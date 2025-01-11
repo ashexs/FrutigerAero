@@ -1,0 +1,130 @@
+/* Reset CSS for uniformity with different browsers */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Custom Fonts */
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/noto-sans-variable.ttf") format("opentype");
+}
+
+/* Background image and default values */
+body {
+  background: url("../images/background.png") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Noto Sans", Arial, Helvetica, sans-serif;
+}
+
+/* Default Values */
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Top Navigation Bar */
+#mainNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  height: 48px;
+  background: linear-gradient(
+    180deg,
+    rgba(111, 118, 122, 0.7) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(62, 65, 67, 0.7) 100%
+  );
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
+    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
+  margin: auto;
+}
+
+/* Links buttons images */
+#mainNav img {
+  height: 20px;
+}
+
+/* Top Navigation links + images */
+.main-nav-links,
+.main-nav-links-active {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 10px;
+  gap: 7px;
+  height: 100%;
+  opacity: 0.9;
+  font-size: 1.2em;
+  font-weight: 250;
+}
+
+/* Active link style */
+.main-nav-links-active {
+  background: linear-gradient(
+      180deg,
+      rgba(91, 168, 74, 0) 30%,
+      rgba(105, 209, 55, 0.4) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(146, 155, 160, 0.6) 0%,
+      rgba(61, 65, 67, 0.4) 49%,
+      rgba(61, 65, 67, 0) 50%
+    );
+}
+/* Inactive links style */
+.main-nav-links {
+  background: linear-gradient(
+    180deg,
+    rgba(146, 155, 160, 0.6) 0%,
+    rgba(61, 65, 67, 0.4) 49%,
+    rgba(61, 65, 67, 0) 50%
+  );
+  transition-duration: 0.4s;
+}
+/* Hover effect */
+.main-nav-links:hover {
+  filter: brightness(80%);
+  transition-duration: 0.4s;
+}
+
+/* Lines between the links */
+.main-nav-links-separators {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.24) 35.94%,
+    rgba(255, 255, 255, 0.36) 100%
+  );
+  box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.4);
+  width: 2px;
+  height: 100%;
+  opacity: 0.9;
+}
+
+/* Responsiveness */
+@media (max-width: 710px) {
+  /* Collapse Navbar */
+  #mainNav {
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+  }
+
+  /* Make nav buttons full width */
+  .main-nav-links,
+  .main-nav-links-active {
+    width: 100%;
+  }
+}
