@@ -107,7 +107,7 @@ body {
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   max-width: 700px;
   font-weight: 400;
-  font-size: 17px;
+  font-size: 1.06em;
   margin-top: 10px;
 }
 
@@ -224,6 +224,14 @@ body {
       rgba(61, 65, 67, 0.4) 49%,
       rgba(61, 65, 67, 0) 50%
     );
+}
+/* Active Buttons text */
+.settings-buttons-active span {
+  font-weight: 500;
+  background: linear-gradient(180deg, #9ed69b 0%, #6fd159 48.44%, #69d137 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* -------------- */

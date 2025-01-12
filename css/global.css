@@ -60,15 +60,6 @@ button {
   opacity: 0.9;
 }
 
-/* Active buttons text */
-.link-active-gradient {
-  font-weight: 500;
-  background: linear-gradient(180deg, #9ed69b 0%, #6fd159 48.44%, #69d137 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
 /* ---------------------- */
 /*        Top Navbar      */
 /* ---------------------- */
@@ -121,6 +112,14 @@ button {
       rgba(61, 65, 67, 0.4) 49%,
       rgba(61, 65, 67, 0) 50%
     );
+}
+/* Active link text */
+.main-nav-links-active span {
+  font-weight: 500;
+  background: linear-gradient(180deg, #9ed69b 0%, #6fd159 48.44%, #69d137 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 /* Inactive links style and hover effect */
 .main-nav-links {

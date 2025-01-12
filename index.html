@@ -38,10 +38,7 @@
       <div class="vertical-separators"></div>
       <!-- Home -->
       <a href="index.html" class="main-nav-links-active"
-        ><img src="images/navbar/home.svg" alt="Nav Home" /><span
-          class="link-active-gradient"
-          >Home</span
-        ></a
+        ><img src="images/navbar/home.svg" alt="Nav Home" /><span>Home</span></a
       >
       <div class="vertical-separators"></div>
 
@@ -111,19 +108,23 @@
         <div class="vertical-separators"></div>
 
         <!-- S -->
-        <button class="settings-buttons" aria-label="Text: Small">
+        <button class="settings-buttons" id="small" aria-label="Text: Small">
           <span>S</span>
         </button>
         <div class="vertical-separators"></div>
 
         <!-- M -->
-        <button class="settings-buttons-active" aria-label="Text: Medium">
-          <span class="link-active-gradient">M</span>
+        <button
+          class="settings-buttons-active"
+          id="medium"
+          aria-label="Text: Medium"
+        >
+          <span>M</span>
         </button>
         <div class="vertical-separators"></div>
 
         <!-- L -->
-        <button class="settings-buttons" aria-label="Text: Large">
+        <button class="settings-buttons" id="large" aria-label="Text: Large">
           <span>L</span>
         </button>
         <div class="vertical-separators"></div>
@@ -137,18 +138,24 @@
         <div class="vertical-separators"></div>
 
         <!-- On -->
-        <button class="settings-buttons"><span>On</span></button>
+        <button class="settings-buttons" id="on" aria-label="Sounds: On">
+          <span>On</span>
+        </button>
         <div class="vertical-separators"></div>
 
         <!-- Off -->
-        <button class="settings-buttons-active">
-          <span class="link-active-gradient">Off</span>
+        <button
+          class="settings-buttons-active"
+          id="off"
+          aria-label="Sounds: Off"
+        >
+          <span>Off</span>
         </button>
         <div class="vertical-separators"></div>
       </div>
     </nav>
 
     <!-- Javascript -->
-    <script src="" async defer></script>
+    <script src="javascript/settings.js" async defer></script>
   </body>
 </html>
