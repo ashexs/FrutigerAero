@@ -152,7 +152,6 @@ button {
 
 /* Main Content (Under navbar) */
 #mainContent {
-  max-width: 1200px;
   margin: 20px auto;
 }
 
@@ -166,7 +165,6 @@ button {
   #mainNav {
     flex-direction: column;
     height: 100%;
-    width: 100%;
   }
 
   /* Make nav buttons full width */
@@ -174,9 +172,12 @@ button {
   .main-nav-links-active {
     width: 100%;
   }
+}
 
-  /* Content responsive width */
-  #mainContent {
-    width: 100%;
+/* Biggest Screen Size */
+@media (min-width: 1150px) {
+  /* Bigger Content */
+  #mainNav {
+    width: 1100px;
   }
 }
