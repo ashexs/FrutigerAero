@@ -150,7 +150,7 @@ body {
   height: 28px;
 }
 /* Setting Title (Text Size | Sounds) */
-.settings-bar-divs span {
+.settings-titles {
   background: linear-gradient(
     180deg,
     rgba(138, 153, 138, 0.9) 0%,
@@ -178,7 +178,6 @@ body {
   padding: 8px 10px;
   gap: 7px;
   height: 100%;
-  opacity: 0.9;
   font-size: 1.2em;
   font-weight: 250;
   cursor: pointer;
@@ -225,7 +224,6 @@ body {
       rgba(61, 65, 67, 0.4) 49%,
       rgba(61, 65, 67, 0) 50%
     );
-  color: #69d137;
 }
 
 /* -------------- */

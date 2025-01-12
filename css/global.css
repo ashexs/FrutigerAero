@@ -95,7 +95,6 @@ button {
   padding: 8px 10px;
   gap: 7px;
   height: 100%;
-  opacity: 0.9;
   font-size: 1.2em;
   font-weight: 300;
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
@@ -113,7 +112,13 @@ button {
       rgba(61, 65, 67, 0.4) 49%,
       rgba(61, 65, 67, 0) 50%
     );
-  color: #69d137;
+}
+.link-active-gradient {
+  font-weight: 500;
+  background: linear-gradient(180deg, #9ed69b 0%, #5ba84a 48.44%, #69d137 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 /* Inactive links style and hover effect */
 .main-nav-links {
