@@ -208,6 +208,7 @@ body {
       rgba(61, 65, 67, 0.4) 49%,
       rgba(61, 65, 67, 0) 50%
     );
+  text-decoration: underline;
 }
 /* Active Buttons */
 .settings-buttons-active {

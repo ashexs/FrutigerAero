@@ -132,6 +132,7 @@ button {
       rgba(61, 65, 67, 0.4) 49%,
       rgba(61, 65, 67, 0) 50%
     );
+  text-decoration: underline;
 }
 
 /* Main Content (Under navbar) */
