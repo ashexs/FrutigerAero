@@ -169,9 +169,8 @@ body {
   cursor: default;
 }
 /* All buttons */
-.settings-buttons,
+.settings-buttons-inactive,
 .settings-buttons-active {
-  color: white;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -184,7 +183,7 @@ body {
   padding: 0px 15px;
 }
 /* Inactive Buttons style and hover effect */
-.settings-buttons {
+.settings-buttons-inactive {
   position: relative;
   background: linear-gradient(
     180deg,
@@ -195,7 +194,7 @@ body {
   transition: all 0.1s ease-in;
   overflow: hidden;
 }
-.settings-buttons::before {
+.settings-buttons-inactive::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -208,15 +207,15 @@ body {
   transition: opacity 0.1s ease-in;
   z-index: 1;
 }
-.settings-buttons:hover::before {
+.settings-buttons-inactive:hover::before {
   opacity: 1;
 }
 /* Active Buttons */
 .settings-buttons-active {
   background: linear-gradient(
       180deg,
-      rgba(91, 168, 74, 0) 30%,
-      rgba(105, 209, 55, 0.4) 100%
+      rgba(74, 168, 135, 0) 30%,
+      rgba(55, 209, 135, 0.4) 100%
     ),
     linear-gradient(
       180deg,
@@ -225,10 +224,23 @@ body {
       rgba(61, 65, 67, 0) 50%
     );
 }
+
 /* Active Buttons text */
 .settings-buttons-active span {
   font-weight: 500;
-  background: linear-gradient(180deg, #9ed69b 0%, #6fd159 48.44%, #69d137 100%);
+  background: linear-gradient(180deg, #9bd6bf 0%, #4aa877 48.44%, #37d16d 100%),
+    linear-gradient(180deg, rgba(138, 153, 138, 0.9) 0%, #ffffff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+/* Inactive link text */
+.settings-buttons-inactive span {
+  background: linear-gradient(
+    180deg,
+    rgba(138, 153, 138, 0.9) 0%,
+    #ffffff 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
