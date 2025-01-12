@@ -186,29 +186,33 @@ body {
   cursor: pointer;
   padding: 0px 15px;
 }
-/* Inactive Buttons */
+/* Inactive Buttons style and hover effect */
 .settings-buttons {
+  position: relative;
   background: linear-gradient(
     180deg,
     rgba(146, 155, 160, 0.6) 0%,
     rgba(61, 65, 67, 0.4) 49%,
     rgba(61, 65, 67, 0) 50%
   );
+  transition: all 0.1s ease-in;
+  overflow: hidden;
 }
-/* Hover Effect */
-.settings-buttons:hover {
+.settings-buttons::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
-      180deg,
-      rgba(127, 140, 124, 0) 30%,
-      rgba(145, 152, 141, 0.4) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(146, 155, 160, 0.6) 0%,
-      rgba(61, 65, 67, 0.4) 49%,
-      rgba(61, 65, 67, 0) 50%
-    );
-  text-decoration: underline;
+    180deg,
+    rgba(127, 140, 124, 0) 30%,
+    rgba(145, 152, 141, 0.4) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+  z-index: 1;
+}
+.settings-buttons:hover::before {
+  opacity: 1;
 }
 /* Active Buttons */
 .settings-buttons-active {

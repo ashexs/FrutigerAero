@@ -110,29 +110,33 @@ button {
     );
   color: #69d137;
 }
-/* Inactive links style */
+/* Inactive links style and hover effect */
 .main-nav-links {
+  position: relative;
   background: linear-gradient(
     180deg,
     rgba(146, 155, 160, 0.6) 0%,
     rgba(61, 65, 67, 0.4) 49%,
     rgba(61, 65, 67, 0) 50%
   );
+  transition: all 0.1s ease-in;
+  overflow: hidden;
 }
-/* Hover effect */
-.main-nav-links:hover {
+.main-nav-links::before {
+  content: "";
+  position: absolute;
+  inset: 0;
   background: linear-gradient(
-      180deg,
-      rgba(127, 140, 124, 0) 30%,
-      rgba(145, 152, 141, 0.4) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(146, 155, 160, 0.6) 0%,
-      rgba(61, 65, 67, 0.4) 49%,
-      rgba(61, 65, 67, 0) 50%
-    );
-  text-decoration: underline;
+    180deg,
+    rgba(127, 140, 124, 0) 30%,
+    rgba(145, 152, 141, 0.4) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.1s ease-in;
+  z-index: 1;
+}
+.main-nav-links:hover::before {
+  opacity: 1;
 }
 
 /* Main Content (Under navbar) */
