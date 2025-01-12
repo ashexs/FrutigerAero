@@ -41,11 +41,6 @@ button {
   border: none;
 }
 
-/* Contains the whole site (for spacing) */
-#siteContainer {
-  margin: 0px 20px;
-}
-
 /* Cosmetic Lines between links / buttons */
 .vertical-separators {
   background: linear-gradient(
