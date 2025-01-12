@@ -21,6 +21,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
   font-family: "Noto Sans", Arial, Helvetica, sans-serif;
+  cursor: url("../images/cursors/normal.cur"), auto;
 }
 
 /* ---------------------- */
@@ -28,6 +29,10 @@ body {
 /* ---------------------- */
 
 /* Default Values */
+a,
+button {
+  cursor: url("../images/cursors/link.cur"), auto;
+}
 a {
   color: white;
   text-decoration: none;

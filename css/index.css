@@ -45,7 +45,6 @@ body {
   justify-content: center;
   align-items: center;
   padding: 16px;
-  height: 108px;
 }
 /* Heading */
 .introduction-section h1 {
@@ -82,7 +81,6 @@ body {
   justify-content: center;
   align-items: center;
   padding: 16px;
-  min-height: 292px;
 }
 /* Mascot Image */
 .introduction-section img {
