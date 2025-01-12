@@ -18,15 +18,9 @@ const SOUND_OFF_BUTTON = document.getElementById("off");
 // Variable to hold selected font size
 let font_size = "1em";
 
-// Function to set a cookie with a specified name, value, and expiration in days
-function setCookie(name, value, days) {
-  let expires = ""; // Initialize expiration string
-  if (days) {
-    let date = new Date(); // Create a new date object
-    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000); // Add days to current time in milliseconds
-    expires = "; expires=" + date.toUTCString(); // Format expiration date as UTC string
-  }
-  document.cookie = name + "=" + value + expires + "; path=/"; // Set the cookie with path=/ for accessibility across pages
+// Function to set a cookie with a specified name and value
+function setCookie(name, value) {
+  document.cookie = name + "=" + value + "; path=/"; // Set the cookie with path=/ for accessibility across pages
 }
 
 // Function to get a cookie value by name
@@ -46,7 +40,7 @@ function getCookie(name) {
 function setActiveButton(activeButton, otherButtons) {
   activeButton.setAttribute("class", "settings-buttons-active"); // Set active button class
   otherButtons.forEach(
-    (button) => button.setAttribute("class", "settings-buttons") // Reset class for other buttons
+    (button) => button.setAttribute("class", "settings-buttons-inactive") // Reset class for other buttons
   );
 }
 
@@ -87,8 +81,8 @@ TEXT_SMALL_BUTTON.addEventListener("click", function () {
   setActiveButton(TEXT_SMALL_BUTTON, [TEXT_MEDIUM_BUTTON, TEXT_LARGE_BUTTON]); // Set active button and reset others
   font_size = "0.9em"; // Set font size
   document.body.style.fontSize = font_size; // Apply font size to body
-  setCookie("font_size", font_size, 1); // Save font size in cookie for 1 day
-  setCookie("active_button", "small", 1); // Save active button in cookie for 1 day
+  setCookie("font_size", font_size); // Save font size in cookie
+  setCookie("active_button", "small"); // Save active button in cookie
 });
 
 // Add event listener for Medium Text button click
@@ -96,8 +90,8 @@ TEXT_MEDIUM_BUTTON.addEventListener("click", function () {
   setActiveButton(TEXT_MEDIUM_BUTTON, [TEXT_SMALL_BUTTON, TEXT_LARGE_BUTTON]); // Set active button and reset others
   font_size = "1em"; // Set font size
   document.body.style.fontSize = font_size; // Apply font size to body
-  setCookie("font_size", font_size, 1); // Save font size in cookie for 1 day
-  setCookie("active_button", "medium", 1); // Save active button in cookie for 1 day
+  setCookie("font_size", font_size); // Save font size in cookie
+  setCookie("active_button", "medium"); // Save active button in cookie
 });
 
 // Add event listener for Large Text button click
@@ -105,8 +99,8 @@ TEXT_LARGE_BUTTON.addEventListener("click", function () {
   setActiveButton(TEXT_LARGE_BUTTON, [TEXT_SMALL_BUTTON, TEXT_MEDIUM_BUTTON]); // Set active button and reset others
   font_size = "1.1em"; // Set font size
   document.body.style.fontSize = font_size; // Apply font size to body
-  setCookie("font_size", font_size, 1); // Save font size in cookie for 1 day
-  setCookie("active_button", "large", 1); // Save active button in cookie for 1 day
+  setCookie("font_size", font_size); // Save font size in cookie
+  setCookie("active_button", "large"); // Save active button in cookie
 });
 
 // ------
@@ -143,20 +137,20 @@ window.addEventListener("load", function () {
 SOUND_ON_BUTTON.addEventListener("click", function () {
   setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true); // Set active sound button for "on"
   background_music.play(); // Play background music
-  setCookie("sound", "on", 1); // Save sound state in cookie for 1 day
+  setCookie("sound", "on"); // Save sound state in cookie for
 });
 
 // Add event listener for Sound Off button click
 SOUND_OFF_BUTTON.addEventListener("click", function () {
   setActiveSound(SOUND_OFF_BUTTON, SOUND_ON_BUTTON, false); // Set active sound button for "off"
   background_music.pause(); // Pause background music
-  setCookie("sound", "off", 1); // Save sound state in cookie for 1 day
+  setCookie("sound", "off"); // Save sound state in cookie
 });
 
 // Function to set the active sound button and reset the other
 function setActiveSound(activeButton, inactiveButton, isSoundOn) {
   activeButton.setAttribute("class", "settings-buttons-active"); // Set active button class
-  inactiveButton.setAttribute("class", "settings-buttons"); // Reset inactive button class
+  inactiveButton.setAttribute("class", "settings-buttons-inactive"); // Reset inactive button class
   sound_on = isSoundOn; // Update sound state variable
 }
 
