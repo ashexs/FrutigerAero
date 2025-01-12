@@ -5,12 +5,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Frutiger Aero Community</title>
+    <!-- Search Engine Meta -->
     <meta
       name="description"
       content="A website dedicated to the Frutiger Aero community, with links, etc."
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Favicon -->
+    <!-- Responsive Favicon -->
     <link
       rel="icon"
       type="image/png"
@@ -25,68 +26,108 @@
     />
     <meta name="apple-mobile-web-app-title" content="FA Archive" />
     <link rel="manifest" href="images/favicon/site.webmanifest" />
-    <!-- CSS -->
+    <!-- External CSS -->
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/index.css" />
     <!-- Canonical tag -->
     <link rel="canonical" href="frutiger-aero.com" />
   </head>
   <body>
-    <div id="siteContainer">
-      <nav id="mainNav" aria-label="Main Navigation">
-        <div class="main-nav-links-separators"></div>
+    <!-- Top Navigation bar -->
+    <nav id="mainNav" aria-label="Main Navigation">
+      <div class="vertical-separators"></div>
+      <!-- Home -->
+      <a href="index.html" class="main-nav-links-active"
+        ><img src="images/navbar/home.svg" alt="Nav Home" />Home</a
+      >
+      <div class="vertical-separators"></div>
 
-        <a href="index.html" class="main-nav-links-active"
-          ><img src="images/navbar/home.svg" alt="Nav Home" />Home</a
-        >
+      <!-- Community -->
+      <a href="community.html" class="main-nav-links"
+        ><img src="images/navbar/community.svg" alt="Nav Home" />Community</a
+      >
+      <div class="vertical-separators"></div>
 
-        <div class="main-nav-links-separators"></div>
+      <!-- Resources -->
+      <a href="resources.html" class="main-nav-links"
+        ><img src="images/navbar/resources.svg" alt="Nav Home" />Resources</a
+      >
+      <div class="vertical-separators"></div>
 
-        <a href="community.html" class="main-nav-links"
-          ><img src="images/navbar/community.svg" alt="Nav Home" />Community</a
-        >
+      <!-- Archives -->
+      <a href="archives.html" class="main-nav-links"
+        ><img src="images/navbar/archives.svg" alt="Nav Home" />Archives</a
+      >
+      <div class="vertical-separators"></div>
 
-        <div class="main-nav-links-separators"></div>
+      <!-- About -->
+      <a href="about.html" class="main-nav-links"
+        ><img src="images/navbar/about.svg" alt="Nav Home" />About</a
+      >
+      <div class="vertical-separators"></div>
+    </nav>
 
-        <a href="resources.html" class="main-nav-links"
-          ><img src="images/navbar/resources.svg" alt="Nav Home" />Resources</a
-        >
+    <!-- Main Content (Middle) -->
+    <main id="mainContent">
+      <section class="introduction-section">
+        <header>
+          <h1>Welcome to the Frutiger Aero Site!</h1>
+        </header>
 
-        <div class="main-nav-links-separators"></div>
+        <article>
+          <img src="images/home/welcome.png" alt="Placeholder Image" />
+          <div>
+            <h2>Aero-chan says</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into.
+            </p>
+          </div>
+        </article>
+      </section>
+    </main>
 
-        <a href="archives.html" class="main-nav-links"
-          ><img src="images/navbar/archives.svg" alt="Nav Home" />Archives</a
-        >
+    <!-- Settings Bar (Text Size/Sound) -->
+    <nav id="settingsBar" aria-label="Settings Bar">
+      <div class="settings-bar-divs" aria-label="Settings: Text Size">
+        <div class="vertical-separators"></div>
+        <img src="images/home/text_size.svg" alt="Text Size Image" />
+        <span>Text size:</span>
+        <div class="vertical-separators"></div>
 
-        <div class="main-nav-links-separators"></div>
+        <!-- S -->
+        <button class="settings-buttons">S</button>
+        <div class="vertical-separators"></div>
 
-        <a href="can.html" class="main-nav-links"
-          ><img src="images/navbar/can.svg" alt="Nav Home" />CAN</a
-        >
+        <!-- M -->
+        <button class="settings-buttons-active">M</button>
+        <div class="vertical-separators"></div>
 
-        <div class="main-nav-links-separators"></div>
+        <!-- L -->
+        <button class="settings-buttons">L</button>
+        <div class="vertical-separators"></div>
+      </div>
 
-        <a href="about.html" class="main-nav-links"
-          ><img src="images/navbar/about.svg" alt="Nav Home" />About</a
-        >
+      <div class="settings-bar-divs" aria-label="Settings: Sound">
+        <div class="vertical-separators"></div>
+        <img src="images/home/sounds.svg" alt="Sounds Image" />
+        <span>Sounds:</span>
+        <div class="vertical-separators"></div>
 
-        <div class="main-nav-links-separators"></div>
-      </nav>
+        <!-- On -->
+        <button class="settings-buttons">On</button>
+        <div class="vertical-separators"></div>
 
-      <!-- <main>
-        <section>
-          <header>
-            <h1>Welcome to the Frutiger Aero Website!</h1>
-          </header>
+        <!-- Off -->
+        <button class="settings-buttons-active">Off</button>
+        <div class="vertical-separators"></div>
+      </div>
+    </nav>
 
-          <article>
-            <h2>Frutiger Aero mascot thing says</h2>
-            <p>Text</p>
-          </article>
-        </section>
-      </main> -->
-    </div>
-
+    <!-- Javascript -->
     <script src="" async defer></script>
   </body>
 </html>
