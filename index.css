@@ -1,0 +1,278 @@
+/* ---------------------- */
+/*      CENTER ALIGN      */
+/* ---------------------- */
+
+/* Modify height of content here */
+html,
+body {
+  height: 85%;
+}
+
+/* Align in the middle */
+html {
+  display: table;
+  margin: auto;
+}
+body {
+  display: table-cell;
+  vertical-align: middle;
+  /* Margins on the sides */
+  padding: 20px;
+}
+
+/* ---------------------- */
+/*      Intro Section     */
+/* ---------------------- */
+
+/* Header */
+.introduction-section header {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0) 16.67%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.63) 0%,
+      rgba(111, 118, 122, 0.7) 90.5%
+    );
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
+    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  height: 108px;
+}
+/* Heading */
+.introduction-section h1 {
+  background: linear-gradient(
+    180deg,
+    rgba(138, 153, 138, 0.9) 0%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-weight: 300;
+  font-size: 2.5em;
+  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
+}
+/* Section content */
+.introduction-section article {
+  background: linear-gradient(
+    180deg,
+    rgba(111, 118, 122, 0.7) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(62, 65, 67, 0.7) 100%
+  );
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
+    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  min-height: 292px;
+}
+/* Mascot Image */
+.introduction-section img {
+  width: 200px;
+  margin-right: 16px;
+}
+/* Title */
+.introduction-section h2 {
+  background: linear-gradient(
+    180deg,
+    rgba(138, 153, 138, 0.9) 0%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
+  font-weight: 300;
+  font-size: 2em;
+}
+/* Text Content */
+.introduction-section p {
+  color: #e6e6e6;
+  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
+  max-width: 700px;
+  font-weight: 400;
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+/* ---------------------- */
+/*      Settings Bar      */
+/* ---------------------- */
+
+/* Container */
+#settingsBar {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 10px auto;
+  gap: 20px;
+}
+/* Settings Divs (2 divs)*/
+.settings-bar-divs {
+  background: linear-gradient(
+    180deg,
+    rgba(111, 118, 122, 0.7) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(62, 65, 67, 0.7) 100%
+  );
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
+    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 100%;
+}
+/* Setting Images */
+.settings-bar-divs img {
+  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
+  margin-left: 10px;
+  height: 28px;
+}
+/* Setting Title (Text Size | Sounds) */
+.settings-bar-divs span {
+  background: linear-gradient(
+    180deg,
+    rgba(138, 153, 138, 0.9) 0%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
+  width: 82px;
+  height: 20px;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 100%;
+  margin: 0px 10px;
+  cursor: default;
+}
+/* All buttons */
+.settings-buttons,
+.settings-buttons-active {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 8px 10px;
+  gap: 7px;
+  height: 100%;
+  opacity: 0.9;
+  font-size: 1.2em;
+  font-weight: 250;
+  cursor: pointer;
+  padding: 0px 15px;
+}
+/* Inactive Buttons */
+.settings-buttons {
+  background: linear-gradient(
+    180deg,
+    rgba(146, 155, 160, 0.6) 0%,
+    rgba(61, 65, 67, 0.4) 49%,
+    rgba(61, 65, 67, 0) 50%
+  );
+}
+/* Hover Effect */
+.settings-buttons:hover {
+  background: linear-gradient(
+      180deg,
+      rgba(127, 140, 124, 0) 30%,
+      rgba(145, 152, 141, 0.4) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(146, 155, 160, 0.6) 0%,
+      rgba(61, 65, 67, 0.4) 49%,
+      rgba(61, 65, 67, 0) 50%
+    );
+  text-decoration: underline;
+}
+/* Active Buttons */
+.settings-buttons-active {
+  background: linear-gradient(
+      180deg,
+      rgba(91, 168, 74, 0) 30%,
+      rgba(105, 209, 55, 0.4) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(146, 155, 160, 0.6) 0%,
+      rgba(61, 65, 67, 0.4) 49%,
+      rgba(61, 65, 67, 0) 50%
+    );
+  color: #69d137;
+}
+
+/* -------------- */
+/* Responsiveness */
+/* -------------- */
+
+/* Size 3 : 750px */
+@media (max-width: 750px) {
+  /* Uncenter the page */
+  html {
+    display: block;
+  }
+
+  /* Smaller Font */
+  .introduction-section h1 {
+    font-size: 2em;
+  }
+  .introduction-section h2 {
+    font-size: 1.8em;
+  }
+
+  /* Collapse Settings */
+  #settingsBar {
+    flex-direction: column;
+  }
+}
+
+/* Size 2: 580px */
+@media (max-width: 580px) {
+  /* Collapse Section */
+  .introduction-section article {
+    flex-direction: column;
+  }
+
+  /* Smaller Font */
+  .introduction-section h1 {
+    font-size: 1.8em;
+  }
+
+  /* Center Heading */
+  .introduction-section h2 {
+    text-align: center;
+  }
+}
+
+/* Size 1: 520px */
+@media (max-width: 520px) {
+  /* Smaller Font */
+  .introduction-section h1 {
+    font-size: 1.5em;
+  }
+}
