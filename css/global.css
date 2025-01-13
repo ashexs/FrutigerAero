@@ -41,6 +41,23 @@ button {
   border: none;
 }
 
+.website-spacers {
+  height: 15px;
+}
+
+/* Align site content */
+#siteContainer {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1200px;
+  /* Modify height on other pages css */
+  padding: 0px 20px;
+}
+
 /* Cosmetic Lines between links / buttons */
 .vertical-separators {
   background: linear-gradient(
@@ -51,7 +68,7 @@ button {
   );
   box-shadow: -1px 0px 1px rgba(0, 0, 0, 0.4);
   width: 2px;
-  height: 100%;
+  min-height: 100%;
   opacity: 0.9;
 }
 
@@ -81,6 +98,12 @@ button {
 #mainNav img {
   height: 20px;
 }
+
+/* Normal flex for non mobile */
+.main-nav-mobile-divs {
+  display: flex;
+}
+
 /* Navigation links + images */
 .main-nav-links-inactive,
 .main-nav-links-active {
@@ -209,16 +232,62 @@ button {
 
 /* Mobile */
 @media (max-width: 750px) {
+  .website-spacers {
+    height: 20px;
+  }
+
+  /* Stop centering content */
+  #siteContainer {
+    position: static;
+    width: auto;
+  }
+
   /* Collapse Navbar */
   #mainNav {
+    border-radius: 0px;
+    position: sticky;
+    top: 0px;
     flex-direction: column;
-    height: 100%;
+    margin: -20px -20px 0px -20px;
+    height: 90px;
+  }
+
+  /* Hide separators on the sides touching the window */
+  .nav-side-vertical-separators {
+    display: none;
+  }
+
+  /* Responsive navbar */
+  .main-nav-mobile-divs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
 
   /* Make nav buttons full width */
   .main-nav-links-inactive,
   .main-nav-links-active {
+    display: flex;
+    justify-content: center;
     width: 100%;
+    padding: 8px 0px;
+  }
+
+  /* Home button */
+  .main-nav-home {
+    width: auto;
+    padding: 11px 15px;
+  }
+
+  /* Hide home nav text */
+  .home-nav-text {
+    display: none;
+  }
+
+  /* Hide other nav images */
+  .main-nav-images {
+    display: none;
   }
 
   /* Make bottom music bar responsive */
@@ -228,10 +297,23 @@ button {
   }
 }
 
+@media (min-width: 750px) {
+  #siteContainer {
+    width: 750px;
+  }
+}
+
+/* Sizes of content */
+@media (min-width: 900px) {
+  #siteContainer {
+    width: 850px;
+  }
+}
+
 /* Biggest Screen Size */
 @media (min-width: 1150px) {
   /* Bigger Content */
-  #mainNav {
+  #siteContainer {
     width: 1100px;
   }
 }

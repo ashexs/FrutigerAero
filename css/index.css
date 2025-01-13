@@ -1,23 +1,6 @@
-/* ---------------------- */
-/*      CENTER ALIGN      */
-/* ---------------------- */
-
-/* Modify height of content here */
-html,
-body {
-  height: 85%;
-}
-
-/* Align in the middle */
-html {
-  display: table;
-  margin: auto;
-}
-body {
-  display: table-cell;
-  vertical-align: middle;
-  /* Margins on the sides */
-  padding: 20px;
+/* Center align */
+#siteContainer {
+  height: 700px;
 }
 
 /* ---------------------- */
@@ -252,11 +235,6 @@ body {
 
 /* Size 3 : 750px */
 @media (max-width: 750px) {
-  /* Uncenter the page */
-  html {
-    display: block;
-  }
-
   /* Smaller Font */
   #introductionSection h1 {
     font-size: 2em;
