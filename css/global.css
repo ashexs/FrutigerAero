@@ -309,22 +309,33 @@ button {
   }
 }
 
+/* Container Size based on window width */
 @media (min-width: 750px) {
   #siteContainer {
     width: 750px;
+    -moz-transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    -moz-transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
   }
 }
-
-/* Sizes of content */
+@media (min-width: 800px) {
+  #siteContainer {
+    width: 800px;
+  }
+}
 @media (min-width: 900px) {
   #siteContainer {
-    width: 850px;
+    width: 900px;
   }
 }
-
-/* Biggest Screen Size */
+@media (min-width: 1000px) {
+  #siteContainer {
+    width: 1000px;
+  }
+}
 @media (min-width: 1150px) {
-  /* Bigger Content */
   #siteContainer {
     width: 1100px;
   }
