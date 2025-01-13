@@ -23,7 +23,7 @@ Other things to do:
 
 When site is hosted:
 - Add XML sitemap file
-- Add to Google Search Console ?
+- Add site to Google Search Console
 - Add error 404 HTML file or a redirect to index URL if URL is typed-in wrong
 
 Figma Link:
