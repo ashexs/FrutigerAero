@@ -22,7 +22,14 @@ Other things to do:
 - Replace placeholder images
 - Choose a favicon
 - Choose songs for playlist
+- Change canonical links in HTML files to correct URLs
 - ???
+
+When site is hosted:
+- Add XML sitemap file
+- Add to Google Search Console ?
+- Domain name with Namecheap ?
+- Add error 404 HTML file or a redirect to index URL if URL is typed-in wrong
 
 Figma Link:
 
