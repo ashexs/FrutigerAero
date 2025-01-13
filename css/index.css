@@ -75,7 +75,7 @@
 /* Mascot Image */
 #introductionSection img {
   width: 200px;
-  margin-right: 16px;
+  margin-right: 20px;
 }
 
 /* Sub-heading Styles */
@@ -135,6 +135,7 @@
   align-items: center;
   height: 48px;
   width: 100%;
+  overflow-x: auto;
 }
 
 /* Settings Icons (Images) */
@@ -155,13 +156,13 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
-  width: 82px;
   height: 20px;
   font-weight: 300;
   font-size: 20px;
   line-height: 100%;
   margin: 0px 10px;
   cursor: default;
+  text-wrap: nowrap;
 }
 
 /* Button Styles for All Buttons */
@@ -249,7 +250,7 @@
 /*     Responsiveness     */
 /* ---------------------- */
 
-/* Size 3: For smaller screens, 750px */
+/* Size 4: For smaller screens, 750px */
 @media (max-width: 750px) {
   #introductionSection h1 {
     font-size: 2em;
@@ -263,7 +264,7 @@
   }
 }
 
-/* Size 2: For smaller screens, 580px */
+/* Size 3: For smaller screens, 580px */
 @media (max-width: 580px) {
   #introductionSection article {
     flex-direction: column;
@@ -273,14 +274,44 @@
     font-size: 1.8em;
   }
 
+  #introductionSection img {
+    width: 130px;
+    margin-right: 0px;
+  }
+
   #introductionSection h2 {
     text-align: center;
   }
 }
 
-/* Size 1: For very small screens, 520px */
+/* Size 2: For very small screens, 520px */
 @media (max-width: 520px) {
   #introductionSection h1 {
     font-size: 1.5em;
+  }
+}
+
+@media (max-width: 330px) {
+  .settings-side-vertical-separators {
+    display: none;
+  }
+  .settings-bar-divs img {
+    display: none;
+  }
+}
+
+/* Size 1: Smallest screens, 240px */
+@media (max-width: 240px) {
+  #introductionSection img {
+    width: 100%;
+  }
+
+  .settings-titles {
+    margin: 0px 5px 0px 0px;
+  }
+
+  .settings-buttons-inactive,
+  .settings-buttons-active {
+    padding: 8px 8px;
   }
 }

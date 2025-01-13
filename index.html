@@ -130,7 +130,9 @@
       <!-- Settings Bar for Text Size and Sound Controls -->
       <nav id="settingsBar" aria-label="Settings Bar">
         <div class="settings-bar-divs" aria-label="Settings: Text Size">
-          <div class="vertical-separators"></div>
+          <div
+            class="settings-side-vertical-separators vertical-separators"
+          ></div>
 
           <!-- Text Size Controls -->
           <img src="images/home/text_size.svg" alt="" />
@@ -169,7 +171,9 @@
         </div>
 
         <div class="settings-bar-divs" aria-label="Settings: Sound">
-          <div class="vertical-separators"></div>
+          <div
+            class="settings-side-vertical-separators vertical-separators"
+          ></div>
 
           <!-- Sound Controls -->
           <img src="images/home/sounds.svg" alt="" />
@@ -217,27 +221,29 @@
 
       <!-- Song Information Display -->
       <div class="music-text-div">
-        <span id="songTitle">Song title — </span>
-        <span id="songArtist">Song artist</span>
+        <div class="music-inner-text">
+          <span id="songTitle">Song title — </span>
+          <span id="songArtist">Song artist</span>
+        </div>
       </div>
 
       <!-- Previous Song Button -->
-      <button
+      <!-- <button
         class="settings-buttons-active"
         id="prevButton"
         aria-label="Previous Song"
       >
         <img src="images/music_on.svg" alt="" />
-      </button>
+      </button> -->
 
       <!-- Next Song Button -->
-      <button
+      <!-- <button
         class="settings-buttons-active"
         id="nextButton"
         aria-label="Next Song"
       >
         <img src="images/music_on.svg" alt="" />
-      </button>
+      </button> -->
     </div>
 
     <!-- External Javascript Files for Music Player and Text Size -->

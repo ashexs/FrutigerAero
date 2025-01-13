@@ -11,6 +11,30 @@ const MUSIC_TOGGLE_IMAGE = document.getElementById("musicToggleImg");
 const SONG_TITLE = document.getElementById("songTitle");
 const SONG_ARTIST = document.getElementById("songArtist");
 
+// Playlist Text for scrolling
+const MUSIC_TEXT_DIV = document.querySelector(".music-text-div");
+const MUSIC_INNER_TEXT_DIV = document.querySelector(".music-inner-text");
+
+// Function to check if text is overflowing and apply scrolling if needed
+function overflowScrolling() {
+  const isOverflowing =
+    MUSIC_INNER_TEXT_DIV.scrollWidth > MUSIC_TEXT_DIV.clientWidth;
+
+  if (isOverflowing) {
+    MUSIC_INNER_TEXT_DIV.classList.add("scrolling");
+  } else {
+    MUSIC_INNER_TEXT_DIV.classList.remove("scrolling");
+  }
+}
+
+// Check overflow when the page loads
+window.addEventListener("load", () => {
+  setTimeout(overflowScrolling, 0); // Ensure layout is ready before measuring
+});
+
+// Check overflow on window resize
+window.addEventListener("resize", overflowScrolling);
+
 // Initial states for sound and music
 let sound_on = false;
 let music_playing = false;
@@ -80,10 +104,12 @@ window.addEventListener("load", () => {
     setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true);
     MUSIC_BAR.style.display = "flex";
     isMusicBarVisible = true;
+    overflowScrolling();
   } else if (savedSound === "off") {
     setActiveSound(SOUND_OFF_BUTTON, SOUND_ON_BUTTON, false);
     MUSIC_BAR.style.display = "none";
     isMusicBarVisible = false;
+    overflowScrolling();
   }
 });
 
@@ -125,6 +151,7 @@ function nextSong() {
   currentSongIndex = (currentSongIndex + 1) % playlist.length;
   loadSong(currentSongIndex);
   if (music_playing) background_music.play();
+  overflowScrolling();
 }
 
 // Go to the previous song in the playlist
@@ -132,16 +159,18 @@ function prevSong() {
   currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
   loadSong(currentSongIndex);
   if (music_playing) background_music.play();
+  overflowScrolling();
 }
 
 // Auto-play the next song when the current one ends
-background_music.addEventListener("ended", nextSong);
+background_music.addEventListener("ended", nextSong, overflowScrolling);
 
 // Turn off music and update UI
 function musicOff() {
   MUSIC_TOGGLE_IMAGE.src = "images/music_off.svg";
   music_playing = false;
   background_music.pause();
+  overflowScrolling();
   setCookie("music", "off");
 }
 
@@ -150,6 +179,7 @@ function musicOn() {
   MUSIC_TOGGLE_IMAGE.src = "images/music_on.svg";
   music_playing = true;
   background_music.play();
+  overflowScrolling();
   setCookie("music", "on");
 }
 
@@ -178,7 +208,3 @@ window.addEventListener("load", () => {
     musicOff();
   }
 });
-
-// Add event listeners for next/previous buttons
-NEXT_BUTTON.addEventListener("click", nextSong);
-PREV_BUTTON.addEventListener("click", prevSong);
