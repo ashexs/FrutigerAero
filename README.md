@@ -20,7 +20,6 @@ Other things to do:
 - Choose songs for playlist
 - Change canonical links in HTML files to correct URLs
 - Playlist Next & Previous Buttons ??
-- ???
 
 When site is hosted:
 - Add XML sitemap file
