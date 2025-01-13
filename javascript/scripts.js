@@ -8,8 +8,15 @@ const TEXT_MEDIUM_BUTTON = document.getElementById("medium");
 const TEXT_LARGE_BUTTON = document.getElementById("large");
 
 // Get references to sound buttons
-const SOUND_ON_BUTTON = document.getElementById("on");
-const SOUND_OFF_BUTTON = document.getElementById("off");
+const SOUND_ON_BUTTON = document.getElementById("soundsOn");
+const SOUND_OFF_BUTTON = document.getElementById("soundsOff");
+
+// Music bar
+const MUSIC_BAR = document.getElementById("musicBar");
+const MUSIC_TOGGLE_BUTTON = document.getElementById("musicToggle");
+const MUSIC_TOGGLE_IMAGE = document.getElementById("musicToggleImg");
+const SONG_TITLE = document.getElementById("songTitle");
+const SONG_ARTIST = document.getElementById("songArtist");
 
 // ---------
 // TEXT SIZE
@@ -103,17 +110,15 @@ TEXT_LARGE_BUTTON.addEventListener("click", function () {
   setCookie("active_button", "large"); // Save active button in cookie
 });
 
-// ------
-// SOUNDS
-// ------
+// ------------------
+// SOUNDS & MUSIC BAR
+// ------------------
 
-const MUSIC_BAR = document.getElementById("musicBar");
-
-// Create an audio object for background music
-let background_music = new Audio("../sounds/background_music.mp3");
-
-// Variable to track sound state
+// Sounds toggle
 let sound_on = false;
+
+// Music Off by default
+let music_playing = false;
 
 // Hide music bar with delay
 let isMusicBarVisible = false; // Track visibility state to prevent overlapping animations
@@ -123,9 +128,9 @@ function musicBarHide() {
   if (!isMusicBarVisible) return; // Prevent multiple hide animations
   isMusicBarVisible = false;
 
-  var op = 1; // initial opacity
+  let op = 1; // initial opacity
   MUSIC_BAR.style.opacity = op; // ensure opacity starts at 1
-  var timer = setInterval(function () {
+  let timer = setInterval(function () {
     if (op <= 0) {
       clearInterval(timer);
       MUSIC_BAR.style.visibility = "hidden"; // hide element visually
@@ -144,9 +149,9 @@ function musicBarShow() {
 
   MUSIC_BAR.style.display = "flex"; // make element visible immediately
   MUSIC_BAR.style.visibility = "visible"; // ensure it's visually visible
-  var op = 0; // initial opacity
+  let op = 0; // initial opacity
   MUSIC_BAR.style.opacity = op; // ensure opacity starts at 0
-  var timer = setInterval(function () {
+  let timer = setInterval(function () {
     if (op >= 1) {
       clearInterval(timer);
     }
@@ -156,34 +161,9 @@ function musicBarShow() {
   }, 50);
 }
 
-// On page load, read saved sound state and music time
-window.addEventListener("load", function () {
-  let savedSound = getCookie("sound"); // Get saved sound state from cookie
-  let savedTime = localStorage.getItem("music_time"); // Get saved music time from localStorage
-
-  if (savedTime) {
-    background_music.currentTime = parseFloat(savedTime); // Set music time if saved time exists
-  }
-
-  if (savedSound) {
-    if (savedSound === "on") {
-      setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true); // Set active sound button for "on"
-      background_music.play(); // Play background music
-      MUSIC_BAR.style.display = "flex"; // Show music bar
-      isMusicBarVisible = true; // Music Bar visible
-    } else if (savedSound === "off") {
-      setActiveSound(SOUND_OFF_BUTTON, SOUND_ON_BUTTON, false); // Set active sound button for "off"
-      background_music.pause(); // Pause background music
-      MUSIC_BAR.style.display = "none"; // Hide music bar
-      isMusicBarVisible = false; // Music Bar hidden
-    }
-  }
-});
-
 // Add event listener for Sound On button click
 SOUND_ON_BUTTON.addEventListener("click", function () {
   setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true); // Set active sound button for "on"
-  background_music.play(); // Play background music
   musicBarShow(); // Show music bar
   setCookie("sound", "on"); // Save sound state in cookie for
 });
@@ -191,9 +171,9 @@ SOUND_ON_BUTTON.addEventListener("click", function () {
 // Add event listener for Sound Off button click
 SOUND_OFF_BUTTON.addEventListener("click", function () {
   setActiveSound(SOUND_OFF_BUTTON, SOUND_ON_BUTTON, false); // Set active sound button for "off"
-  background_music.pause(); // Pause background music
   musicBarHide(); // Hide music bar
   setCookie("sound", "off"); // Save sound state in cookie
+  musicOff();
 });
 
 // Function to set the active sound button and reset the other
@@ -203,14 +183,132 @@ function setActiveSound(activeButton, inactiveButton, isSoundOn) {
   sound_on = isSoundOn; // Update sound state variable
 }
 
-// Add event listener to save current music time periodically
-background_music.addEventListener("timeupdate", function () {
-  localStorage.setItem("music_time", background_music.currentTime); // Save current music time in localStorage
+// On page load, remember if sound bar is on
+window.addEventListener("load", function () {
+  let savedSound = getCookie("sound"); // Get saved sound state from cookie
+
+  if (savedSound) {
+    if (savedSound === "on") {
+      setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true); // Set active sound button for "on"
+      MUSIC_BAR.style.display = "flex"; // Show music bar
+      isMusicBarVisible = true; // Music Bar visible
+    } else if (savedSound === "off") {
+      setActiveSound(SOUND_OFF_BUTTON, SOUND_ON_BUTTON, false); // Set active sound button for "off"
+      MUSIC_BAR.style.display = "none"; // Hide music bar
+      isMusicBarVisible = false; // Music Bar hidden
+    }
+  }
 });
 
 // ------------
 // MUSIC PLAYER
 // ------------
 
-const SONG_TITLE = document.getElementById("songTitle");
-const SONG_ARTIST = document.getElementById("songArtist");
+// Music bar
+const NEXT_BUTTON = document.getElementById("nextButton"); // Next button
+const PREV_BUTTON = document.getElementById("prevButton"); // Previous button
+
+// Song Playlist
+let playlist = [
+  {
+    src: "../sounds/music/song_1.mp3",
+    title: "Song One —",
+    artist: "Artist One",
+  },
+  {
+    src: "../sounds/music/song_2.mp3",
+    title: "Song Two —",
+    artist: "Artist Two",
+  },
+  {
+    src: "../sounds/music/song_3.mp3",
+    title: "Song Three —",
+    artist: "Artist Three",
+  },
+];
+
+let currentSongIndex = 0;
+let background_music = new Audio(); // Initialize audio object
+
+// Load and display the current song
+function loadSong(index) {
+  let song = playlist[index]; // Get the song object at the given index
+  background_music.src = song.src; // Set the audio source
+  SONG_TITLE.textContent = song.title; // Update the song title
+  SONG_ARTIST.textContent = song.artist; // Update the song artist
+}
+
+// Go to next song
+function nextSong() {
+  currentSongIndex = (currentSongIndex + 1) % playlist.length; // Loop to the first song if at the end
+  loadSong(currentSongIndex);
+  if (music_playing) {
+    background_music.play();
+  }
+}
+
+// Go to previous song
+function prevSong() {
+  currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length; // Loop to the last song if at the beginning
+  loadSong(currentSongIndex);
+  if (music_playing) {
+    background_music.play();
+  }
+}
+
+// Autoplay to next song when current one ends
+background_music.addEventListener("ended", nextSong);
+
+// Music Off function
+function musicOff() {
+  MUSIC_TOGGLE_IMAGE.src = "images/music_off.svg";
+  music_playing = false;
+  background_music.pause(); // Pause background music
+  setCookie("music", "off"); // Save sound state in cookie
+}
+
+// Music On function
+function musicOn() {
+  MUSIC_TOGGLE_IMAGE.src = "images/music_on.svg";
+  music_playing = true;
+  background_music.play(); // Play background music
+  setCookie("music", "on"); // Save sound state in cookie
+}
+
+// Music Toggle Button
+MUSIC_TOGGLE_BUTTON.addEventListener("click", function () {
+  if (music_playing === true) {
+    musicOff();
+  } else {
+    musicOn();
+  }
+});
+
+// Add event listener to save current music time periodically
+background_music.addEventListener("timeupdate", function () {
+  localStorage.setItem("music_time", background_music.currentTime); // Save current music time in localStorage
+});
+
+// On page load, read saved sound state and music time
+window.addEventListener("load", function () {
+  let savedMusic = getCookie("music");
+  let savedTime = localStorage.getItem("music_time");
+
+  loadSong(currentSongIndex); // Load the first song
+
+  if (savedTime) {
+    background_music.currentTime = parseFloat(savedTime); // Set saved playback time
+  }
+
+  if (savedMusic) {
+    if (savedMusic === "on") {
+      musicOn();
+    } else if (savedMusic === "off") {
+      musicOff();
+    }
+  }
+});
+
+// Event listeners for next and previous buttons
+NEXT_BUTTON.addEventListener("click", nextSong);
+PREV_BUTTON.addEventListener("click", prevSong);

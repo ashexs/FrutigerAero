@@ -35,7 +35,7 @@
   <body>
     <div id="siteContainer">
       <!-- Spacer -->
-      <div class="website-spacers"></div>
+      <div class="website-spacer-top"></div>
       <!-- Top Navigation bar -->
       <nav id="mainNav" aria-label="Main Navigation">
         <div class="nav-side-vertical-separators vertical-separators"></div>
@@ -166,7 +166,7 @@
           <!-- On -->
           <button
             class="settings-buttons-inactive"
-            id="on"
+            id="soundsOn"
             aria-label="Sounds: On"
           >
             <span>On</span>
@@ -176,7 +176,7 @@
           <!-- Off -->
           <button
             class="settings-buttons-active"
-            id="off"
+            id="soundsOff"
             aria-label="Sounds: Off"
           >
             <span>Off</span>
@@ -185,14 +185,43 @@
         </div>
       </nav>
       <!-- Spacer -->
-      <div class="website-spacers"></div>
+      <div class="website-spacer-bottom"></div>
     </div>
 
     <!-- Add aria label later if pause button added -->
     <div id="musicBar">
-      <img src="images/music.svg" alt="" />
-      <span id="songTitle">Song title — </span>
-      <span id="songArtist">Song artist</span>
+      <!-- Music On / Off -->
+      <button
+        class="settings-buttons-active"
+        id="musicToggle"
+        aria-label="Toggle Music"
+      >
+        <img src="images/music_off.svg" alt="" id="musicToggleImg" />
+      </button>
+
+      <div class="vertical-separators"></div>
+      <div class="music-text-div">
+        <span id="songTitle">Song title — </span>
+        <span id="songArtist">Song artist</span>
+      </div>
+
+      <!-- Button Previous -->
+      <button
+        class="settings-buttons-active"
+        id="prevButton"
+        aria-label="Previous Song"
+      >
+        <img src="images/music_on.svg" alt="" />
+      </button>
+
+      <!-- Button Next -->
+      <button
+        class="settings-buttons-active"
+        id="nextButton"
+        aria-label="Next Song"
+      >
+        <img src="images/music_on.svg" alt="" />
+      </button>
     </div>
 
     <!-- Javascript -->

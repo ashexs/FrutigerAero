@@ -41,8 +41,12 @@ button {
   border: none;
 }
 
-.website-spacers {
-  height: 15px;
+/* Space on top and bottom of content */
+.website-spacer-top {
+  height: 20px;
+}
+.website-spacer-bottom {
+  height: 58px;
 }
 
 /* Align site content */
@@ -190,7 +194,6 @@ button {
 #musicBar {
   display: none;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   position: fixed;
   width: 627.5px;
@@ -209,8 +212,21 @@ button {
   backdrop-filter: blur(4px);
   border-radius: 8px 8px 0px 0px;
   z-index: 3;
+  overflow: hidden;
 }
-/* Text */
+#musicToggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+}
+/* Div containing the text */
+.music-text-div {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+/* The text itself */
 #musicBar span {
   font-weight: 300;
   font-size: 1.2em;
@@ -232,10 +248,6 @@ button {
 
 /* Mobile */
 @media (max-width: 750px) {
-  .website-spacers {
-    height: 20px;
-  }
-
   /* Stop centering content */
   #siteContainer {
     position: static;
@@ -292,8 +304,8 @@ button {
 
   /* Make bottom music bar responsive */
   #musicBar {
-    width: 100%;
-    left: 0;
+    width: 99.1%;
+    left: 6px;
   }
 }
 

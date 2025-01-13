@@ -33,143 +33,179 @@
     <link rel="canonical" href="frutiger-aero.com" />
   </head>
   <body>
-    <!-- Top Navigation bar -->
-    <nav id="mainNav" aria-label="Main Navigation">
-      <div class="vertical-separators"></div>
-      <!-- Home -->
-      <a href="index.html" class="main-nav-links-inactive"
-        ><img src="images/navbar/inactive/home.svg" alt="" /><span
-          >Home</span
-        ></a
+    <div id="siteContainer">
+      <!-- Spacer -->
+      <div class="website-spacer-top"></div>
+      <!-- Top Navigation bar -->
+      <nav id="mainNav" aria-label="Main Navigation">
+        <div class="nav-side-vertical-separators vertical-separators"></div>
+        <div class="main-nav-mobile-divs">
+          <!-- Home -->
+          <a href="index.html" class="main-nav-home main-nav-links-active"
+            ><img src="images/navbar/active/home.svg" alt="" /><span
+              class="home-nav-text"
+              >Home</span
+            ></a
+          >
+          <div class="vertical-separators"></div>
+
+          <!-- Community -->
+          <a href="community.html" class="main-nav-links-inactive"
+            ><img
+              src="images/navbar/inactive/community.svg"
+              alt=""
+              class="main-nav-images"
+            /><span>Community</span></a
+          >
+          <div class="vertical-separators"></div>
+
+          <!-- Resources -->
+          <a href="resources.html" class="main-nav-links-inactive"
+            ><img
+              src="images/navbar/inactive/resources.svg"
+              alt=""
+              class="main-nav-images"
+            /><span>Resources</span></a
+          >
+          <div class="vertical-separators"></div>
+        </div>
+
+        <div class="main-nav-mobile-divs">
+          <!-- Archives -->
+          <a href="archives.html" class="main-nav-links-inactive"
+            ><img
+              src="images/navbar/inactive/archives.svg"
+              alt=""
+              class="main-nav-images"
+            /><span>Archives</span></a
+          >
+          <div class="vertical-separators"></div>
+
+          <!-- About -->
+          <a href="about.html" class="main-nav-links-inactive"
+            ><img
+              src="images/navbar/inactive/about.svg"
+              alt=""
+              class="main-nav-images"
+            /><span>About</span></a
+          >
+          <div class="nav-side-vertical-separators vertical-separators"></div>
+        </div>
+      </nav>
+
+      <!-- Main Content (Middle) -->
+      <main id="mainContent">
+        <section id="introductionSection">
+          <header>
+            <h1>Welcome to the Frutiger Aero Site!</h1>
+          </header>
+
+          <article>
+            <img src="images/home/welcome.png" alt="Placeholder Image" />
+            <div>
+              <h2>Aero-chan says</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into.
+              </p>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <!-- Settings Bar (Text Size/Sound) -->
+      <nav id="settingsBar" aria-label="Settings Bar">
+        <div class="settings-bar-divs" aria-label="Settings: Text Size">
+          <div class="vertical-separators"></div>
+          <!-- Text size -->
+          <img src="images/home/text_size.svg" alt="" />
+          <span class="settings-titles">Text size:</span>
+          <div class="vertical-separators"></div>
+
+          <!-- S -->
+          <button
+            class="settings-buttons-inactive"
+            id="small"
+            aria-label="Text: Small"
+          >
+            <span>S</span>
+          </button>
+          <div class="vertical-separators"></div>
+
+          <!-- M -->
+          <button
+            class="settings-buttons-active"
+            id="medium"
+            aria-label="Text: Medium"
+          >
+            <span>M</span>
+          </button>
+          <div class="vertical-separators"></div>
+
+          <!-- L -->
+          <button
+            class="settings-buttons-inactive"
+            id="large"
+            aria-label="Text: Large"
+          >
+            <span>L</span>
+          </button>
+          <div class="vertical-separators"></div>
+        </div>
+
+        <div class="settings-bar-divs" aria-label="Settings: Sound">
+          <div class="vertical-separators"></div>
+          <!-- Sounds -->
+          <img src="images/home/sounds.svg" alt="" />
+          <span class="settings-titles">Sounds:</span>
+          <div class="vertical-separators"></div>
+
+          <!-- On -->
+          <button
+            class="settings-buttons-inactive"
+            id="soundsOn"
+            aria-label="Sounds: On"
+          >
+            <span>On</span>
+          </button>
+          <div class="vertical-separators"></div>
+
+          <!-- Off -->
+          <button
+            class="settings-buttons-active"
+            id="soundsOff"
+            aria-label="Sounds: Off"
+          >
+            <span>Off</span>
+          </button>
+          <div class="vertical-separators"></div>
+        </div>
+      </nav>
+      <!-- Spacer -->
+      <div class="website-spacer-bottom"></div>
+    </div>
+
+    <!-- Add aria label later if pause button added -->
+    <div id="musicBar">
+      <!-- Music On / Off -->
+      <button
+        class="settings-buttons-active"
+        id="musicToggle"
+        aria-label="Toggle Music"
       >
+        <img src="images/music_on.svg" alt="" id="musicToggleImg" />
+      </button>
       <div class="vertical-separators"></div>
-
-      <!-- Community -->
-      <a href="community.html" class="main-nav-links-active"
-        ><img src="images/navbar/active/community.svg" alt="" /><span
-          >Community</span
-        ></a
-      >
-      <div class="vertical-separators"></div>
-
-      <!-- Resources -->
-      <a href="resources.html" class="main-nav-links-inactive"
-        ><img src="images/navbar/inactive/resources.svg" alt="" /><span
-          >Resources</span
-        ></a
-      >
-      <div class="vertical-separators"></div>
-
-      <!-- Archives -->
-      <a href="archives.html" class="main-nav-links-inactive"
-        ><img src="images/navbar/inactive/archives.svg" alt="" /><span
-          >Archives</span
-        ></a
-      >
-      <div class="vertical-separators"></div>
-
-      <!-- About -->
-      <a href="about.html" class="main-nav-links-inactive"
-        ><img src="images/navbar/inactive/about.svg" alt="" /><span
-          >About</span
-        ></a
-      >
-      <div class="vertical-separators"></div>
-    </nav>
-
-    <!-- Main Content (Middle) -->
-    <main id="mainContent">
-      <section class="introduction-section">
-        <header>
-          <h1>Welcome to the Frutiger Aero Site!</h1>
-        </header>
-
-        <article>
-          <img src="images/home/welcome.png" alt="Placeholder Image" />
-          <div>
-            <h2>Aero-chan says</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into.
-            </p>
-          </div>
-        </article>
-      </section>
-    </main>
-
-    <!-- Settings Bar (Text Size/Sound) -->
-    <nav id="settingsBar" aria-label="Settings Bar">
-      <div class="settings-bar-divs" aria-label="Settings: Text Size">
-        <div class="vertical-separators"></div>
-        <!-- Text size -->
-        <img src="images/home/text_size.svg" alt="" />
-        <span class="settings-titles">Text size:</span>
-        <div class="vertical-separators"></div>
-
-        <!-- S -->
-        <button
-          class="settings-buttons-inactive"
-          id="small"
-          aria-label="Text: Small"
-        >
-          <span>S</span>
-        </button>
-        <div class="vertical-separators"></div>
-
-        <!-- M -->
-        <button
-          class="settings-buttons-active"
-          id="medium"
-          aria-label="Text: Medium"
-        >
-          <span>M</span>
-        </button>
-        <div class="vertical-separators"></div>
-
-        <!-- L -->
-        <button
-          class="settings-buttons-inactive"
-          id="large"
-          aria-label="Text: Large"
-        >
-          <span>L</span>
-        </button>
-        <div class="vertical-separators"></div>
+      <div class="music-text-div">
+        <span id="songTitle">Song title — </span>
+        <span id="songArtist">Song artist</span>
       </div>
-
-      <div class="settings-bar-divs" aria-label="Settings: Sound">
-        <div class="vertical-separators"></div>
-        <!-- Sounds -->
-        <img src="images/home/sounds.svg" alt="" />
-        <span class="settings-titles">Sounds:</span>
-        <div class="vertical-separators"></div>
-
-        <!-- On -->
-        <button
-          class="settings-buttons-inactive"
-          id="on"
-          aria-label="Sounds: On"
-        >
-          <span>On</span>
-        </button>
-        <div class="vertical-separators"></div>
-
-        <!-- Off -->
-        <button
-          class="settings-buttons-active"
-          id="off"
-          aria-label="Sounds: Off"
-        >
-          <span>Off</span>
-        </button>
-        <div class="vertical-separators"></div>
-      </div>
-    </nav>
+    </div>
 
     <!-- Javascript -->
-    <script src="javascript/settings.js" async defer></script>
+    <script src="javascript/scripts.js" async defer></script>
   </body>
 </html>
