@@ -2,7 +2,30 @@
 
 This is the page for the official Frutiger Aero Community website, maintained by the Consumer Aesthetic Network.
 
+Preview:
+
 <img src="thumbnail.jpg" alt="Thumbnail">
+
+Pages Done:
+
+✅ Home Page
+
+Pages to do:
+- Community Page
+- Resources Page
+- Archives Page
+- About Page
+
+What to improve on:
+
+⚠️ Playlist Next & Previous Buttons
+
+Other things to do:
+
+- Write content
+- Replace placeholder images
+- Choose songs for playlist
+- ???
 
 Figma Link:
 
