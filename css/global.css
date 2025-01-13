@@ -1,19 +1,31 @@
-/* Reset CSS for uniformity with different browsers */
+/* ---------------------- */
+/*         Reset CSS      */
+/* ---------------------- */
+
+/* Reset CSS for uniformity across browsers */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Ensure consistent box-sizing across browsers */
 }
 
-/* Custom Fonts */
+/* ---------------------- */
+/*      Custom Fonts      */
+/* ---------------------- */
+
+/* Load custom font */
 @font-face {
   font-family: "Noto Sans";
   src: url("../fonts/noto-sans-variable.ttf") format("opentype");
 }
 
-/* Background image and default font */
+/* ---------------------- */
+/*       Body Styles      */
+/* ---------------------- */
+
+/* Body background, font, and cursor */
 body {
   background: url("../images/background.png") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -28,20 +40,22 @@ body {
 /*         Global         */
 /* ---------------------- */
 
-/* Default Values */
+/* Default styles for links and buttons */
 a,
 button {
   cursor: url("../images/cursors/link.cur"), auto;
 }
+
 a {
   color: white;
   text-decoration: none;
 }
+
 button {
   border: none;
 }
 
-/* Space on top and bottom of content */
+/* Spacer elements for consistent layout */
 .website-spacer-top {
   height: 20px;
 }
@@ -49,7 +63,7 @@ button {
   height: 58px;
 }
 
-/* Align site content */
+/* Center align site container */
 #siteContainer {
   position: absolute;
   top: 0px;
@@ -58,11 +72,10 @@ button {
   right: 0;
   margin: auto;
   width: 1200px;
-  /* Modify height on other pages css */
   padding: 0px 20px;
 }
 
-/* Cosmetic Lines between links / buttons */
+/* Cosmetic vertical lines between links/buttons */
 .vertical-separators {
   background: linear-gradient(
     180deg,
@@ -77,8 +90,9 @@ button {
 }
 
 /* ---------------------- */
-/*        Top Navbar      */
+/*     Top Navbar Styles  */
 /* ---------------------- */
+
 #mainNav {
   display: flex;
   flex-direction: row;
@@ -98,17 +112,17 @@ button {
   border-radius: 8px;
   margin: auto;
 }
-/* Link images */
+
 #mainNav img {
   height: 20px;
 }
 
-/* Normal flex for non mobile */
+/* Flex layout for desktop navbar */
 .main-nav-mobile-divs {
   display: flex;
 }
 
-/* Navigation links + images */
+/* Styles for navigation links */
 .main-nav-links-inactive,
 .main-nav-links-active {
   display: flex;
@@ -122,7 +136,7 @@ button {
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
 }
 
-/* Active link style */
+/* Active link styles */
 .main-nav-links-active {
   background: linear-gradient(
       180deg,
@@ -136,7 +150,8 @@ button {
       rgba(61, 65, 67, 0) 50%
     );
 }
-/* Active link text */
+
+/* Active link text gradient */
 .main-nav-links-active span {
   font-weight: 500;
   background: linear-gradient(180deg, #9bd6bf 0%, #4aa877 48.44%, #37d16d 100%),
@@ -145,7 +160,8 @@ button {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-/* Inactive links style and hover effect */
+
+/* Inactive link styles and hover effect */
 .main-nav-links-inactive {
   position: relative;
   background: linear-gradient(
@@ -157,6 +173,7 @@ button {
   transition: all 0.1s ease-in;
   overflow: hidden;
 }
+
 .main-nav-links-inactive::before {
   content: "";
   position: absolute;
@@ -170,10 +187,12 @@ button {
   transition: opacity 0.1s ease-in;
   z-index: 1;
 }
+
 .main-nav-links-inactive:hover::before {
   opacity: 1;
 }
-/* Inactive link text */
+
+/* Inactive link text style */
 .main-nav-links-inactive span {
   background: linear-gradient(
     180deg,
@@ -185,12 +204,19 @@ button {
   background-clip: text;
 }
 
-/* Main Content (Under navbar) */
+/* ---------------------- */
+/*    Main Content Styles */
+/* ---------------------- */
+
+/* Main content styles under navbar */
 #mainContent {
   margin: 20px auto;
 }
 
-/* Bottom bar indicating current song */
+/* ---------------------- */
+/*        Music Bar       */
+/* ---------------------- */
+
 #musicBar {
   display: none;
   flex-direction: row;
@@ -214,19 +240,21 @@ button {
   z-index: 3;
   overflow: hidden;
 }
+
 #musicToggle {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 70px;
 }
-/* Div containing the text */
+
+/* Text inside music bar */
 .music-text-div {
   display: flex;
   width: 100%;
   justify-content: center;
 }
-/* The text itself */
+
 #musicBar span {
   font-weight: 300;
   font-size: 1.2em;
@@ -242,19 +270,18 @@ button {
   margin-left: 8px;
 }
 
-/* -------------- */
-/* Responsiveness */
-/* -------------- */
+/* ---------------------- */
+/*      Responsiveness    */
+/* ---------------------- */
 
-/* Mobile */
+/* Mobile styles */
 @media (max-width: 750px) {
-  /* Stop centering content */
   #siteContainer {
     position: static;
     width: auto;
   }
 
-  /* Collapse Navbar */
+  /* Navbar for mobile */
   #mainNav {
     border-radius: 0px;
     position: sticky;
@@ -264,12 +291,10 @@ button {
     height: 90px;
   }
 
-  /* Hide separators on the sides touching the window */
   .nav-side-vertical-separators {
     display: none;
   }
 
-  /* Responsive navbar */
   .main-nav-mobile-divs {
     display: flex;
     justify-content: center;
@@ -277,7 +302,6 @@ button {
     width: 100%;
   }
 
-  /* Make nav buttons full width */
   .main-nav-links-inactive,
   .main-nav-links-active {
     display: flex;
@@ -286,55 +310,50 @@ button {
     padding: 8px 0px;
   }
 
-  /* Home button */
   .main-nav-home {
     width: auto;
     padding: 11px 15px;
   }
 
-  /* Hide home nav text */
   .home-nav-text {
     display: none;
   }
 
-  /* Hide other nav images */
   .main-nav-images {
     display: none;
   }
 
-  /* Make bottom music bar responsive */
   #musicBar {
     width: 99.1%;
     left: 6px;
   }
 }
 
-/* Container Size based on window width */
+/* Desktop responsiveness */
 @media (min-width: 750px) {
   #siteContainer {
     width: 750px;
-    -moz-transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-    -webkit-transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-    -moz-transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-    -o-transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
   }
 }
+
 @media (min-width: 800px) {
   #siteContainer {
     width: 800px;
   }
 }
+
 @media (min-width: 900px) {
   #siteContainer {
     width: 900px;
   }
 }
+
 @media (min-width: 1000px) {
   #siteContainer {
     width: 1000px;
   }
 }
+
 @media (min-width: 1150px) {
   #siteContainer {
     width: 1100px;

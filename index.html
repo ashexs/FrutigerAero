@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Meta Information for SEO, Responsiveness, and Compatibility -->
     <meta charset="UTF-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Frutiger Aero Community</title>
-    <!-- Search Engine Meta -->
+
+    <!-- Search Engine Meta Description -->
     <meta
       name="description"
       content="A website dedicated to the Frutiger Aero community, with links, etc."
     />
+
+    <!-- Viewport settings for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Responsive Favicon -->
+
+    <!-- Favicon for the site -->
     <link
       rel="icon"
       type="image/png"
@@ -26,74 +31,80 @@
     />
     <meta name="apple-mobile-web-app-title" content="FA Archive" />
     <link rel="manifest" href="images/favicon/site.webmanifest" />
-    <!-- External CSS -->
+
+    <!-- External CSS Stylesheets -->
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/index.css" />
-    <!-- Canonical tag -->
+
+    <!-- Canonical Link to prevent duplicate content issues in search engines -->
     <link rel="canonical" href="frutiger-aero.com" />
   </head>
   <body>
     <div id="siteContainer">
-      <!-- Spacer -->
+      <!-- Spacer for top margin -->
       <div class="website-spacer-top"></div>
-      <!-- Top Navigation bar -->
+
+      <!-- Main Navigation Bar -->
       <nav id="mainNav" aria-label="Main Navigation">
         <div class="nav-side-vertical-separators vertical-separators"></div>
+
         <div class="main-nav-mobile-divs">
-          <!-- Home -->
-          <a href="index.html" class="main-nav-home main-nav-links-active"
-            ><img src="images/navbar/active/home.svg" alt="" /><span
-              class="home-nav-text"
-              >Home</span
-            ></a
-          >
+          <!-- Home Link -->
+          <a href="index.html" class="main-nav-home main-nav-links-active">
+            <img src="images/navbar/active/home.svg" alt="" />
+            <span class="home-nav-text">Home</span>
+          </a>
           <div class="vertical-separators"></div>
 
-          <!-- Community -->
-          <a href="community.html" class="main-nav-links-inactive"
-            ><img
+          <!-- Community Link -->
+          <a href="community.html" class="main-nav-links-inactive">
+            <img
               src="images/navbar/inactive/community.svg"
               alt=""
               class="main-nav-images"
-            /><span>Community</span></a
-          >
+            />
+            <span>Community</span>
+          </a>
           <div class="vertical-separators"></div>
 
-          <!-- Resources -->
-          <a href="resources.html" class="main-nav-links-inactive"
-            ><img
+          <!-- Resources Link -->
+          <a href="resources.html" class="main-nav-links-inactive">
+            <img
               src="images/navbar/inactive/resources.svg"
               alt=""
               class="main-nav-images"
-            /><span>Resources</span></a
-          >
+            />
+            <span>Resources</span>
+          </a>
           <div class="vertical-separators"></div>
         </div>
 
         <div class="main-nav-mobile-divs">
-          <!-- Archives -->
-          <a href="archives.html" class="main-nav-links-inactive"
-            ><img
+          <!-- Archives Link -->
+          <a href="archives.html" class="main-nav-links-inactive">
+            <img
               src="images/navbar/inactive/archives.svg"
               alt=""
               class="main-nav-images"
-            /><span>Archives</span></a
-          >
+            />
+            <span>Archives</span>
+          </a>
           <div class="vertical-separators"></div>
 
-          <!-- About -->
-          <a href="about.html" class="main-nav-links-inactive"
-            ><img
+          <!-- About Link -->
+          <a href="about.html" class="main-nav-links-inactive">
+            <img
               src="images/navbar/inactive/about.svg"
               alt=""
               class="main-nav-images"
-            /><span>About</span></a
-          >
+            />
+            <span>About</span>
+          </a>
           <div class="nav-side-vertical-separators vertical-separators"></div>
         </div>
       </nav>
 
-      <!-- Main Content (Middle) -->
+      <!-- Main Content Area -->
       <main id="mainContent">
         <section id="introductionSection">
           <header>
@@ -101,6 +112,7 @@
           </header>
 
           <article>
+            <!-- Placeholder Image for Welcome Section -->
             <img src="images/home/welcome.png" alt="Placeholder Image" />
             <div>
               <h2>Aero-chan says</h2>
@@ -108,24 +120,24 @@
                 Lorem Ipsum is simply dummy text of the printing and typesetting
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into.
+                of type...
               </p>
             </div>
           </article>
         </section>
       </main>
 
-      <!-- Settings Bar (Text Size/Sound) -->
+      <!-- Settings Bar for Text Size and Sound Controls -->
       <nav id="settingsBar" aria-label="Settings Bar">
         <div class="settings-bar-divs" aria-label="Settings: Text Size">
           <div class="vertical-separators"></div>
-          <!-- Text size -->
+
+          <!-- Text Size Controls -->
           <img src="images/home/text_size.svg" alt="" />
           <span class="settings-titles">Text size:</span>
           <div class="vertical-separators"></div>
 
-          <!-- Small -->
+          <!-- Small Text Button -->
           <button
             class="settings-buttons-inactive"
             id="small"
@@ -135,7 +147,7 @@
           </button>
           <div class="vertical-separators"></div>
 
-          <!-- Medium -->
+          <!-- Medium Text Button -->
           <button
             class="settings-buttons-active"
             id="medium"
@@ -145,7 +157,7 @@
           </button>
           <div class="vertical-separators"></div>
 
-          <!-- Large -->
+          <!-- Large Text Button -->
           <button
             class="settings-buttons-inactive"
             id="large"
@@ -158,12 +170,13 @@
 
         <div class="settings-bar-divs" aria-label="Settings: Sound">
           <div class="vertical-separators"></div>
-          <!-- Sounds -->
+
+          <!-- Sound Controls -->
           <img src="images/home/sounds.svg" alt="" />
           <span class="settings-titles">Sounds:</span>
           <div class="vertical-separators"></div>
 
-          <!-- On -->
+          <!-- Sound On Button -->
           <button
             class="settings-buttons-inactive"
             id="soundsOn"
@@ -173,7 +186,7 @@
           </button>
           <div class="vertical-separators"></div>
 
-          <!-- Off -->
+          <!-- Sound Off Button -->
           <button
             class="settings-buttons-active"
             id="soundsOff"
@@ -184,13 +197,14 @@
           <div class="vertical-separators"></div>
         </div>
       </nav>
-      <!-- Spacer -->
+
+      <!-- Spacer for bottom margin -->
       <div class="website-spacer-bottom"></div>
     </div>
 
-    <!-- Add aria label later if pause button added -->
+    <!-- Music Player Section -->
     <div id="musicBar">
-      <!-- Music On / Off -->
+      <!-- Music Toggle Button -->
       <button
         class="settings-buttons-active"
         id="musicToggle"
@@ -200,12 +214,14 @@
       </button>
 
       <div class="vertical-separators"></div>
+
+      <!-- Song Information Display -->
       <div class="music-text-div">
         <span id="songTitle">Song title — </span>
         <span id="songArtist">Song artist</span>
       </div>
 
-      <!-- Playlist Previous -->
+      <!-- Previous Song Button -->
       <button
         class="settings-buttons-active"
         id="prevButton"
@@ -214,7 +230,7 @@
         <img src="images/music_on.svg" alt="" />
       </button>
 
-      <!-- Playlist Next -->
+      <!-- Next Song Button -->
       <button
         class="settings-buttons-active"
         id="nextButton"
@@ -224,7 +240,8 @@
       </button>
     </div>
 
-    <!-- Javascript -->
-    <script src="javascript/scripts.js" async defer></script>
+    <!-- External Javascript Files for Music Player and Text Size -->
+    <script src="javascript/music_player.js" async defer></script>
+    <script src="javascript/text_size.js" async defer></script>
   </body>
 </html>

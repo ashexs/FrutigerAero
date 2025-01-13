@@ -1,4 +1,8 @@
-/* Center align */
+/* ---------------------- */
+/*      General Styles    */
+/* ---------------------- */
+
+/* Center align the content */
 #siteContainer {
   max-height: 700px;
 }
@@ -7,7 +11,7 @@
 /*      Intro Section     */
 /* ---------------------- */
 
-/* Header */
+/* Header Styles */
 #introductionSection header {
   background: linear-gradient(
       0deg,
@@ -29,7 +33,8 @@
   align-items: center;
   padding: 16px;
 }
-/* Heading */
+
+/* Main Heading Styles */
 #introductionSection h1 {
   background: linear-gradient(
     180deg,
@@ -46,7 +51,8 @@
   font-size: 2.5em;
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
 }
-/* Section content */
+
+/* Section Content Styles */
 #introductionSection article {
   background: linear-gradient(
     180deg,
@@ -71,7 +77,8 @@
   width: 200px;
   margin-right: 16px;
 }
-/* Title */
+
+/* Sub-heading Styles */
 #introductionSection h2 {
   background: linear-gradient(
     180deg,
@@ -85,6 +92,7 @@
   font-weight: 300;
   font-size: 2em;
 }
+
 /* Text Content */
 #introductionSection p {
   color: #e6e6e6;
@@ -99,7 +107,7 @@
 /*      Settings Bar      */
 /* ---------------------- */
 
-/* Container */
+/* Settings Bar Container */
 #settingsBar {
   display: flex;
   align-items: center;
@@ -107,7 +115,8 @@
   margin: 10px auto;
   gap: 20px;
 }
-/* Settings Divs (2 divs)*/
+
+/* Settings Div Styles */
 .settings-bar-divs {
   background: linear-gradient(
     180deg,
@@ -127,13 +136,15 @@
   height: 48px;
   width: 100%;
 }
-/* Setting Images */
+
+/* Settings Icons (Images) */
 .settings-bar-divs img {
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   margin-left: 10px;
   height: 28px;
 }
-/* Setting Title (Text Size | Sounds) */
+
+/* Settings Title (e.g., Text Size, Sounds) */
 .settings-titles {
   background: linear-gradient(
     180deg,
@@ -152,7 +163,8 @@
   margin: 0px 10px;
   cursor: default;
 }
-/* All buttons */
+
+/* Button Styles for All Buttons */
 .settings-buttons-inactive,
 .settings-buttons-active {
   display: flex;
@@ -166,7 +178,8 @@
   cursor: pointer;
   padding: 0px 15px;
 }
-/* Inactive Buttons style and hover effect */
+
+/* Inactive Button Style and Hover Effect */
 .settings-buttons-inactive {
   position: relative;
   background: linear-gradient(
@@ -194,7 +207,8 @@
 .settings-buttons-inactive:hover::before {
   opacity: 1;
 }
-/* Active Buttons */
+
+/* Active Button Styles */
 .settings-buttons-active {
   background: linear-gradient(
       180deg,
@@ -209,7 +223,7 @@
     );
 }
 
-/* Active Buttons text */
+/* Active Button Text Styles */
 .settings-buttons-active span {
   font-weight: 500;
   background: linear-gradient(180deg, #9bd6bf 0%, #4aa877 48.44%, #37d16d 100%),
@@ -218,7 +232,8 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
-/* Inactive link text */
+
+/* Inactive Button Text Styles */
 .settings-buttons-inactive span {
   background: linear-gradient(
     180deg,
@@ -230,13 +245,12 @@
   background-clip: text;
 }
 
-/* -------------- */
-/* Responsiveness */
-/* -------------- */
+/* ---------------------- */
+/*     Responsiveness     */
+/* ---------------------- */
 
-/* Size 3 : 750px */
+/* Size 3: For smaller screens, 750px */
 @media (max-width: 750px) {
-  /* Smaller Font */
   #introductionSection h1 {
     font-size: 2em;
   }
@@ -244,33 +258,28 @@
     font-size: 1.8em;
   }
 
-  /* Collapse Settings */
   #settingsBar {
     flex-direction: column;
   }
 }
 
-/* Size 2: 580px */
+/* Size 2: For smaller screens, 580px */
 @media (max-width: 580px) {
-  /* Collapse Section */
   #introductionSection article {
     flex-direction: column;
   }
 
-  /* Smaller Font */
   #introductionSection h1 {
     font-size: 1.8em;
   }
 
-  /* Center Heading */
   #introductionSection h2 {
     text-align: center;
   }
 }
 
-/* Size 1: 520px */
+/* Size 1: For very small screens, 520px */
 @media (max-width: 520px) {
-  /* Smaller Font */
   #introductionSection h1 {
     font-size: 1.5em;
   }
