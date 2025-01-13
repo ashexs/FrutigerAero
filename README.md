@@ -12,10 +12,6 @@ Pages to do:
 - Archives Page
 - About Page
 
-What to improve on:
-
-⚠️ Playlist Next & Previous Buttons
-
 Other things to do:
 
 - Replace placeholder text
@@ -23,6 +19,7 @@ Other things to do:
 - Choose a favicon
 - Choose songs for playlist
 - Change canonical links in HTML files to correct URLs
+- Playlist Next & Previous Buttons ??
 - ???
 
 When site is hosted:
