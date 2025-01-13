@@ -25,7 +25,7 @@ body {
 /* ---------------------- */
 
 /* Header */
-.introduction-section header {
+#introductionSection header {
   background: linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.3) 0%,
@@ -47,7 +47,7 @@ body {
   padding: 16px;
 }
 /* Heading */
-.introduction-section h1 {
+#introductionSection h1 {
   background: linear-gradient(
     180deg,
     rgba(138, 153, 138, 0.9) 0%,
@@ -64,7 +64,7 @@ body {
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
 }
 /* Section content */
-.introduction-section article {
+#introductionSection article {
   background: linear-gradient(
     180deg,
     rgba(111, 118, 122, 0.7) 0%,
@@ -83,12 +83,12 @@ body {
   padding: 16px;
 }
 /* Mascot Image */
-.introduction-section img {
+#introductionSection img {
   width: 200px;
   margin-right: 16px;
 }
 /* Title */
-.introduction-section h2 {
+#introductionSection h2 {
   background: linear-gradient(
     180deg,
     rgba(138, 153, 138, 0.9) 0%,
@@ -102,7 +102,7 @@ body {
   font-size: 2em;
 }
 /* Text Content */
-.introduction-section p {
+#introductionSection p {
   color: #e6e6e6;
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   max-width: 700px;
@@ -258,10 +258,10 @@ body {
   }
 
   /* Smaller Font */
-  .introduction-section h1 {
+  #introductionSection h1 {
     font-size: 2em;
   }
-  .introduction-section h2 {
+  #introductionSection h2 {
     font-size: 1.8em;
   }
 
@@ -274,17 +274,17 @@ body {
 /* Size 2: 580px */
 @media (max-width: 580px) {
   /* Collapse Section */
-  .introduction-section article {
+  #introductionSection article {
     flex-direction: column;
   }
 
   /* Smaller Font */
-  .introduction-section h1 {
+  #introductionSection h1 {
     font-size: 1.8em;
   }
 
   /* Center Heading */
-  .introduction-section h2 {
+  #introductionSection h2 {
     text-align: center;
   }
 }
@@ -292,7 +292,7 @@ body {
 /* Size 1: 520px */
 @media (max-width: 520px) {
   /* Smaller Font */
-  .introduction-section h1 {
+  #introductionSection h1 {
     font-size: 1.5em;
   }
 }

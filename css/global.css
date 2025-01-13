@@ -163,6 +163,46 @@ button {
   margin: 20px auto;
 }
 
+/* Bottom bar indicating current song */
+#musicBar {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 627.5px;
+  height: 48px;
+  left: calc(50% - 627.5px / 2 - 0.25px);
+  bottom: 0px;
+  background: linear-gradient(
+    180deg,
+    rgba(111, 118, 122, 0.7) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(62, 65, 67, 0.7) 100%
+  );
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
+    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  border-radius: 8px 8px 0px 0px;
+  z-index: 3;
+}
+/* Text */
+#musicBar span {
+  font-weight: 300;
+  font-size: 1.2em;
+  background: linear-gradient(
+    180deg,
+    rgba(138, 153, 138, 0.9) 0%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
+  margin-left: 8px;
+}
+
 /* -------------- */
 /* Responsiveness */
 /* -------------- */
@@ -179,6 +219,12 @@ button {
   .main-nav-links-inactive,
   .main-nav-links-active {
     width: 100%;
+  }
+
+  /* Make bottom music bar responsive */
+  #musicBar {
+    width: 100%;
+    left: 0;
   }
 }
 
