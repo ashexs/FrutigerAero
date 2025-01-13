@@ -20,6 +20,7 @@ Other things to do:
 
 - Replace placeholder text
 - Replace placeholder images
+- Choose a favicon
 - Choose songs for playlist
 - ???
 
