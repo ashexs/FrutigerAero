@@ -18,7 +18,7 @@ What to improve on:
 
 Other things to do:
 
-- Write content
+- Replace placeholder text
 - Replace placeholder images
 - Choose songs for playlist
 - ???
