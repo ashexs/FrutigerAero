@@ -177,7 +177,7 @@ button {
     rgba(61, 65, 67, 0.4) 49%,
     rgba(61, 65, 67, 0) 50%
   );
-  transition: all 0.1s ease-in;
+  transition: all 0.2s ease-in;
   overflow: hidden;
 }
 
@@ -191,7 +191,7 @@ button {
     rgba(145, 152, 141, 0.4) 100%
   );
   opacity: 0;
-  transition: opacity 0.1s ease-in;
+  transition: opacity 0.2s ease-in;
   z-index: 1;
 }
 
