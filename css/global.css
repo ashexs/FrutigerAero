@@ -268,7 +268,6 @@ button {
 
 /* Styling for main navigation bar */
 #mainNav {
-  max-width: 1200px;
   height: 48px;
   padding: 0;
   border-radius: 8px;
@@ -499,8 +498,14 @@ button {
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 1100px) {
   #siteContainer {
     width: 1100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #siteContainer {
+    width: 1200px;
   }
 }
