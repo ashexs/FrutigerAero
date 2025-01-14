@@ -1,0 +1,8 @@
+.community-top-links {
+  display: flex;
+  align-items: center;
+}
+
+.community-top-links img {
+  width: 50px;
+}

@@ -45,19 +45,22 @@
       <div class="website-spacer-top"></div>
 
       <!-- Main Navigation Bar -->
-      <nav id="mainNav" aria-label="Main Navigation">
+      <nav id="mainNav" class="containers-style" aria-label="Main Navigation">
         <div class="nav-side-vertical-separators vertical-separators"></div>
 
         <div class="main-nav-mobile-divs">
           <!-- Home Link -->
-          <a href="index.html" class="main-nav-home main-nav-links-active">
+          <a
+            href="index.html"
+            class="main-nav-home main-nav-links button-links-active"
+          >
             <img src="images/navbar/active/home.svg" alt="" />
             <span class="home-nav-text">Home</span>
           </a>
           <div class="vertical-separators"></div>
 
           <!-- Community Link -->
-          <a href="community.html" class="main-nav-links-inactive">
+          <a href="community.html" class="main-nav-links button-links-inactive">
             <img
               src="images/navbar/inactive/community.svg"
               alt=""
@@ -68,7 +71,7 @@
           <div class="vertical-separators"></div>
 
           <!-- Resources Link -->
-          <a href="resources.html" class="main-nav-links-inactive">
+          <a href="resources.html" class="main-nav-links button-links-inactive">
             <img
               src="images/navbar/inactive/resources.svg"
               alt=""
@@ -81,7 +84,7 @@
 
         <div class="main-nav-mobile-divs">
           <!-- Archives Link -->
-          <a href="archives.html" class="main-nav-links-inactive">
+          <a href="archives.html" class="main-nav-links button-links-inactive">
             <img
               src="images/navbar/inactive/archives.svg"
               alt=""
@@ -92,7 +95,7 @@
           <div class="vertical-separators"></div>
 
           <!-- About Link -->
-          <a href="about.html" class="main-nav-links-inactive">
+          <a href="about.html" class="main-nav-links button-links-inactive">
             <img
               src="images/navbar/inactive/about.svg"
               alt=""
@@ -107,11 +110,11 @@
       <!-- Main Content Area -->
       <main id="mainContent">
         <section id="introductionSection">
-          <header>
+          <header class="containers-style">
             <h1>Welcome to the Frutiger Aero Site!</h1>
           </header>
 
-          <article>
+          <article class="containers-style">
             <!-- Placeholder Image for Welcome Section -->
             <img src="images/home/welcome.png" alt="Placeholder Image" />
             <div>
@@ -129,7 +132,10 @@
 
       <!-- Settings Bar for Text Size and Sound Controls -->
       <nav id="settingsBar" aria-label="Settings Bar">
-        <div class="settings-bar-divs" aria-label="Settings: Text Size">
+        <div
+          class="settings-bar-divs containers-style"
+          aria-label="Settings: Text Size"
+        >
           <div
             class="settings-side-vertical-separators vertical-separators"
           ></div>
@@ -141,7 +147,7 @@
 
           <!-- Small Text Button -->
           <button
-            class="settings-buttons-inactive"
+            class="settings-buttons button-links-inactive"
             id="small"
             aria-label="Text: Small"
           >
@@ -151,7 +157,7 @@
 
           <!-- Medium Text Button -->
           <button
-            class="settings-buttons-active"
+            class="settings-buttons button-links-active"
             id="medium"
             aria-label="Text: Medium"
           >
@@ -161,7 +167,7 @@
 
           <!-- Large Text Button -->
           <button
-            class="settings-buttons-inactive"
+            class="settings-buttons button-links-inactive"
             id="large"
             aria-label="Text: Large"
           >
@@ -170,7 +176,10 @@
           <div class="vertical-separators"></div>
         </div>
 
-        <div class="settings-bar-divs" aria-label="Settings: Sound">
+        <div
+          class="settings-bar-divs containers-style"
+          aria-label="Settings: Sound"
+        >
           <div
             class="settings-side-vertical-separators vertical-separators"
           ></div>
@@ -182,7 +191,7 @@
 
           <!-- Sound On Button -->
           <button
-            class="settings-buttons-inactive"
+            class="settings-buttons button-links-inactive"
             id="soundsOn"
             aria-label="Sounds: On"
           >
@@ -192,7 +201,7 @@
 
           <!-- Sound Off Button -->
           <button
-            class="settings-buttons-active"
+            class="settings-buttons button-links-active"
             id="soundsOff"
             aria-label="Sounds: Off"
           >
@@ -207,10 +216,10 @@
     </div>
 
     <!-- Music Player Section -->
-    <div id="musicBar">
+    <div id="musicBar" class="containers-style">
       <!-- Music Toggle Button -->
       <button
-        class="settings-buttons-active"
+        class="button-links-inactive"
         id="musicToggle"
         aria-label="Toggle Music"
       >
@@ -226,28 +235,9 @@
           <span id="songArtist">Song artist</span>
         </div>
       </div>
-
-      <!-- Previous Song Button -->
-      <!-- <button
-        class="settings-buttons-active"
-        id="prevButton"
-        aria-label="Previous Song"
-      >
-        <img src="images/music_on.svg" alt="" />
-      </button> -->
-
-      <!-- Next Song Button -->
-      <!-- <button
-        class="settings-buttons-active"
-        id="nextButton"
-        aria-label="Next Song"
-      >
-        <img src="images/music_on.svg" alt="" />
-      </button> -->
     </div>
 
-    <!-- External Javascript Files for Music Player and Text Size -->
-    <script src="javascript/music_player.js" async defer></script>
-    <script src="javascript/text_size.js" async defer></script>
+    <!-- Javascript -->
+    <script src="javascript/scripts.js" async defer></script>
   </body>
 </html>

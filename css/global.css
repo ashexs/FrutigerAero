@@ -2,20 +2,20 @@
 /*         Reset CSS      */
 /* ---------------------- */
 
-/* Reset CSS for uniformity across browsers */
+/* Reset all elements to have consistent margin, padding, and box-sizing */
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Ensure consistent box-sizing across browsers */
+  box-sizing: border-box;
 }
 
 /* ---------------------- */
 /*      Custom Fonts      */
 /* ---------------------- */
 
-/* Load custom font */
+/* Load and define custom font "Noto Sans" */
 @font-face {
   font-family: "Noto Sans";
   src: url("../fonts/noto-sans-variable.ttf") format("opentype");
@@ -25,7 +25,7 @@
 /*       Body Styles      */
 /* ---------------------- */
 
-/* Body background, font, and cursor */
+/* Set background, font family, and cursor styles for the body */
 body {
   background: url("../images/background.png") no-repeat center center fixed;
   -webkit-background-size: cover;
@@ -40,45 +40,117 @@ body {
 /*         Global         */
 /* ---------------------- */
 
-/* Default styles for links and buttons */
+/* Gradient text style for main headings (h1, h2) */
+h1,
+h2 {
+  background: linear-gradient(
+    180deg,
+    rgba(213, 224, 213, 0.9) 0%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
+  font-weight: 300;
+}
+
+/* Styling for main heading (h1) */
+h1 {
+  display: flex;
+  align-items: center;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+/* Styling for sub-heading (h2) */
+h2 {
+  font-size: 2em;
+}
+
+/* Gradient text style for paragraphs */
+p {
+  background: linear-gradient(
+    180deg,
+    rgba(247, 255, 247, 0.9) 0%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
+  max-width: 700px;
+  font-weight: 400;
+  font-size: 1.06em;
+  margin-top: 10px;
+}
+
+/* Default cursor styles for links and buttons */
 a,
 button {
   cursor: url("../images/cursors/link.cur"), auto;
 }
 
+/* Styling for links */
 a {
   color: #ffffff;
   text-decoration: none;
 }
+
+/* Underline effect on hover for links */
 a:hover {
   text-decoration: underline;
 }
 
+/* Default button styles */
 button {
   border: none;
 }
 
-/* Spacer elements for consistent layout */
+/* ---------------------- */
+/*   Container Styling    */
+/* ---------------------- */
+
+/* Default container style with gradient background and shadows */
+.containers-style {
+  background: linear-gradient(
+    180deg,
+    rgba(111, 118, 122, 0.7) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(62, 65, 67, 0.7) 100%
+  );
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
+    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+
+/* Spacer elements for consistent spacing */
 .website-spacer-top {
   height: 20px;
 }
+
 .website-spacer-bottom {
   height: 58px;
 }
 
-/* Center align site container */
+/* Center align the main site container */
 #siteContainer {
   position: absolute;
-  top: 0px;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
   width: 1200px;
-  padding: 0px 20px;
+  padding: 0 20px;
 }
 
-/* Cosmetic vertical lines between links/buttons */
+/* Vertical line separators between links/buttons */
 .vertical-separators {
   background: linear-gradient(
     180deg,
@@ -93,55 +165,11 @@ button {
 }
 
 /* ---------------------- */
-/*     Top Navbar Styles  */
+/*   Link Button Styles   */
 /* ---------------------- */
 
-#mainNav {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  max-width: 1200px;
-  height: 48px;
-  background: linear-gradient(
-    180deg,
-    rgba(111, 118, 122, 0.7) 0%,
-    rgba(0, 0, 0, 0.7) 50%,
-    rgba(62, 65, 67, 0.7) 100%
-  );
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
-    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
-    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
-  border-radius: 8px;
-  margin: auto;
-}
-
-#mainNav img {
-  height: 20px;
-}
-
-/* Flex layout for desktop navbar */
-.main-nav-mobile-divs {
-  display: flex;
-}
-
-/* Styles for navigation links */
-.main-nav-links-inactive,
-.main-nav-links-active {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 8px 15px;
-  gap: 7px;
-  height: 48px;
-  font-size: 1.3em;
-  font-weight: 300;
-  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
-}
-
-/* Active link styles */
-.main-nav-links-active {
+/* Active button link styles with gradient background */
+.button-links-active {
   background: linear-gradient(
       180deg,
       rgba(74, 168, 135, 0) 30%,
@@ -155,93 +183,37 @@ button {
     );
 }
 
-.main-nav-links-active:hover {
+/* Remove underline effect on hover for active button links */
+.button-links-active:hover {
   text-decoration: none;
 }
 
-/* Active link text gradient */
-.main-nav-links-active span {
-  font-weight: 500;
+/* Gradient text style for active button links */
+.button-links-active span {
   background: linear-gradient(180deg, #9bd6bf 0%, #5fd196 48.44%, #37d16d 100%),
     linear-gradient(180deg, rgba(138, 153, 138, 0.9) 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 500;
 }
 
-/* Inactive link styles and hover effect */
-.main-nav-links-inactive {
-  position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(146, 155, 160, 0.6) 0%,
-    rgba(61, 65, 67, 0.4) 49%,
-    rgba(61, 65, 67, 0) 50%
-  );
-  transition: all 0.2s ease-in;
-  overflow: hidden;
-}
-
-.main-nav-links-inactive::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(127, 140, 124, 0) 30%,
-    rgba(145, 152, 141, 0.4) 100%
-  );
-  opacity: 0;
-  transition: opacity 0.2s ease-in;
-  z-index: 1;
-}
-
-.main-nav-links-inactive:hover::before {
-  opacity: 1;
-}
-
-/* Inactive link text style */
-.main-nav-links-inactive span {
-  background: linear-gradient(
-    180deg,
-    rgba(138, 153, 138, 0.9) 0%,
-    #ffffff 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* ---------------------- */
-/*    Main Content Styles */
-/* ---------------------- */
-
-/* Main content styles under navbar */
-#mainContent {
-  margin: 20px auto;
-}
-
-/* -------------------------- */
-/*      Settings Buttons      */
-/* -------------------------- */
-
-/* Button Styles for All Buttons */
-.settings-buttons-inactive,
-.settings-buttons-active {
+/* Common styles for both active and inactive button links */
+.button-links-active,
+.button-links-inactive {
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
-  padding: 8px 10px;
   gap: 7px;
   height: 100%;
   font-size: 1.2em;
   font-weight: 250;
   cursor: pointer;
-  padding: 0px 15px;
 }
 
-/* Inactive Button Style and Hover Effect */
-.settings-buttons-inactive {
+/* Inactive button link styles with gradient background */
+.button-links-inactive {
   position: relative;
   background: linear-gradient(
     180deg,
@@ -252,7 +224,9 @@ button {
   transition: all 0.2s ease-in;
   overflow: hidden;
 }
-.settings-buttons-inactive::before {
+
+/* Hover effect for inactive button links */
+.button-links-inactive::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -265,37 +239,13 @@ button {
   transition: opacity 0.2s ease-in;
   z-index: 1;
 }
-.settings-buttons-inactive:hover::before {
+
+.button-links-inactive:hover::before {
   opacity: 1;
 }
 
-/* Active Button Styles */
-.settings-buttons-active {
-  background: linear-gradient(
-      180deg,
-      rgba(74, 168, 135, 0) 30%,
-      rgba(12, 224, 122, 0.4) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(146, 155, 160, 0.6) 0%,
-      rgba(61, 65, 67, 0.4) 49%,
-      rgba(61, 65, 67, 0) 50%
-    );
-}
-
-/* Active Button Text Styles */
-.settings-buttons-active span {
-  font-weight: 500;
-  background: linear-gradient(180deg, #9bd6bf 0%, #4aa877 48.44%, #37d16d 100%),
-    linear-gradient(180deg, rgba(138, 153, 138, 0.9) 0%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Inactive Button Text Styles */
-.settings-buttons-inactive span {
+/* Gradient text style for inactive button links */
+.button-links-inactive span {
   background: linear-gradient(
     180deg,
     rgba(138, 153, 138, 0.9) 0%,
@@ -307,46 +257,79 @@ button {
   color: #ffffff;
 }
 
-.settings-buttons-inactive:hover span {
+/* Underline effect on hover for inactive button link text */
+.button-links-inactive:hover span {
   text-decoration: underline;
+}
+
+/* ---------------------- */
+/*     Top Navbar Styles  */
+/* ---------------------- */
+
+/* Styling for main navigation bar */
+#mainNav {
+  max-width: 1200px;
+  height: 48px;
+  padding: 0;
+  border-radius: 8px;
+  margin: auto;
+}
+
+/* Set height for images in navigation bar */
+#mainNav img {
+  height: 20px;
+}
+
+/* Flex layout for desktop navigation bar */
+.main-nav-mobile-divs {
+  display: flex;
+}
+
+/* Padding and font size for navigation links */
+.main-nav-links {
+  height: 48px;
+  padding: 8px 15px;
+  font-size: 1.3em;
+}
+
+/* ---------------------- */
+/*    Main Content Styles */
+/* ---------------------- */
+
+/* Set margin for main content section */
+#mainContent {
+  margin: 20px auto;
 }
 
 /* ---------------------- */
 /*        Music Bar       */
 /* ---------------------- */
 
+/* Hidden music bar by default */
 #musicBar {
   display: none;
-  flex-direction: row;
-  align-items: center;
   position: fixed;
   width: 627.5px;
   height: 48px;
   left: calc(50% - 627.5px / 2 - 0.25px);
-  bottom: 0px;
-  background: linear-gradient(
-    180deg,
-    rgba(111, 118, 122, 0.7) 0%,
-    rgba(0, 0, 0, 0.7) 50%,
-    rgba(62, 65, 67, 0.7) 100%
-  );
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
-    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
-    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+  bottom: 0;
   backdrop-filter: blur(4px);
-  border-radius: 8px 8px 0px 0px;
-  padding-right: 1px;
+  border-radius: 8px 8px 0 0;
+  padding: 0 1px 0 0;
   z-index: 3;
   overflow: hidden;
 }
 
+/* Toggle button for music bar */
 #musicToggle {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 70px;
+  padding: 0 15px;
 }
 
+/* Styling for text in the music bar */
 .music-text-div {
   margin: auto;
   text-align: center;
@@ -371,14 +354,14 @@ button {
   text-wrap: nowrap;
 }
 
-/* Inner text div that may overflow */
+/* Inner text in the music bar */
 .music-inner-text {
   display: inline-block;
   white-space: nowrap;
   transition: transform 0.3s ease;
 }
 
-/* Scrolling animation class */
+/* Scrolling animation for music text */
 .scrolling {
   animation: scroll 7s linear infinite;
 }
@@ -396,6 +379,7 @@ button {
 /*      Responsiveness    */
 /* ---------------------- */
 
+/* Reduce font size for nav links on smaller screens */
 @media (max-width: 900px) {
   .main-nav-links-inactive,
   .main-nav-links-active {
@@ -405,17 +389,25 @@ button {
 
 /* Mobile styles */
 @media (max-width: 750px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
+
   #siteContainer {
     position: static;
     width: auto;
   }
 
   #mainNav {
-    border-radius: 0px;
+    border-radius: 0;
     position: sticky;
-    top: 0px;
+    top: 0;
     flex-direction: column;
-    margin: -20px -20px 0px -20px;
+    margin: -20px -20px 0 -20px;
     height: 90px;
   }
 
@@ -430,12 +422,9 @@ button {
     width: 100%;
   }
 
-  .main-nav-links-inactive,
-  .main-nav-links-active {
-    display: flex;
-    justify-content: center;
+  .main-nav-links {
+    padding: 8px 0;
     width: 100%;
-    padding: 8px 0px;
   }
 
   .main-nav-home {
@@ -453,14 +442,27 @@ button {
 
   #musicBar {
     width: 100%;
-    left: 0px;
+    left: 0;
+  }
+}
+
+/* Further reduce font size for smaller screens */
+@media (max-width: 580px) {
+  h1 {
+    font-size: 1.8em;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 520px) {
+  h1 {
+    font-size: 1.5em;
   }
 }
 
 /* Small mobile */
 @media (max-width: 300px) {
-  .main-nav-links-inactive,
-  .main-nav-links-active {
+  .main-nav-links {
     font-size: 1em;
   }
 }
@@ -470,14 +472,9 @@ button {
   .main-nav-home {
     padding: 11px 5px;
   }
-
-  .settings-buttons-inactive,
-  .settings-buttons-active {
-    padding: 8px 8px;
-  }
 }
 
-/* Desktop responsiveness */
+/* Desktop responsiveness - adjust site container width */
 @media (min-width: 750px) {
   #siteContainer {
     width: 750px;

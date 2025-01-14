@@ -34,7 +34,7 @@
 
     <!-- External CSS Stylesheets -->
     <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/community.css" />
 
     <!-- Canonical Link to prevent duplicate content issues in search engines -->
     <link rel="canonical" href="frutigeraero.org" />
@@ -45,19 +45,22 @@
       <div class="website-spacer-top"></div>
 
       <!-- Main Navigation Bar -->
-      <nav id="mainNav" aria-label="Main Navigation">
+      <nav id="mainNav" class="containers-style" aria-label="Main Navigation">
         <div class="nav-side-vertical-separators vertical-separators"></div>
 
         <div class="main-nav-mobile-divs">
           <!-- Home Link -->
-          <a href="index.html" class="main-nav-home main-nav-links-active">
+          <a
+            href="index.html"
+            class="main-nav-home main-nav-links button-links-active"
+          >
             <img src="images/navbar/active/home.svg" alt="" />
             <span class="home-nav-text">Home</span>
           </a>
           <div class="vertical-separators"></div>
 
           <!-- Community Link -->
-          <a href="community.html" class="main-nav-links-inactive">
+          <a href="community.html" class="main-nav-links button-links-inactive">
             <img
               src="images/navbar/inactive/community.svg"
               alt=""
@@ -68,7 +71,7 @@
           <div class="vertical-separators"></div>
 
           <!-- Resources Link -->
-          <a href="resources.html" class="main-nav-links-inactive">
+          <a href="resources.html" class="main-nav-links button-links-inactive">
             <img
               src="images/navbar/inactive/resources.svg"
               alt=""
@@ -81,7 +84,7 @@
 
         <div class="main-nav-mobile-divs">
           <!-- Archives Link -->
-          <a href="archives.html" class="main-nav-links-inactive">
+          <a href="archives.html" class="main-nav-links button-links-inactive">
             <img
               src="images/navbar/inactive/archives.svg"
               alt=""
@@ -92,7 +95,7 @@
           <div class="vertical-separators"></div>
 
           <!-- About Link -->
-          <a href="about.html" class="main-nav-links-inactive">
+          <a href="about.html" class="main-nav-links button-links-inactive">
             <img
               src="images/navbar/inactive/about.svg"
               alt=""
@@ -106,111 +109,52 @@
 
       <!-- Main Content Area -->
       <main id="mainContent">
-        <section id="introductionSection">
-          <header>
-            <h1>Welcome to the Frutiger Aero Site!</h1>
+        <section id="communitySection">
+          <header class="containers-style">
+            <h1>Community - Top Links</h1>
           </header>
 
-          <article>
-            <!-- Placeholder Image for Welcome Section -->
-            <img src="images/home/welcome.png" alt="Placeholder Image" />
-            <div>
-              <h2>Aero-chan says</h2>
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type...
-              </p>
-            </div>
+          <article class="containers-style">
+            <!-- Discord -->
+            <a href="" target="_blank" class="community-top-links">
+              <img src="images/home/welcome.png" />
+              <span>Discord</span>
+            </a>
+            <div class="vertical-separators"></div>
+
+            <!-- Reddit -->
+            <a href="" target="_blank" class="community-top-links">
+              <img src="images/home/welcome.png" />
+              <span>Reddit</span>
+            </a>
+            <div class="vertical-separators"></div>
+
+            <!-- Spotify Playlist -->
+            <a href="" target="_blank" class="community-top-links">
+              <img src="images/home/welcome.png" />
+              <span>Spotify Playlist</span>
+            </a>
+            <div class="vertical-separators"></div>
+
+            <!-- Patreon -->
+            <a href="" target="_blank" class="community-top-links">
+              <img src="images/home/welcome.png" />
+              <span>Patreon</span>
+            </a>
+            <div class="vertical-separators"></div>
           </article>
         </section>
       </main>
-
-      <!-- Settings Bar for Text Size and Sound Controls -->
-      <nav id="settingsBar" aria-label="Settings Bar">
-        <div class="settings-bar-divs" aria-label="Settings: Text Size">
-          <div
-            class="settings-side-vertical-separators vertical-separators"
-          ></div>
-
-          <!-- Text Size Controls -->
-          <img src="images/home/text_size.svg" alt="" />
-          <span class="settings-titles">Text size:</span>
-          <div class="vertical-separators"></div>
-
-          <!-- Small Text Button -->
-          <button
-            class="settings-buttons-inactive"
-            id="small"
-            aria-label="Text: Small"
-          >
-            <span>S</span>
-          </button>
-          <div class="vertical-separators"></div>
-
-          <!-- Medium Text Button -->
-          <button
-            class="settings-buttons-active"
-            id="medium"
-            aria-label="Text: Medium"
-          >
-            <span>M</span>
-          </button>
-          <div class="vertical-separators"></div>
-
-          <!-- Large Text Button -->
-          <button
-            class="settings-buttons-inactive"
-            id="large"
-            aria-label="Text: Large"
-          >
-            <span>L</span>
-          </button>
-          <div class="vertical-separators"></div>
-        </div>
-
-        <div class="settings-bar-divs" aria-label="Settings: Sound">
-          <div
-            class="settings-side-vertical-separators vertical-separators"
-          ></div>
-
-          <!-- Sound Controls -->
-          <img src="images/home/sounds.svg" alt="" />
-          <span class="settings-titles">Sounds:</span>
-          <div class="vertical-separators"></div>
-
-          <!-- Sound On Button -->
-          <button
-            class="settings-buttons-inactive"
-            id="soundsOn"
-            aria-label="Sounds: On"
-          >
-            <span>On</span>
-          </button>
-          <div class="vertical-separators"></div>
-
-          <!-- Sound Off Button -->
-          <button
-            class="settings-buttons-active"
-            id="soundsOff"
-            aria-label="Sounds: Off"
-          >
-            <span>Off</span>
-          </button>
-          <div class="vertical-separators"></div>
-        </div>
-      </nav>
 
       <!-- Spacer for bottom margin -->
       <div class="website-spacer-bottom"></div>
     </div>
 
     <!-- Music Player Section -->
-    <div id="musicBar">
+    <div id="musicBar" class="containers-style">
       <!-- Music Toggle Button -->
       <button
-        class="settings-buttons-active"
+        class="button-links-inactive"
         id="musicToggle"
         aria-label="Toggle Music"
       >
@@ -226,28 +170,9 @@
           <span id="songArtist">Song artist</span>
         </div>
       </div>
-
-      <!-- Previous Song Button -->
-      <!-- <button
-        class="settings-buttons-active"
-        id="prevButton"
-        aria-label="Previous Song"
-      >
-        <img src="images/music_on.svg" alt="" />
-      </button> -->
-
-      <!-- Next Song Button -->
-      <!-- <button
-        class="settings-buttons-active"
-        id="nextButton"
-        aria-label="Next Song"
-      >
-        <img src="images/music_on.svg" alt="" />
-      </button> -->
     </div>
 
-    <!-- External Javascript Files for Music Player and Text Size -->
-    <script src="javascript/music_player.js" async defer></script>
-    <script src="javascript/text_size.js" async defer></script>
+    <!-- Javascript -->
+    <script src="javascript/scripts.js" async defer></script>
   </body>
 </html>

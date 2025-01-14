@@ -13,101 +13,20 @@
 
 /* Header Styles */
 #introductionSection header {
-  background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 0.3) 0%,
-      rgba(0, 0, 0, 0) 16.67%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.63) 0%,
-      rgba(111, 118, 122, 0.7) 90.5%
-    );
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
-    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
-    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 16px;
 }
 
-/* Main Heading Styles */
-#introductionSection h1 {
-  background: linear-gradient(
-    180deg,
-    rgba(213, 224, 213, 0.9) 0%,
-    #ffffff 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-weight: 300;
-  font-size: 2.5em;
-  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
-}
-
-/* Section Content Styles */
+/* Article border radius */
 #introductionSection article {
-  background: linear-gradient(
-    180deg,
-    rgba(111, 118, 122, 0.7) 0%,
-    rgba(0, 0, 0, 0.7) 50%,
-    rgba(62, 65, 67, 0.7) 100%
-  );
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
-    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
-    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 16px;
 }
 
 /* Mascot Image */
 #introductionSection img {
   width: 200px;
   margin-right: 20px;
-}
-
-/* Sub-heading Styles */
-#introductionSection h2 {
-  background: linear-gradient(
-    180deg,
-    rgba(213, 224, 213, 0.9) 0%,
-    #ffffff 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
-  font-weight: 300;
-  font-size: 2em;
-}
-
-/* Text Content */
-#introductionSection p {
-  background: linear-gradient(
-    180deg,
-    rgba(247, 255, 247, 0.9) 0%,
-    #ffffff 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
-  max-width: 700px;
-  font-weight: 400;
-  font-size: 1.06em;
-  margin-top: 10px;
 }
 
 /* ---------------------- */
@@ -125,23 +44,11 @@
 
 /* Settings Div Styles */
 .settings-bar-divs {
-  background: linear-gradient(
-    180deg,
-    rgba(111, 118, 122, 0.7) 0%,
-    rgba(0, 0, 0, 0.7) 50%,
-    rgba(62, 65, 67, 0.7) 100%
-  );
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
-    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
-    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(4px);
   border-radius: 8px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
   height: 48px;
   width: 100%;
+  padding: 0px;
   overflow-x: auto;
 }
 
@@ -165,11 +72,15 @@
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   height: 20px;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 1.3em;
   line-height: 100%;
   margin: 0px 10px;
   cursor: default;
   text-wrap: nowrap;
+}
+
+.settings-buttons {
+  padding: 0px 15px;
 }
 
 /* ---------------------- */
@@ -178,13 +89,6 @@
 
 /* Size 4: For smaller screens, 750px */
 @media (max-width: 750px) {
-  #introductionSection h1 {
-    font-size: 2em;
-  }
-  #introductionSection h2 {
-    font-size: 1.8em;
-  }
-
   #settingsBar {
     flex-direction: column;
   }
@@ -194,10 +98,6 @@
 @media (max-width: 580px) {
   #introductionSection article {
     flex-direction: column;
-  }
-
-  #introductionSection h1 {
-    font-size: 1.8em;
   }
 
   #introductionSection img {
@@ -210,13 +110,7 @@
   }
 }
 
-/* Size 2: For very small screens, 520px */
-@media (max-width: 520px) {
-  #introductionSection h1 {
-    font-size: 1.5em;
-  }
-}
-
+/* Size 2: For very small screens, 330px */
 @media (max-width: 330px) {
   .settings-side-vertical-separators {
     display: none;
@@ -231,8 +125,11 @@
   #introductionSection img {
     width: 100%;
   }
-
   .settings-titles {
     margin: 0px 5px 0px 0px;
+  }
+
+  .settings-buttons {
+    padding: 8px 8px;
   }
 }
