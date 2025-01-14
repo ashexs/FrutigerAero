@@ -47,8 +47,11 @@ button {
 }
 
 a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
 }
 
 button {
@@ -149,6 +152,10 @@ button {
       rgba(61, 65, 67, 0.4) 49%,
       rgba(61, 65, 67, 0) 50%
     );
+}
+
+.main-nav-links-active:hover {
+  text-decoration: none;
 }
 
 /* Active link text gradient */

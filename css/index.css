@@ -244,6 +244,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: #ffffff;
+}
+
+.settings-buttons-inactive:hover span {
+  text-decoration: underline;
 }
 
 /* ---------------------- */
