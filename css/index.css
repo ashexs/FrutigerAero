@@ -38,7 +38,7 @@
 #introductionSection h1 {
   background: linear-gradient(
     180deg,
-    rgba(138, 153, 138, 0.9) 0%,
+    rgba(213, 224, 213, 0.9) 0%,
     #ffffff 100%
   );
   -webkit-background-clip: text;
@@ -82,7 +82,7 @@
 #introductionSection h2 {
   background: linear-gradient(
     180deg,
-    rgba(138, 153, 138, 0.9) 0%,
+    rgba(213, 224, 213, 0.9) 0%,
     #ffffff 100%
   );
   -webkit-background-clip: text;
@@ -95,7 +95,14 @@
 
 /* Text Content */
 #introductionSection p {
-  color: #e6e6e6;
+  background: linear-gradient(
+    180deg,
+    rgba(247, 255, 247, 0.9) 0%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   max-width: 700px;
   font-weight: 400;
@@ -165,92 +172,6 @@
   text-wrap: nowrap;
 }
 
-/* Button Styles for All Buttons */
-.settings-buttons-inactive,
-.settings-buttons-active {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 8px 10px;
-  gap: 7px;
-  height: 100%;
-  font-size: 1.2em;
-  font-weight: 250;
-  cursor: pointer;
-  padding: 0px 15px;
-}
-
-/* Inactive Button Style and Hover Effect */
-.settings-buttons-inactive {
-  position: relative;
-  background: linear-gradient(
-    180deg,
-    rgba(146, 155, 160, 0.6) 0%,
-    rgba(61, 65, 67, 0.4) 49%,
-    rgba(61, 65, 67, 0) 50%
-  );
-  transition: all 0.2s ease-in;
-  overflow: hidden;
-}
-.settings-buttons-inactive::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(127, 140, 124, 0) 30%,
-    rgba(145, 152, 141, 0.4) 100%
-  );
-  opacity: 0;
-  transition: opacity 0.2s ease-in;
-  z-index: 1;
-}
-.settings-buttons-inactive:hover::before {
-  opacity: 1;
-}
-
-/* Active Button Styles */
-.settings-buttons-active {
-  background: linear-gradient(
-      180deg,
-      rgba(74, 168, 135, 0) 30%,
-      rgba(55, 209, 135, 0.4) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(146, 155, 160, 0.6) 0%,
-      rgba(61, 65, 67, 0.4) 49%,
-      rgba(61, 65, 67, 0) 50%
-    );
-}
-
-/* Active Button Text Styles */
-.settings-buttons-active span {
-  font-weight: 500;
-  background: linear-gradient(180deg, #9bd6bf 0%, #4aa877 48.44%, #37d16d 100%),
-    linear-gradient(180deg, rgba(138, 153, 138, 0.9) 0%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-/* Inactive Button Text Styles */
-.settings-buttons-inactive span {
-  background: linear-gradient(
-    180deg,
-    rgba(138, 153, 138, 0.9) 0%,
-    #ffffff 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: #ffffff;
-}
-
-.settings-buttons-inactive:hover span {
-  text-decoration: underline;
-}
-
 /* ---------------------- */
 /*     Responsiveness     */
 /* ---------------------- */
@@ -313,10 +234,5 @@
 
   .settings-titles {
     margin: 0px 5px 0px 0px;
-  }
-
-  .settings-buttons-inactive,
-  .settings-buttons-active {
-    padding: 8px 8px;
   }
 }
