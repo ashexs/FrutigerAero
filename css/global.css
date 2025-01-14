@@ -237,7 +237,7 @@ button {
     inset 0px -2px 1px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(4px);
   border-radius: 8px 8px 0px 0px;
-  padding-right: 3px;
+  padding-right: 1px;
   z-index: 3;
   overflow: hidden;
 }
@@ -282,18 +282,15 @@ button {
 
 /* Scrolling animation class */
 .scrolling {
-  animation: scroll-pingpong 7s linear infinite;
+  animation: scroll 7s linear infinite;
 }
 
-@keyframes scroll-pingpong {
+@keyframes scroll {
   0% {
-    transform: translateX(0%);
-  }
-  50% {
-    transform: translateX(-100%);
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
 }
 
