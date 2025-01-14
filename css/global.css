@@ -168,18 +168,32 @@ button {
 /*   Link Button Styles   */
 /* ---------------------- */
 
+/* Common styles for both active and inactive button links */
+.button-links-active,
+.button-links-inactive {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  height: 100%;
+  font-size: 1.2em;
+  font-weight: 250;
+  cursor: pointer;
+}
+
 /* Active button link styles with gradient background */
 .button-links-active {
   background: linear-gradient(
       180deg,
-      rgba(74, 168, 135, 0) 30%,
-      rgba(12, 224, 122, 0.4) 100%
+      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0.1) 49%,
+      rgba(255, 255, 255, 0) 50%
     ),
     linear-gradient(
       180deg,
-      rgba(146, 155, 160, 0.6) 0%,
-      rgba(61, 65, 67, 0.4) 49%,
-      rgba(61, 65, 67, 0) 50%
+      rgba(74, 168, 135, 0) 30%,
+      rgba(55, 209, 135, 0.4) 100%
     );
 }
 
@@ -196,20 +210,6 @@ button {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 500;
-}
-
-/* Common styles for both active and inactive button links */
-.button-links-active,
-.button-links-inactive {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 7px;
-  height: 100%;
-  font-size: 1.2em;
-  font-weight: 250;
-  cursor: pointer;
 }
 
 /* Inactive button link styles with gradient background */
@@ -233,7 +233,7 @@ button {
   background: linear-gradient(
     180deg,
     rgba(127, 140, 124, 0) 30%,
-    rgba(145, 152, 141, 0.4) 100%
+    rgba(180, 189, 175, 0.4) 100%
   );
   opacity: 0;
   transition: opacity 0.2s ease-in;
@@ -272,6 +272,7 @@ button {
   padding: 0;
   border-radius: 8px;
   margin: auto;
+  z-index: 10;
 }
 
 /* Set height for images in navigation bar */
