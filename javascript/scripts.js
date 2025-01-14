@@ -218,6 +218,7 @@ background_music.addEventListener("ended", nextSong, overflowScrolling);
 // Turn off music and update UI
 function musicOff() {
   MUSIC_TOGGLE_IMAGE.src = "images/music_off.svg";
+  MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
   music_playing = false;
   background_music.pause();
   overflowScrolling();
@@ -227,6 +228,7 @@ function musicOff() {
 // Turn on music and update UI
 function musicOn() {
   MUSIC_TOGGLE_IMAGE.src = "images/music_on.svg";
+  MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-active");
   music_playing = true;
   background_music.play();
   overflowScrolling();
