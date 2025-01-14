@@ -1,5 +1,5 @@
 /* Top border radius for headers */
-header {
+#topLinksSection header {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -46,6 +46,13 @@ header {
   margin-top: 20px;
 }
 
+#communitySection header {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: -9px;
+  z-index: 1;
+}
+
 /* Cards */
 .community-cards {
   border-bottom-right-radius: 10px;
@@ -53,6 +60,7 @@ header {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  z-index: 2;
 }
 
 .card-headers {
