@@ -112,13 +112,8 @@ button {
 /* ---------------------- */
 
 /* Default container style with gradient background and shadows */
-.containers-style {
-  background: linear-gradient(
-    180deg,
-    rgba(111, 118, 122, 0.7) 0%,
-    rgba(0, 0, 0, 0.7) 50%,
-    rgba(62, 65, 67, 0.7) 100%
-  );
+.containers-style,
+.containers-style-2 {
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
     inset 0px 2px 1px rgba(255, 255, 255, 0.3),
     inset 0px -2px 1px rgba(0, 0, 0, 0.4);
@@ -127,6 +122,28 @@ button {
   justify-content: center;
   align-items: center;
   padding: 16px;
+}
+
+.containers-style {
+  background: linear-gradient(
+    180deg,
+    rgba(111, 118, 122, 0.7) 0%,
+    rgba(0, 0, 0, 0.7) 50%,
+    rgba(62, 65, 67, 0.7) 100%
+  );
+}
+
+.containers-style-2 {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0) 16.67%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.63) 0%,
+      rgba(111, 118, 122, 0.7) 90.5%
+    );
 }
 
 /* Spacer elements for consistent spacing */
@@ -470,9 +487,6 @@ button {
 
 /* Smaller mobile */
 @media (max-width: 240px) {
-  .main-nav-home {
-    padding: 11px 5px;
-  }
 }
 
 /* Desktop responsiveness - adjust site container width */
