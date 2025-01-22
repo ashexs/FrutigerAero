@@ -62,6 +62,33 @@
   overflow: hidden;
 }
 
+.community-cards a {
+  z-index: 2;
+}
+
+.community-cards div {
+  transition: all 0.2s ease-in;
+}
+
+/* Hover effect for inactive */
+.community-cards div::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(127, 140, 124, 0) 30%,
+    rgba(112, 117, 108, 0.4) 100%
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  z-index: 1;
+}
+
+.community-cards div:hover::before {
+  opacity: 1;
+}
+
 .card-headers {
   background: linear-gradient(
       180deg,
@@ -107,6 +134,12 @@
 .community-cards img {
   width: 100%;
   max-width: 250px;
+  transition-duration: 0.4s;
+}
+
+.community-cards img:hover {
+  transform: scale(105%);
+  transition-duration: 0.4s;
 }
 
 /* ---------------------- */
