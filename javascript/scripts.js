@@ -28,20 +28,14 @@ let sound_on = false;
 let music_playing = false;
 let isMusicBarVisible = false; // To prevent overlapping animations
 
-// Set a cookie with a specified name and value
-function setCookie(name, value) {
-  document.cookie = name + "=" + value + "; path=/";
+// Set a sessionStorage with a specified name and value
+function setSessionStorage(name, value) {
+  sessionStorage.setItem(name, value);
 }
 
-// Get a cookie value by name
-function getCookie(name) {
-  let nameEQ = name + "=";
-  let ca = document.cookie.split(";");
-  for (let i = 0; i < ca.length; i++) {
-    let c = ca[i].trim();
-    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-  }
-  return null;
+// Get a sessionStorage value by name
+function getSessionStorage(name) {
+  return sessionStorage.getItem(name);
 }
 
 // Set active button and reset others
@@ -115,7 +109,7 @@ if (SOUND_ON_BUTTON) {
   SOUND_ON_BUTTON.addEventListener("click", () => {
     setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true);
     musicBarShow();
-    setCookie("sound", "on");
+    setSessionStorage("sound", "on");
   });
 }
 
@@ -123,7 +117,7 @@ if (SOUND_OFF_BUTTON) {
   SOUND_OFF_BUTTON.addEventListener("click", () => {
     setActiveSound(SOUND_OFF_BUTTON, SOUND_ON_BUTTON, false);
     musicBarHide();
-    setCookie("sound", "off");
+    setSessionStorage("sound", "off");
     musicOff();
   });
 }
@@ -142,7 +136,7 @@ function setActiveSound(activeButton, inactiveButton, isSoundOn) {
 
 // Load saved sound state on page load
 window.addEventListener("load", () => {
-  let savedSound = getCookie("sound");
+  let savedSound = getSessionStorage("sound");
   if (savedSound === "on") {
     MUSIC_BAR.style.display = "flex";
     isMusicBarVisible = true;
@@ -222,7 +216,7 @@ function musicOff() {
   music_playing = false;
   background_music.pause();
   overflowScrolling();
-  setCookie("music", "off");
+  setSessionStorage("music", "off");
 }
 
 // Turn on music and update UI
@@ -232,7 +226,7 @@ function musicOn() {
   music_playing = true;
   background_music.play();
   overflowScrolling();
-  setCookie("music", "on");
+  setSessionStorage("music", "on");
 }
 
 // Toggle music on/off when the button is clicked
@@ -242,13 +236,13 @@ MUSIC_TOGGLE_BUTTON.addEventListener("click", () => {
 
 // Save current playback time periodically
 background_music.addEventListener("timeupdate", () => {
-  localStorage.setItem("music_time", background_music.currentTime);
+  sessionStorage.setItem("music_time", background_music.currentTime);
 });
 
 // Load saved music state and playback time on page load
 window.addEventListener("load", () => {
-  let savedMusic = getCookie("music");
-  let savedTime = localStorage.getItem("music_time");
+  let savedMusic = getSessionStorage("music");
+  let savedTime = sessionStorage.getItem("music_time");
 
   loadSong(currentSongIndex);
 
@@ -261,8 +255,8 @@ window.addEventListener("load", () => {
   }
 
   // Font size handling for text buttons
-  let savedFontSize = getCookie("font_size");
-  let savedButton = getCookie("active_button");
+  let savedFontSize = getSessionStorage("font_size");
+  let savedButton = getSessionStorage("active_button");
 
   if (savedFontSize && savedButton) {
     document.body.style.fontSize = savedFontSize;
@@ -296,8 +290,8 @@ if (TEXT_SMALL_BUTTON) {
     setActiveButton(TEXT_SMALL_BUTTON, [TEXT_MEDIUM_BUTTON, TEXT_LARGE_BUTTON]);
     font_size = "0.9em";
     document.body.style.fontSize = font_size;
-    setCookie("font_size", font_size);
-    setCookie("active_button", "small");
+    setSessionStorage("font_size", font_size);
+    setSessionStorage("active_button", "small");
   });
 }
 
@@ -306,8 +300,8 @@ if (TEXT_MEDIUM_BUTTON) {
     setActiveButton(TEXT_MEDIUM_BUTTON, [TEXT_SMALL_BUTTON, TEXT_LARGE_BUTTON]);
     font_size = "1em";
     document.body.style.fontSize = font_size;
-    setCookie("font_size", font_size);
-    setCookie("active_button", "medium");
+    setSessionStorage("font_size", font_size);
+    setSessionStorage("active_button", "medium");
   });
 }
 
@@ -316,7 +310,7 @@ if (TEXT_LARGE_BUTTON) {
     setActiveButton(TEXT_LARGE_BUTTON, [TEXT_SMALL_BUTTON, TEXT_MEDIUM_BUTTON]);
     font_size = "1.1em";
     document.body.style.fontSize = font_size;
-    setCookie("font_size", font_size);
-    setCookie("active_button", "large");
+    setSessionStorage("font_size", font_size);
+    setSessionStorage("active_button", "large");
   });
 }
