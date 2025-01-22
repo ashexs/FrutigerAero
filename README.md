@@ -32,4 +32,4 @@ https://www.figma.com/design/4R49u117Em6kXky3DRYb5N/frutigeraero.org?node-id=0-1
 
 Preview:
 
-<img src="thumbnail.jpg" alt="Thumbnail">
+<img src="thumbnail.png" alt="Thumbnail">
