@@ -5,9 +5,9 @@ This is the page for the official Frutiger Aero Community website, maintained by
 Pages Done:
 
 ✅ Home Page
+✅ Community Page
 
 Pages to do:
-- Community Page
 - Resources Page
 - Archives Page
 - About Page
