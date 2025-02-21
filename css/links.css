@@ -1,34 +1,28 @@
-/* Adjust spacing */
 article {
   margin-bottom: 15px;
 }
 
-/* Border radius on top */
 header {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   overflow: hidden;
 }
 
-/* Default font size for headings */
 h2 {
   font-size: 2.3em;
 }
 
-/* Contains all navs with links */
 .links-nav-containers {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
   overflow: hidden;
 }
 
-/* Individual navs (or link row) */
 .links-container {
   height: 80px;
   padding: 0px;
 }
 
-/* Links */
 .links-container a {
   justify-content: flex-start;
   padding: 10px;
@@ -42,23 +36,16 @@ h2 {
   z-index: 1;
 }
 
-/* Links images */
 .links-container img {
   height: 100%;
 }
 
-/* Separators */
 .links-separators {
   height: 80px;
   padding: 1px;
   z-index: 2;
 }
 
-/* ---------------------- */
-/*      Responsiveness    */
-/* ---------------------- */
-
-/* Mobile styles */
 @media (max-width: 750px) {
   #mainNav {
     height: 45px;
@@ -90,7 +77,6 @@ h2 {
   }
 }
 
-/* Mobile styles */
 @media (max-width: 410px) {
   .main-nav-home {
     padding: 11px 15px;
@@ -105,7 +91,6 @@ h2 {
   }
 }
 
-/* Mobile styles */
 @media (max-width: 250px) {
   .links-container a {
     flex-direction: column;
