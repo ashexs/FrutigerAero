@@ -24,14 +24,14 @@
     <meta name="apple-mobile-web-app-title" content="FrutAero" />
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
     <link rel="canonical" href="frutigeraero.org/resources" />
-    <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/resources.css" />
+    <link rel="stylesheet" href="css/global.min.css" />
+    <link rel="stylesheet" href="css/resources.min.css" />
   </head>
+
   <body>
     <div id="siteContainer">
-      <!-- Spacer for top margin -->
+      <div id="background"></div>
       <div class="website-spacer-top"></div>
-
       <!-- Main Navigation Bar -->
       <nav id="mainNav" class="containers-style" aria-label="Main Navigation">
         <div class="nav-side-vertical-separators vertical-separators"></div>
@@ -42,7 +42,7 @@
             href="index.html"
             class="main-nav-home main-nav-links button-links-inactive"
           >
-            <img src="images/navbar/inactive/home.svg" alt="" />
+            <img src="images/navbar/inactive/home.svg" alt="Home Logo" />
             <span class="home-nav-text">Home</span>
           </a>
           <div class="vertical-separators"></div>
@@ -51,7 +51,7 @@
           <a href="community.html" class="main-nav-links button-links-inactive">
             <img
               src="images/navbar/inactive/community.svg"
-              alt=""
+              alt="Community Logo"
               class="main-nav-images"
             />
             <span>Community</span>
@@ -62,7 +62,7 @@
           <a href="resources.html" class="main-nav-links button-links-active">
             <img
               src="images/navbar/active/resources.svg"
-              alt=""
+              alt="Resources Logo"
               class="main-nav-images"
             />
             <span>Resources</span>
@@ -72,10 +72,13 @@
 
         <div class="main-nav-mobile-divs">
           <!-- Archives Link -->
-          <a href="archives.html" class="main-nav-links button-links-inactive">
+          <a
+            href="https://frutigeraeroarchive.org/"
+            class="main-nav-links button-links-inactive"
+          >
             <img
               src="images/navbar/inactive/archives.svg"
-              alt=""
+              alt="Archives Logo"
               class="main-nav-images"
             />
             <span>Archives</span>
@@ -86,7 +89,7 @@
           <a href="about.html" class="main-nav-links button-links-inactive">
             <img
               src="images/navbar/inactive/about.svg"
-              alt=""
+              alt="About Logo"
               class="main-nav-images"
             />
             <span>About</span>
@@ -348,25 +351,23 @@
           </section>
         </section>
       </main>
-
-      <!-- Spacer for bottom margin -->
       <div class="website-spacer-bottom"></div>
     </div>
 
-    <!-- Music Player Section -->
+    <!-- Music Player -->
     <div id="musicBar" class="containers-style">
-      <!-- Music Toggle Button -->
       <button
         class="button-links-inactive"
         id="musicToggle"
         aria-label="Toggle Music"
       >
-        <img src="../images/music_off.svg" alt="" id="musicToggleImg" />
+        <img
+          src="images/music_off.svg"
+          alt="Music Status"
+          id="musicToggleImg"
+        />
       </button>
-
       <div class="vertical-separators"></div>
-
-      <!-- Song Information Display -->
       <div class="music-text-div">
         <div class="music-inner-text">
           <span id="songTitle">Song title — </span>

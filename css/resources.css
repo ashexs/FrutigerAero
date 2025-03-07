@@ -6,7 +6,6 @@
   justify-content: center;
   align-items: center;
 }
-
 #mainHeader span {
   font-style: normal;
   font-weight: 300;
@@ -26,15 +25,12 @@
   flex-direction: column;
   align-items: flex-start;
 }
-
 .history-article p {
   max-width: 100%;
 }
-
 .history-article h2 {
   margin: 10px 0px 0px 0px;
 }
-
 .history-article img {
   float: left;
   width: 100%;
@@ -46,7 +42,6 @@
 #featuredVideos {
   margin-top: 20px;
 }
-
 #featuredVideos header {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -66,7 +61,6 @@
   width: 100%;
   position: relative;
 }
-
 .carousel-and-buttons-container button {
   background: linear-gradient(
       180deg,
@@ -90,11 +84,9 @@
   position: absolute;
   z-index: 1;
 }
-
 .carousel-and-buttons-container .video-nav-buttons:first-child {
   left: 0;
 }
-
 .carousel-and-buttons-container .video-nav-buttons:last-child {
   right: 0;
 }
@@ -114,7 +106,6 @@
   width: max-content;
   transition: none;
 }
-
 .video-carousel img {
   border-radius: 3px;
   margin: 0px 5px;
@@ -141,9 +132,9 @@
 
 /* Style the range slider background */
 .slider-div input {
-  -webkit-appearance: none; /* Disable default styling in WebKit browsers */
-  appearance: none; /* Disable default styling */
-  width: 100%; /* Full width of the container */
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
   height: 8px;
   background: linear-gradient(
     180deg,
@@ -153,7 +144,7 @@
   );
   box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  outline: none; /* Remove focus outline */
+  outline: none;
   margin: 0;
   padding: 0;
 }
@@ -169,7 +160,6 @@
   );
   border-radius: 4px;
 }
-
 .slider-div input::-moz-range-track {
   height: 8px;
   background: linear-gradient(
@@ -180,7 +170,6 @@
   );
   border-radius: 4px;
 }
-
 .slider-div input::-ms-track {
   height: 8px;
   background: linear-gradient(
@@ -199,17 +188,16 @@
 
 /* Style the thumb (the movable part of the slider) */
 .slider-div input::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Remove default thumb styling */
-  appearance: none; /* Remove default thumb styling */
+  -webkit-appearance: none;
+  appearance: none;
   width: 100px;
   height: 8px;
   background: linear-gradient(180deg, #c7e0d6 0%, #4aa871 48.44%, #20edb3 100%);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   border-radius: 5px;
-  cursor: pointer; /* Show a pointer cursor on hover */
+  cursor: pointer;
   transition: background-color 0.2s ease;
 }
-
 .slider-div input::-moz-range-thumb {
   width: 100px;
   height: 8px;
@@ -218,7 +206,6 @@
   border-radius: 5px;
   cursor: pointer;
 }
-
 .slider-div input::-ms-thumb {
   width: 100px;
   height: 8px;
@@ -227,29 +214,23 @@
   border-radius: 5px;
   cursor: pointer;
 }
-
 /* Style when the slider is hovered */
 .slider-div input:hover::-webkit-slider-thumb {
   background: linear-gradient(180deg, #a9c8b7 0%, #429f65 48.44%, #1ac68d 100%);
 }
-
 .slider-div input:hover::-moz-range-thumb {
   background: linear-gradient(180deg, #a9c8b7 0%, #429f65 48.44%, #1ac68d 100%);
 }
-
 .slider-div input:hover::-ms-thumb {
   background: linear-gradient(180deg, #a9c8b7 0%, #429f65 48.44%, #1ac68d 100%);
 }
-
 .video-carousel-wrapper::-webkit-scrollbar {
   height: 8px;
 }
-
 .video-carousel-wrapper::-webkit-scrollbar-thumb {
   background-color: #888;
   border-radius: 4px;
 }
-
 .video-carousel-wrapper::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
@@ -257,7 +238,6 @@
 #charitiesOrgs {
   margin-top: 20px;
 }
-
 #charitiesOrgs header {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -275,8 +255,6 @@
   height: 80px;
   padding: 0px;
 }
-
-/* Links */
 .links-container a {
   justify-content: flex-start;
   padding: 10px;
@@ -289,23 +267,17 @@
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
-
-/* Links images */
 .links-container img {
   height: 100%;
 }
 
-/* Separators */
 .links-separators {
   height: 80px;
   padding: 1px;
   z-index: 2;
 }
 
-/* ---------------------- */
-/*      Responsiveness    */
-/* ---------------------- */
-
+/* Responsiveness */
 @media (max-width: 250px) {
   .links-container a {
     flex-direction: column;
@@ -317,11 +289,9 @@
   h1 {
     font-size: 1.4em;
   }
-
   h2 {
     font-size: 1.3em;
   }
-
   .video-nav-buttons {
     display: none;
   }
@@ -332,11 +302,9 @@
     flex-direction: column;
     height: 100%;
   }
-
   .links-container a {
     padding: 5px;
   }
-
   .links-separators {
     display: none;
   }
