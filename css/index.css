@@ -3,15 +3,6 @@
   max-height: 650px;
 }
 
-#introductionSection header {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-#introductionSection article {
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
 /* Mascot Image */
 #introductionSection img {
   width: 200px;
@@ -20,8 +11,6 @@
 
 /* Settings Bar Container */
 #settingsBar {
-  display: flex;
-  align-items: center;
   max-width: 1200px;
   margin: 10px auto;
   gap: 20px;
@@ -40,15 +29,6 @@
   height: 28px;
 }
 .settings-titles {
-  background: linear-gradient(
-    180deg,
-    rgba(138, 153, 138, 0.9) 0%,
-    #ffffff 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   height: 20px;
   font-weight: 300;
   font-size: 1.3em;

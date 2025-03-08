@@ -1,10 +1,5 @@
 #mainHeader {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 #mainHeader span {
   font-style: normal;
@@ -18,21 +13,13 @@
 
 /* Article */
 .history-article {
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  display: flex;
-  justify-content: flex-start;
   flex-direction: column;
-  align-items: flex-start;
 }
 .history-article h2 {
   margin: 10px 0px 0px 0px;
 }
 .history-article p {
   max-width: 100%;
-}
-.history-article a {
-  text-decoration: underline;
 }
 .history-article img {
   float: left;
@@ -45,42 +32,17 @@
 #featuredVideos {
   margin-top: 20px;
 }
-#featuredVideos header {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
 
 .video-carousel-container {
-  display: flex;
-  align-items: center;
   flex-direction: column;
   position: relative;
 }
 
 .carousel-and-buttons-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
   position: relative;
 }
 .carousel-and-buttons-container button {
-  background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.25) 0%,
-      rgba(255, 255, 255, 0.1) 49%,
-      rgba(255, 255, 255, 0) 50%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(111, 118, 122, 0.7) 0%,
-      rgba(0, 0, 0, 0.7) 50%,
-      rgba(62, 65, 67, 0.7) 100%
-    );
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
-    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
-    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
   border-radius: 9px;
   width: 64px;
   height: 48px;
@@ -125,9 +87,7 @@
   );
   box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.3);
   border-radius: 4px;
-  display: flex;
   flex-direction: row;
-  align-items: center;
   height: 8px;
   width: 100%;
   margin-top: 20px;
@@ -241,17 +201,6 @@
 #charitiesOrgs {
   margin-top: 20px;
 }
-#charitiesOrgs header {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
-/* Contains all navs with links */
-.links-nav-containers {
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-  overflow: hidden;
-}
 
 /* Individual navs (or link row) */
 .links-container {
@@ -268,6 +217,7 @@
   font-size: 18px;
   color: #ffffff;
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
   z-index: 1;
 }
 .links-container img {

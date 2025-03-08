@@ -83,56 +83,16 @@ button {
   border: none;
 }
 
-/* Class to align items */
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Class to remove underlines */
-.buttons-no-underline a {
-  text-decoration: none;
-}
-
-.gradient-style-text {
-  background: linear-gradient(
-    180deg,
-    rgba(138, 153, 138, 0.9) 0%,
-    #ffffff 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
-}
-
-.gradient-headers-buttons {
-  background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.25) 0%,
-      rgba(255, 255, 255, 0.1) 49%,
-      rgba(255, 255, 255, 0) 50%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(111, 118, 122, 0.7) 0%,
-      rgba(0, 0, 0, 0.7) 50%,
-      rgba(62, 65, 67, 0.7) 100%
-    );
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
-    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
-    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
-}
-
 /* Default container style with gradient background and shadows */
 .containers-style,
 .containers-style-2 {
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
     inset 0px 2px 1px rgba(255, 255, 255, 0.3),
     inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+  display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   padding: 16px;
 }
 .containers-style {
@@ -193,7 +153,10 @@ button {
 /* Common styles for both active and inactive button links */
 .button-links-active,
 .button-links-inactive {
+  display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   gap: 7px;
   height: 100%;
   font-size: 1.2em;
@@ -261,6 +224,11 @@ button {
 
 /* Gradient text style */
 .button-links-inactive span {
+  background: linear-gradient(
+    180deg,
+    rgba(138, 153, 138, 0.9) 0%,
+    #ffffff 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -280,6 +248,9 @@ button {
 }
 #mainNav img {
   height: 20px;
+}
+#mainNav a {
+  text-decoration: none;
 }
 
 /* Flex layout for desktop navigation bar */
@@ -328,6 +299,9 @@ button {
 
 /* Toggle button for music bar */
 #musicToggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 70px;
   padding: 0 15px;
 }
@@ -343,6 +317,11 @@ button {
   display: inline-block;
   font-weight: 300;
   font-size: 1.2em;
+  background: linear-gradient(
+    180deg,
+    rgba(138, 153, 138, 0.9) 0%,
+    #ffffff 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -402,6 +381,9 @@ button {
     display: none;
   }
   .main-nav-mobile-divs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
   }
   .main-nav-links {

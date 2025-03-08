@@ -40,13 +40,17 @@
     <div id="siteContainer">
       <div class="website-spacer-top"></div>
       <!-- Main Navigation Bar -->
-      <nav id="mainNav" class="containers-style" aria-label="Main Navigation">
+      <nav
+        id="mainNav"
+        class="containers-style flex-center buttons-no-underline"
+        aria-label="Main Navigation"
+      >
         <div class="nav-side-vertical-separators vertical-separators"></div>
 
         <div class="main-nav-mobile-divs">
           <a
             href="index.html"
-            class="main-nav-home main-nav-links button-links-active"
+            class="main-nav-home main-nav-links button-links-active flex-center"
           >
             <img src="images/navbar/active/home.svg" alt="Home Logo" />
             <span class="home-nav-text">Home</span>
@@ -54,24 +58,30 @@
           <div class="vertical-separators"></div>
 
           <!-- Community Link -->
-          <a href="community.html" class="main-nav-links button-links-inactive">
+          <a
+            href="community.html"
+            class="main-nav-links button-links-inactive flex-center"
+          >
             <img
               src="images/navbar/inactive/community.svg"
               alt="Community Logo"
               class="main-nav-images"
             />
-            <span>Community</span>
+            <span class="gradient-style-text">Community</span>
           </a>
           <div class="vertical-separators"></div>
 
           <!-- Resources Link -->
-          <a href="resources.html" class="main-nav-links button-links-inactive">
+          <a
+            href="resources.html"
+            class="main-nav-links button-links-inactive flex-center"
+          >
             <img
               src="images/navbar/inactive/resources.svg"
               alt="Resources Logo"
               class="main-nav-images"
             />
-            <span>Resources</span>
+            <span class="gradient-style-text">Resources</span>
           </a>
           <div class="vertical-separators"></div>
         </div>
@@ -80,25 +90,28 @@
           <!-- Archives Link -->
           <a
             href="https://frutigeraeroarchive.org/"
-            class="main-nav-links button-links-inactive"
+            class="main-nav-links button-links-inactive flex-center"
           >
             <img
               src="images/navbar/inactive/archives.svg"
               alt="Archives Logo"
               class="main-nav-images"
             />
-            <span>Archives</span>
+            <span class="gradient-style-text">Archives</span>
           </a>
           <div class="vertical-separators"></div>
 
           <!-- About Link -->
-          <a href="about.html" class="main-nav-links button-links-inactive">
+          <a
+            href="about.html"
+            class="main-nav-links button-links-inactive flex-center"
+          >
             <img
               src="images/navbar/inactive/about.svg"
               alt="About Logo"
               class="main-nav-images"
             />
-            <span>About</span>
+            <span class="gradient-style-text">About</span>
           </a>
           <div class="nav-side-vertical-separators vertical-separators"></div>
         </div>
@@ -107,11 +120,11 @@
       <!-- Main Content Area -->
       <main id="mainContent">
         <section id="introductionSection">
-          <header class="containers-style">
+          <header class="containers-style flex-center">
             <h1>Welcome to the Frutiger Aero Site!</h1>
           </header>
 
-          <article class="containers-style">
+          <article class="containers-style flex-center">
             <!-- Placeholder Image for Welcome Section -->
             <img src="images/home/welcome.png" alt="Placeholder Image" />
             <div>
@@ -128,9 +141,9 @@
       </main>
 
       <!-- Settings Bar for Text Size and Sound Controls -->
-      <nav id="settingsBar" aria-label="Settings Bar">
+      <nav id="settingsBar" class="flex-center" aria-label="Settings Bar">
         <div
-          class="settings-bar-divs containers-style"
+          class="settings-bar-divs containers-style flex-center"
           aria-label="Settings: Text Size"
         >
           <div
@@ -139,7 +152,7 @@
 
           <!-- Text Size Controls -->
           <img src="images/home/text_size.svg" alt="" />
-          <span class="settings-titles">Text size:</span>
+          <span class="settings-titles gradient-style-text">Text size:</span>
           <div class="vertical-separators"></div>
 
           <!-- Small Text Button -->
@@ -148,7 +161,7 @@
             id="small"
             aria-label="Text: Small"
           >
-            <span>S</span>
+            <span class="gradient-style-text">S</span>
           </button>
           <div class="vertical-separators"></div>
 
@@ -158,7 +171,7 @@
             id="medium"
             aria-label="Text: Medium"
           >
-            <span>M</span>
+            <span class="gradient-style-text">M</span>
           </button>
           <div class="vertical-separators"></div>
 
@@ -168,13 +181,13 @@
             id="large"
             aria-label="Text: Large"
           >
-            <span>L</span>
+            <span class="gradient-style-text">L</span>
           </button>
           <div class="vertical-separators"></div>
         </div>
 
         <div
-          class="settings-bar-divs containers-style"
+          class="settings-bar-divs containers-style flex-center"
           aria-label="Settings: Sound"
         >
           <div
@@ -183,7 +196,7 @@
 
           <!-- Sound Controls -->
           <img src="images/home/sounds.svg" alt="" />
-          <span class="settings-titles">Sounds:</span>
+          <span class="settings-titles gradient-style-text">Sounds:</span>
           <div class="vertical-separators"></div>
 
           <!-- Sound On Button -->
@@ -192,7 +205,7 @@
             id="soundsOn"
             aria-label="Sounds: On"
           >
-            <span>On</span>
+            <span class="gradient-style-text">On</span>
           </button>
           <div class="vertical-separators"></div>
 
@@ -202,7 +215,7 @@
             id="soundsOff"
             aria-label="Sounds: Off"
           >
-            <span>Off</span>
+            <span class="gradient-style-text">Off</span>
           </button>
           <div class="vertical-separators"></div>
         </div>
@@ -226,8 +239,8 @@
       <div class="vertical-separators"></div>
       <div class="music-text-div">
         <div class="music-inner-text">
-          <span id="songTitle">Song title — </span>
-          <span id="songArtist">Song artist</span>
+          <span id="songTitle" class="gradient-style-text">Song title — </span>
+          <span id="songArtist" class="gradient-style-text">Song artist</span>
         </div>
       </div>
     </div>

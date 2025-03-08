@@ -1,7 +1,5 @@
 /* Top links */
 .top-links-container {
-  display: flex;
-  justify-content: center;
   padding: 0px;
   overflow: hidden;
 }
@@ -9,9 +7,7 @@
   height: 85%;
 }
 .top-links-container a {
-  display: flex;
   justify-content: flex-start;
-  align-items: center;
   width: 100%;
   height: 75px;
   font-size: 1.4em;
@@ -40,9 +36,7 @@
 
 /* Cards */
 .community-cards {
-  display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 .community-cards a {
   z-index: 2;
@@ -59,7 +53,7 @@
   background: linear-gradient(
     180deg,
     rgba(127, 140, 124, 0) 30%,
-    rgba(112, 117, 108, 0.4) 100%
+    rgba(160, 160, 160, 0.5) 100%
   );
   opacity: 0;
   transition: opacity 0.2s ease-in;
@@ -67,25 +61,6 @@
 }
 .community-cards div:hover::before {
   opacity: 1;
-}
-
-.card-headers {
-  background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.25) 0%,
-      rgba(255, 255, 255, 0.1) 49%,
-      rgba(255, 255, 255, 0) 50%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(111, 118, 122, 0.7) 0%,
-      rgba(0, 0, 0, 0.7) 50%,
-      rgba(62, 65, 67, 0.7) 100%
-    );
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
-    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
-    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
 }
 .community-cards h2 {
   font-size: 1.5em;
