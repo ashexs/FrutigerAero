@@ -90,6 +90,14 @@ button {
   align-items: center;
 }
 
+/* Float Directions */
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+
 /* Class to remove underlines */
 .buttons-no-underline a {
   text-decoration: none;
