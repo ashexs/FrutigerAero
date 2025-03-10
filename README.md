@@ -3,21 +3,18 @@
 This is the page for the official Frutiger Aero Community website, maintained by the Consumer Aesthetic Network.
 
 Pages Done:
-
 ✅ Home Page
 ✅ Community Page
 ✅ Resources Page
 ✅ About Page
 
-Other things to do:
-
+To do list:
+- Choose meta page descriptions
 - Replace placeholder text
 - Replace placeholder images
-- Choose a favicon
-- Choose songs for playlist
+- Replace placeholder favicon
 
 When site is hosted:
-- Add XML sitemap file
 - Add site to Google Search Console
 - Add error 404 HTML file or a redirect to index URL if URL is typed-in wrong
 
