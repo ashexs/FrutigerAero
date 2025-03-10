@@ -74,6 +74,7 @@ button {
 
 a {
   color: #ffffff;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.35);
 }
 a:hover {
   text-decoration: underline;
@@ -98,9 +99,12 @@ button {
   float: right;
 }
 
-/* Class to remove underlines */
+/* Class to remove default underlines */
 .buttons-no-underline a {
   text-decoration: none;
+}
+.buttons-no-underline a:hover {
+  text-decoration: underline;
 }
 
 /* Gradients for text */
@@ -226,7 +230,7 @@ button {
     );
 }
 .button-links-active:hover {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* Gradient text style for active button links */

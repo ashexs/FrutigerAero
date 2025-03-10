@@ -42,13 +42,47 @@
   height: 100%;
   font-family: "Noto Sans";
   font-weight: 400;
-  font-size: 18px;
+  font-size: 1.1em;
   color: #ffffff;
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   z-index: 1;
 }
 .staff-member-divs img {
-  max-width: 132px;
+  max-width: 160px;
+  margin: -15px 0px -15px 0px;
+  transition-duration: 0.3s;
+}
+.staff-member-divs img:hover {
+  transform: scale(1.05);
+  transition-duration: 0.3s;
+}
+.staff-name {
+  font-size: 1.2em;
+}
+.staff-role {
+  font-size: 0.95em;
+}
+.staff-contact {
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.712);
+  font-size: 0.9em;
+  margin: 0px 5px;
+}
+
+/* Staff Colors */
+.ashex {
+  color: #fdfdc3;
+  text-shadow: 0px 3px 2px rgba(129, 129, 103, 0.3);
+}
+.tokoni {
+  color: #0004ff;
+  text-shadow: 0px 3px 2px rgba(10, 6, 255, 0.3);
+}
+.ali {
+  color: #faafbb;
+  text-shadow: 0px 3px 2px rgba(172, 121, 129, 0.3);
+}
+.daniele {
+  color: #40a83a;
 }
 
 .staff-separators {
@@ -86,16 +120,16 @@
   height: 400px;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.36) 0%,
-    rgba(94, 100, 104, 0.394033) 71%
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(94, 100, 104, 0.4) 71%
   );
   box-shadow: 0px -3px 15px rgba(0, 0, 0, 0.3),
     inset 0px -2px 1px rgba(255, 255, 255, 0.3),
     inset 0px 2px 1px rgba(0, 0, 0, 0.4);
   border-radius: 8px;
   margin-top: 20px;
-  overflow-y: scroll;
-  scrollbar-color: #14a177 #18664b;
+  overflow-y: auto;
+  scrollbar-color: #14a177 rgba(24, 102, 75, 0.2);
 }
 
 #privacy {
