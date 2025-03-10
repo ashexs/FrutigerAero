@@ -24,8 +24,8 @@
     <meta name="apple-mobile-web-app-title" content="FrutAero" />
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
     <link rel="canonical" href="frutigeraero.org/links" />
-    <link rel="stylesheet" href="css/global.min.css" />
-    <link rel="stylesheet" href="css/links.min.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/links.css" />
   </head>
 
   <body>
@@ -644,26 +644,31 @@
     <!-- Music Player -->
     <div id="musicBar" class="containers-style">
       <button
-        class="button-links-inactive"
+        class="button-links-active"
         id="musicToggle"
         aria-label="Toggle Music"
       >
-        <img
-          src="images/music_off.svg"
-          alt="Music Status"
-          id="musicToggleImg"
-        />
+        <img src="images/music_on.svg" alt="Music Status" id="musicToggleImg" />
       </button>
       <div class="vertical-separators"></div>
       <div class="music-text-div">
         <div class="music-inner-text">
-          <span id="songTitle" class="gradient-style-text">Song title — </span>
-          <span id="songArtist" class="gradient-style-text">Song artist</span>
+          <audio
+            id="songAudio"
+            loop
+            data-title="eShop Menu (Track 5)"
+            data-artist="Wii U"
+          >
+            <source src="/music/all_links.mp3" type="audio/mpeg" />
+          </audio>
+          <span id="songTitle" class="gradient-style-text"></span>
+          <span class="gradient-style-text">—</span>
+          <span id="songArtist" class="gradient-style-text"></span>
         </div>
       </div>
     </div>
 
     <!-- Javascript -->
-    <script src="javascript/scripts.min.js" async defer></script>
+    <script src="javascript/scripts.js" async defer></script>
   </body>
 </html>
