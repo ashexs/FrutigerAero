@@ -84,6 +84,11 @@ button {
   border: none;
 }
 
+/* Bold Text */
+.bold {
+  font-weight: bold;
+}
+
 /* Class to align items */
 .flex-center {
   display: flex;
