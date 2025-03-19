@@ -134,10 +134,40 @@ button {
       rgba(0, 0, 0, 0.7) 50%,
       rgba(62, 65, 67, 0.7) 100%
     );
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3),
     inset 0px 2px 1px rgba(255, 255, 255, 0.3),
     inset 0px -2px 1px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(4px);
+}
+/* Hover effect */
+.gradient-headers-buttons-hover button {
+  border-radius: 9px;
+  position: absolute;
+  z-index: 1;
+  transition-duration: 0.3;
+}
+.gradient-headers-buttons-hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      180deg,
+      rgba(127, 140, 124, 0.1) 30%,
+      rgba(145, 152, 141, 0.2) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(111, 118, 122, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(62, 65, 67, 0.2) 100%
+    );
+  border-radius: 9px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  z-index: 1;
+}
+.gradient-headers-buttons-hover:hover::before {
+  opacity: 1;
 }
 
 /* Default container style with gradient background and shadows */
@@ -152,7 +182,7 @@ button {
 .containers-style {
   background: linear-gradient(
     180deg,
-    rgba(111, 118, 122, 0.7) 0%,
+    rgba(90, 95, 99, 0.7) 0%,
     rgba(0, 0, 0, 0.7) 50%,
     rgba(62, 65, 67, 0.7) 100%
   );
@@ -175,7 +205,7 @@ button {
   height: 20px;
 }
 .website-spacer-bottom {
-  height: 58px;
+  height: 40px;
 }
 
 /* Center align the main site container */

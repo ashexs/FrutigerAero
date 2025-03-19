@@ -18,14 +18,29 @@
 .history-article h2 {
   margin: 10px 0px 0px 0px;
 }
+.history-article header {
+  margin-bottom: 40px;
+}
 .history-article p {
   max-width: 100%;
   margin: 10px 0px;
 }
 
 .history-images {
+  background: rgba(31, 31, 31, 0.3);
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15),
+    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
+    inset 0px -2px 1px rgba(0, 0, 0, 0.2);
   flex-direction: column;
-  margin-top: 10px;
+  max-width: 235px;
+  padding: 10px;
+}
+.history-images-right {
+  margin: 5px 0px 0px 10px;
+}
+.history-images-left {
+  margin: 5px 10px 0px 0px;
 }
 .history-images a {
   transition-duration: 0.2s;
@@ -36,11 +51,9 @@
   transform: scale(1.03);
 }
 .history-images img {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border: 3px solid rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   width: 100%;
-  max-width: 230px;
   margin-right: 10px;
 }
 
@@ -59,18 +72,49 @@
 }
 .carousel-and-buttons-container button {
   border-radius: 9px;
-  width: 64px;
+  width: 50px;
   height: 48px;
   position: absolute;
   z-index: 1;
+  transition-duration: 0.3;
 }
+/* Hover effect */
+/* .carousel-and-buttons-container button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      180deg,
+      rgba(127, 140, 124, 0.1) 30%,
+      rgba(145, 152, 141, 0.2) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(111, 118, 122, 0.2) 0%,
+      rgba(0, 0, 0, 0.2) 50%,
+      rgba(62, 65, 67, 0.2) 100%
+    );
+  border-radius: 9px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+  z-index: 1;
+}
+.carousel-and-buttons-container button:hover::before {
+  opacity: 1;
+} */
+.video-nav-buttons img {
+  width: 45%;
+  margin-bottom: -3px;
+  z-index: 2;
+  position: relative;
+}
+
 .carousel-and-buttons-container .video-nav-buttons:first-child {
   left: 0;
 }
 .carousel-and-buttons-container .video-nav-buttons:last-child {
   right: 0;
 }
-
 .video-carousel-wrapper {
   overflow: hidden;
   flex-grow: 1;
@@ -87,7 +131,7 @@
   transition: none;
 }
 .video-carousel img {
-  border-radius: 3px;
+  border-radius: 7px;
   margin: 0px 5px;
   max-width: 256px;
   flex-shrink: 0;
