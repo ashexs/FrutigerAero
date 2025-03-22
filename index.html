@@ -1,90 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frutiger Aero Community</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="scripts.js" defer></script>
-</head>
-<body>
-    <header class="glossy-header">
-        <div class="header-content">
-            <h1>Frutiger Aero Community</h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#community">Community</a></li>
-                    <li><a href="#resources">Resources</a></li>
-                    <li><a href="#archives">Archives</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Frutiger Aero</title>
+    <meta
+      name="description"
+      content="Welcome to the Frutiger Aero website made by the Aesthetic Network, a community that is dedicated to preserving aesthetics and supporting artists."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="/images/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon/apple-touch-icon.png"
+    />
+    <meta name="apple-mobile-web-app-title" content="FrutAero" />
+    <link rel="manifest" href="/images/favicon/site.webmanifest" />
+    <link rel="canonical" href="frutigeraero.org" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <noscript>
+      <style>
+        .settings-bar-divs {
+          display: none !important;
+        }
+      </style>
+    </noscript>
+  </head>
+
+  <body>
+    <div id="background"></div>
+    <div id="siteContainer">
+      <div class="website-spacer-top"></div>
+      <!-- Main Navigation Bar -->
+      <nav
+        id="mainNav"
+        class="containers-style flex-center buttons-no-underline"
+        aria-label="Main Navigation"
+      >
+        <div class="nav-side-vertical-separators vertical-separators"></div>
+
+        <div class="main-nav-mobile-divs">
+          <a
+            href="index.html"
+            class="main-nav-home main-nav-links button-links-active flex-center"
+          >
+            <img src="images/navbar/active/home.svg" alt="Home Logo" />
+            <span class="home-nav-text">Home</span>
+          </a>
+          <div class="vertical-separators"></div>
+
+          <!-- Community Link -->
+          <a
+            href="community.html"
+            class="main-nav-links button-links-inactive flex-center"
+          >
+            <img
+              src="images/navbar/inactive/community.svg"
+              alt="Community Logo"
+              class="main-nav-images"
+            />
+            <span class="gradient-style-text">Community</span>
+          </a>
+          <div class="vertical-separators"></div>
+
+          <!-- Resources Link -->
+          <a
+            href="resources.html"
+            class="main-nav-links button-links-inactive flex-center"
+          >
+            <img
+              src="images/navbar/inactive/resources.svg"
+              alt="Resources Logo"
+              class="main-nav-images"
+            />
+            <span class="gradient-style-text">Resources</span>
+          </a>
+          <div class="vertical-separators"></div>
         </div>
-    </header>
 
-    <main>
-        <section id="home" class="section">
-            <h2>Welcome to Frutiger Aero</h2>
-            <p>Your hub for the Frutiger Aero aesthetic and community!</p>
-            <button class="glossy-button" onclick="alert('Welcome!')">Learn More</button>
+        <div class="main-nav-mobile-divs">
+          <!-- About Link -->
+          <a
+            href="about.html"
+            class="main-nav-links button-links-inactive flex-center"
+          >
+            <img
+              src="images/navbar/inactive/about.svg"
+              alt="About Logo"
+              class="main-nav-images"
+            />
+            <span class="gradient-style-text">About</span>
+          </a>
+          <div class="nav-side-vertical-separators vertical-separators"></div>
+        </div>
+      </nav>
+
+      <!-- Main Content Area -->
+      <main id="mainContent">
+        <section id="introductionSection">
+          <header class="containers-style flex-center">
+            <h1>Welcome to the Frutiger Aero Site!</h1>
+          </header>
+
+          <article class="containers-style flex-center">
+            <!-- Placeholder Image for Welcome Section -->
+            <img src="images/home/welcome.png" alt="Placeholder Image" />
+            <div>
+              <h2>Aero-chan says</h2>
+              <p>
+                Welcome! This website is dedicated to Frutiger Aero, a tech
+                aesthetic from the early 2000s. It is maintained by the
+                Aesthetic Network, a community dedicated to preserving
+                aesthetics and supporting artists. Explore the website to learn
+                more about the aesthetic, find links to our various socials,
+                other communities, and much more.
+              </p>
+            </div>
+          </article>
         </section>
+      </main>
 
-        <section id="community" class="section">
-            <h2>Community</h2>
-            <ul>
-                <li><a href="#">Discord</a></li>
-                <li><a href="#">Facebook Group</a></li>
-                <li><a href="#">News + Events</a></li>
-                <li><a href="#">Creator Spotlights</a></li>
-            </ul>
-        </section>
+      <!-- Settings Bar for Text Size and Sound Controls -->
+      <nav id="settingsBar" class="flex-center" aria-label="Settings Bar">
+        <div
+          class="settings-bar-divs containers-style flex-center"
+          aria-label="Settings: Text Size"
+        >
+          <div
+            class="settings-side-vertical-separators vertical-separators"
+          ></div>
 
-        <section id="resources" class="section">
-            <h2>Resources</h2>
-            <ul>
-                <li><a href="#">What is Frutiger Aero?</a></li>
-                <li><a href="#">Community Values</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Featured Videos</a></li>
-            </ul>
-        </section>
+          <!-- Text Size Controls -->
+          <img src="images/home/text_size.svg" alt="" />
+          <span class="settings-titles gradient-style-text">Text size:</span>
+          <div class="vertical-separators"></div>
 
-        <section id="archives" class="section">
-            <h2>Archives</h2>
-            <ul>
-                <li><a href="#">Images</a></li>
-                <li><a href="#">Icon Packs</a></li>
-                <li><a href="#">Wallpapers</a></li>
-                <li><a href="#">Music</a></li>
-            </ul>
-        </section>
+          <!-- Small Text Button -->
+          <button
+            class="settings-buttons button-links-inactive"
+            id="small"
+            aria-label="Text: Small"
+          >
+            <span class="gradient-style-text">S</span>
+          </button>
+          <div class="vertical-separators"></div>
 
-        <section id="about" class="section">
-            <h2>About</h2>
-            <p>Meet the team behind the Frutiger Aero Community.</p>
-        </section>
+          <!-- Medium Text Button -->
+          <button
+            class="settings-buttons button-links-active"
+            id="medium"
+            aria-label="Text: Medium"
+          >
+            <span class="gradient-style-text">M</span>
+          </button>
+          <div class="vertical-separators"></div>
 
-        <section id="contact" class="section">
-            <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit" class="glossy-button">Send</button>
-            </form>
-        </section>
-    </main>
+          <!-- Large Text Button -->
+          <button
+            class="settings-buttons button-links-inactive"
+            id="large"
+            aria-label="Text: Large"
+          >
+            <span class="gradient-style-text">L</span>
+          </button>
+          <div class="vertical-separators"></div>
+        </div>
 
-    <footer class="glossy-footer">
-        <p>&copy; 2024 Frutiger Aero Community. All Rights Reserved.</p>
-    </footer>
-</body>
+        <div
+          class="settings-bar-divs containers-style flex-center"
+          aria-label="Settings: Sound"
+        >
+          <div
+            class="settings-side-vertical-separators vertical-separators"
+          ></div>
+
+          <!-- Sound Controls -->
+          <img src="images/home/sounds.svg" alt="" />
+          <span class="settings-titles gradient-style-text">Sounds:</span>
+          <div class="vertical-separators"></div>
+
+          <!-- Sound On Button -->
+          <button
+            class="settings-buttons button-links-inactive"
+            id="soundsOn"
+            aria-label="Sounds: On"
+          >
+            <span class="gradient-style-text">On</span>
+          </button>
+          <div class="vertical-separators"></div>
+
+          <!-- Sound Off Button -->
+          <button
+            class="settings-buttons button-links-active"
+            id="soundsOff"
+            aria-label="Sounds: Off"
+          >
+            <span class="gradient-style-text">Off</span>
+          </button>
+          <div class="vertical-separators"></div>
+        </div>
+      </nav>
+      <div class="website-spacer-bottom"></div>
+    </div>
+
+    <!-- Music Player -->
+    <div id="musicBar" class="containers-style">
+      <button
+        class="button-links-active"
+        id="musicToggle"
+        aria-label="Toggle Music"
+      >
+        <img src="images/music_on.svg" alt="Music Status" id="musicToggleImg" />
+      </button>
+      <div class="vertical-separators"></div>
+      <div class="music-text-div">
+        <div class="music-inner-text">
+          <audio
+            id="songAudio"
+            loop
+            data-title="Editing a Mii (Gamepad)"
+            data-artist="Wii U"
+          >
+            <source src="/music/home.mp3" type="audio/mpeg" />
+          </audio>
+          <span id="songTitle" class="gradient-style-text"></span>
+          <span class="gradient-style-text">—</span>
+          <span id="songArtist" class="gradient-style-text"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Javascript -->
+    <script src="javascript/scripts.js" async defer></script>
+  </body>
 </html>

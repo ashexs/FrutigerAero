@@ -1,0 +1,129 @@
+.rss-button {
+  padding: 10px;
+  border-radius: 9px;
+  width: 50px;
+  margin-left: 15px;
+}
+
+.blog-entry-container {
+  justify-content: flex-start;
+}
+.blog-entry-container img {
+  height: 100%;
+}
+
+.blog-entry-text a {
+  background: linear-gradient(
+    180deg,
+    rgba(213, 224, 213, 0.9) 0%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
+  font-weight: 300;
+  font-size: 2em;
+  display: inline-block;
+}
+.blog-entry-text span {
+  font-weight: 300;
+  font-size: 1.4em;
+  color: #ffffff;
+  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
+}
+.blog-entry-text p {
+  max-width: none;
+  width: 100%;
+}
+
+#blogpostHeader {
+  flex-direction: column;
+}
+#blogpostHeader span {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.4em;
+  line-height: 100%;
+  color: #e7e7e7;
+  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
+  margin-top: 5px;
+}
+
+.blog-article {
+  flex-direction: column;
+}
+.blog-article p {
+  max-width: 100%;
+}
+.blog-article h2 {
+  margin: 10px 0px 0px 0px;
+}
+.blog-article img {
+  float: left;
+  width: 100%;
+  max-width: 250px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+/* Specific to Creator Spotlights */
+.quotation-words {
+  margin-left: 20px;
+}
+.creator-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0px 10px 10px;
+}
+.creator-images img {
+  border: 3px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  max-width: 360px;
+}
+
+/* Responsiveness */
+@media (max-width: 750px) {
+  #mainNav {
+    height: 45px;
+  }
+  .main-nav-images {
+    display: block;
+  }
+  .main-nav-home {
+    padding: 11px 30px;
+  }
+  .header-img {
+    display: none;
+  }
+  .blog-entry-container img {
+    display: none;
+  }
+  .blog-entry-text p {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  h1 {
+    font-size: 1.4em;
+  }
+  h2 {
+    font-size: 1.3em;
+  }
+  .main-nav-home {
+    padding: 11px 15px;
+  }
+  .blog-entry-text a {
+    font-size: 1.3em;
+  }
+  .blog-entry-text span {
+    font-size: 1.1em;
+  }
+}
+
+@media (max-width: 300px) {
+  .blog-entry-container {
+    font-size: 0.7em;
+  }
+}
