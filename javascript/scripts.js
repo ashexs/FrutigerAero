@@ -165,6 +165,14 @@ SONG_ARTIST.textContent = SONG_AUDIO.getAttribute("data-artist");
 // Song volume
 SONG_AUDIO.volume = 0.3;
 
+// Check if music is paused or played externally and change button state
+SONG_AUDIO.onpause = function () {
+  musicOff();
+};
+SONG_AUDIO.onplay = function () {
+  musicOn();
+};
+
 // Turn off music and update UI
 function musicOff() {
   MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
