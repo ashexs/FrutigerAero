@@ -57,6 +57,7 @@
   margin-right: 10px;
 }
 
+#communityValues,
 #featuredVideos {
   margin-top: 15px;
 }
@@ -78,30 +79,7 @@
   z-index: 1;
   transition-duration: 0.3;
 }
-/* Hover effect */
-/* .carousel-and-buttons-container button::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-      180deg,
-      rgba(127, 140, 124, 0.1) 30%,
-      rgba(145, 152, 141, 0.2) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(111, 118, 122, 0.2) 0%,
-      rgba(0, 0, 0, 0.2) 50%,
-      rgba(62, 65, 67, 0.2) 100%
-    );
-  border-radius: 9px;
-  opacity: 0;
-  transition: opacity 0.2s ease-in;
-  z-index: 1;
-}
-.carousel-and-buttons-container button:hover::before {
-  opacity: 1;
-} */
+
 .video-nav-buttons img {
   width: 45%;
   margin-bottom: -3px;
@@ -130,11 +108,23 @@
   width: max-content;
   transition: none;
 }
+.video-carousel a {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 0.8em;
+}
 .video-carousel img {
   border-radius: 7px;
   margin: 0px 5px;
   max-width: 256px;
   flex-shrink: 0;
+  transition-duration: 0.2s;
+}
+.video-carousel img:hover {
+  filter: brightness(80%);
+  scale: 0.98;
+  transition-duration: 0.2s;
 }
 
 .slider-div {
