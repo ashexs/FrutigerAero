@@ -47,7 +47,7 @@ h4 {
 
 h1,
 h2 {
-  color: rgba(204, 204, 204, 0.4);
+  color: rgba(255, 255, 255, 0.1);
   background: linear-gradient(
     180deg,
     rgba(213, 224, 213, 0.9) 0%,
@@ -61,11 +61,11 @@ h2 {
 h1 {
   display: flex;
   align-items: center;
-  font-size: 2.5em;
+  font-size: 2.3em;
   text-align: center;
 }
 h2 {
-  font-size: 2em;
+  font-size: 1.9em;
 }
 
 p {
