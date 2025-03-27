@@ -33,6 +33,12 @@ article {
 }
 
 /* Responsiveness */
+@media (max-width: 950px) {
+  .buttons-links-long-text {
+    display: none;
+  }
+}
+
 @media (max-width: 750px) {
   #mainNav {
     height: 45px;
