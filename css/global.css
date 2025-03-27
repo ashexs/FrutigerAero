@@ -7,13 +7,18 @@
 }
 
 @font-face {
+  font-family: "Noto Sans Light";
+  src: url("../fonts/NotoSans-Light.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Noto Sans Regular";
-  src: url("../fonts/noto-sans-regular.ttf") format("opentype");
+  src: url("../fonts/NotoSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Noto Sans Semi Bold";
-  src: url("../fonts/noto-sans-semi-bold.ttf") format("opentype");
+  src: url("../fonts/NotoSans-SemiBold.ttf") format("truetype");
 }
 
 /* To fix default cursor on background */
@@ -34,6 +39,13 @@ body {
 }
 
 h1,
+h2,
+h3,
+h4 {
+  font-family: "Noto Sans Light", Arial, Helvetica, sans-serif;
+}
+
+h1,
 h2 {
   background: linear-gradient(
     180deg,
@@ -44,7 +56,6 @@ h2 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
-  font-weight: 300;
 }
 h1 {
   display: flex;
