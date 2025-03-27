@@ -80,6 +80,11 @@
   border: 3px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   max-width: 360px;
+  transition-duration: 0.2s;
+}
+.creator-images img:hover {
+  transform: scale(1.03);
+  transition-duration: 0.2s;
 }
 
 /* Responsiveness */
