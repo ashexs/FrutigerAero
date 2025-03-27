@@ -13,27 +13,26 @@
 }
 
 .blog-entry-text a {
+  font-style: normal;
+  font-weight: 300;
   background: linear-gradient(
     180deg,
-    rgba(213, 224, 213, 0.9) 0%,
+    rgba(241, 241, 241, 0.9) 0%,
     #ffffff 100%
   );
   -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
-  font-weight: 300;
   font-size: 2em;
   display: inline-block;
-}
-.blog-entry-text span {
-  font-weight: 300;
-  font-size: 1.4em;
-  color: #ffffff;
-  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
 }
 .blog-entry-text p {
   max-width: none;
   width: 100%;
+}
+.blog-entry-text span {
+  font-size: 1.2em;
 }
 
 #blogpostHeader {
