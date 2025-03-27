@@ -17,6 +17,9 @@ let sound_on = false;
 let music_playing = false;
 let isMusicBarVisible = false;
 
+MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
+MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
+
 function setSessionStorage(name, value) {
   sessionStorage.setItem(name, value);
 }
