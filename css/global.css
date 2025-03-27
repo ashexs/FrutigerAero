@@ -47,16 +47,18 @@ h4 {
 
 h1,
 h2 {
+  color: transparent;
   background: linear-gradient(
     180deg,
     rgba(213, 224, 213, 0.9) 0%,
     #ffffff 100%
   );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
+  text-rendering: optimizeLegibility;
 }
+
 h1 {
   display: flex;
   align-items: center;
@@ -102,7 +104,6 @@ button {
 
 /* Bold Text */
 .bold {
-  /* font-weight: bold; */
   font-family: "Noto Sans Semi Bold", Arial, Helvetica, sans-serif;
 }
 
