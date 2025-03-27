@@ -181,8 +181,7 @@ window.addEventListener("load", () => {
   }
 
   if (navigator.userAgent.match(/iPhone|iPad|iPod|Macintosh/i)) {
-    MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
-    MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
+    musicOff();
   }
 
   let savedFontSize = localStorage.getItem("font_size");
