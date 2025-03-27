@@ -6,6 +6,7 @@ const PREV_BUTTON = document.querySelector(
 const NEXT_BUTTON = document.querySelector(
   '.video-nav-buttons[aria-label="Next Videos"]'
 );
+const SLIDER = document.querySelector(".slider-div input");
 
 const IMAGE_WIDTH = 640;
 const IMAGE_MARGIN = 5;
@@ -45,4 +46,17 @@ PREV_BUTTON.addEventListener("click", () => {
 
 NEXT_BUTTON.addEventListener("click", () => {
   CAROUSEL_WRAPPER.scrollLeft += IMAGE_WIDTH;
+});
+
+SLIDER.addEventListener("input", () => {
+  const maxScroll = (IMAGE_WIDTH + IMAGE_MARGIN * 2) * (TOTAL_ITEMS - 1);
+  const sliderValue = SLIDER.value;
+  const newScrollLeft = (sliderValue / 100) * maxScroll;
+  CAROUSEL_WRAPPER.scrollLeft = newScrollLeft;
+});
+
+CAROUSEL_WRAPPER.addEventListener("scroll", () => {
+  const maxScroll = (IMAGE_WIDTH + IMAGE_MARGIN * 2) * (TOTAL_ITEMS - 1);
+  const scrollPercentage = (CAROUSEL_WRAPPER.scrollLeft / maxScroll) * 100;
+  SLIDER.value = scrollPercentage;
 });
