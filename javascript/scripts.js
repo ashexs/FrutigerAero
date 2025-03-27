@@ -181,7 +181,6 @@ window.addEventListener("load", () => {
   }
 
   if (navigator.userAgent.match(/iPhone|iPad|iPod|Macintosh/i)) {
-    setSessionStorage("sound", "off");
     MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
     MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
   }
