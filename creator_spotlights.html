@@ -3,13 +3,16 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Frutiger Aero Community Blog - 01 Jan 2025</title>
-    <meta name="description" content="Blog post 1 description here." />
+    <title>Frutiger Aero - Creator Spotlights</title>
+    <meta
+      name="description"
+      content="Featured Artists of the month in the Frutiger Aero Community."
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="icon"
       type="image/png"
-      href="../images/favicon/favicon-96x96.png"
+      href="/images/favicon/favicon-96x96.png"
       sizes="96x96"
     />
     <link rel="shortcut icon" href="/images/favicon/favicon.ico" />
@@ -20,10 +23,11 @@
     />
     <meta name="apple-mobile-web-app-title" content="FrutAero" />
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
-    <link rel="canonical" href="frutigeraero.org/news" />
-    <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/blogs.css" />
+    <link rel="canonical" href="frutigeraero.org/creator_spotlights" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/blogs.css" />
   </head>
+
   <body>
     <div id="background"></div>
     <div id="siteContainer">
@@ -39,15 +43,15 @@
         <div class="main-nav-mobile-divs">
           <!-- Community Link -->
           <a
-            href="/news"
+            href="/community"
             class="main-nav-links button-links-inactive flex-center"
           >
             <img
-              src="../images/navbar/inactive/back.png"
+              src="images/navbar/inactive/back.png"
               alt="Community Logo"
               class="main-nav-images"
             />
-            <span class="gradient-style-text">Back to News</span>
+            <span class="gradient-style-text">Back to Community</span>
           </a>
           <div class="vertical-separators"></div>
 
@@ -56,7 +60,7 @@
             href="/"
             class="main-nav-home main-nav-links button-links-inactive flex-center"
           >
-            <img src="../images/navbar/inactive/home.svg" alt="Home Logo" />
+            <img src="images/navbar/inactive/home.svg" alt="Home Logo" />
             <span class="home-nav-text gradient-style-text">Home</span>
           </a>
         </div>
@@ -67,30 +71,33 @@
       <main id="mainContent">
         <section id="communitySection">
           <header
-            id="blogpostHeader"
+            id="newsHeader"
             class="containers-style-2 border-radius-top flex-center"
           >
-            <h1>A Long long Entry Blog Title</h1>
-            <span class="gradient-style-text">2025-01-20</span>
+            <h1>Creator Spotlights</h1>
+            <a
+              href="rss/creator_spotlights.xml"
+              class="rss-button gradient-headers-buttons gradient-headers-buttons-hover flex-center"
+              title="Open RSS file, you can then copy the URL to your reader."
+              ><img src="images/community/rss.svg" alt="RSS Button"
+            /></a>
           </header>
 
-          <article class="blog-article containers-style border-radius-bottom">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est
-              laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+          <article
+            class="containers-style blog-entry-container border-radius-bottom buttons-no-underline"
+          >
+            <div class="blog-entry-text">
+              <a href="/creator_spotlight/january_2025.html"
+                >January 2025 Creator Spotlight</a
+              ><br />
+              <p>
+                With the new year, we wanted a way to highlight our amazing
+                community artists and spotlight an artist each month in our
+                community. We will be featuring a new Frutiger Aero Artist of
+                the Month starting in 2025. This month, our Artist of the Month
+                is Liam! (@z2rMC)
+              </p>
+            </div>
           </article>
         </section>
       </main>
@@ -112,10 +119,13 @@
           <audio
             id="songAudio"
             loop
-            data-title="SD Card Gallery"
-            data-artist="Wii Photo Channel"
+            data-title="Get In Shape!"
+            data-artist="Wii Fit"
           >
-            <source src="/music/blog.mp3" type="audio/mpeg" />
+            <source
+              src="/music/creator_spotlights_menu.mp3"
+              type="audio/mpeg"
+            />
           </audio>
           <span id="songTitle" class="gradient-style-text"></span>
           <span class="gradient-style-text">—</span>
@@ -125,6 +135,6 @@
     </div>
 
     <!-- Javascript -->
-    <script src="/javascript/scripts.js" async defer></script>
+    <script src="javascript/scripts.js" async defer></script>
   </body>
 </html>
