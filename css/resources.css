@@ -294,6 +294,9 @@
   h2 {
     font-size: 1.3em;
   }
+  .video-nav-buttons {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
