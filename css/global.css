@@ -7,8 +7,13 @@
 }
 
 @font-face {
-  font-family: "Noto Sans";
-  src: url("../fonts/noto-sans-variable.ttf") format("opentype");
+  font-family: "Noto Sans Regular";
+  src: url("../fonts/noto-sans-regular.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Noto Sans Semi Bold";
+  src: url("../fonts/noto-sans-semi-bold.ttf") format("opentype");
 }
 
 /* To fix default cursor on background */
@@ -24,7 +29,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  font-family: "Noto Sans", Arial, Helvetica, sans-serif;
+  font-family: "Noto Sans Regular", Arial, Helvetica, sans-serif;
   cursor: url("../images/cursors/normal.cur"), auto;
 }
 
@@ -86,7 +91,8 @@ button {
 
 /* Bold Text */
 .bold {
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-family: "Noto Sans Semi Bold", Arial, Helvetica, sans-serif;
 }
 
 /* Class to align items */

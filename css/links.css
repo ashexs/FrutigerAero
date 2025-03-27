@@ -15,7 +15,7 @@ article {
   padding: 10px;
   width: 100%;
   min-height: 80px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans Regular", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
   color: #ffffff;
