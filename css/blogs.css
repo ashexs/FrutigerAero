@@ -86,6 +86,37 @@
   transition-duration: 0.2s;
 }
 
+/* Links */
+.links-container {
+  height: 80px;
+  padding: 0px;
+}
+.links-container a {
+  justify-content: flex-start;
+  padding: 10px;
+  width: 100%;
+  min-height: 80px;
+  font-family: "Noto Sans Regular", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #ffffff;
+  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+.links-container img {
+  height: 60px;
+}
+
+.links-separators {
+  height: 80px;
+  padding: 1px;
+  z-index: 2;
+}
+
+#nominateArtistArticle {
+  margin-top: 15px;
+}
+
 /* Responsiveness */
 @media (max-width: 750px) {
   #mainNav {
