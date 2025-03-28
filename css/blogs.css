@@ -134,9 +134,6 @@
   .blog-entry-container img {
     display: none;
   }
-  .blog-entry-text p {
-    display: none;
-  }
 }
 
 @media (max-width: 520px) {
