@@ -9,17 +9,6 @@
   margin-right: 20px;
 }
 
-/* 88x31 Buttons */
-.community-buttons {
-  width: 88px !important;
-  margin-top: 5px;
-  transition-duration: 0.2s;
-}
-.community-buttons:hover {
-  filter: brightness(85%);
-  transition-duration: 0.2s;
-}
-
 /* Settings Bar Container */
 #settingsBar {
   max-width: 1200px;

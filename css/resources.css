@@ -57,7 +57,7 @@
   margin-right: 10px;
 }
 
-#introductionSection,
+#introduction,
 #communityValues {
   margin-top: 15px;
 }
@@ -247,8 +247,27 @@
   background-color: #555;
 }
 
-#charitiesOrgs {
-  margin-top: 20px;
+#charitiesOrgs,
+#graphics {
+  margin-top: 15px;
+}
+
+#graphics {
+  text-align: center;
+}
+#graphics p {
+  max-width: 100%;
+}
+
+/* 88x31 Buttons */
+.community-buttons {
+  width: 88px !important;
+  margin-top: 5px;
+  transition-duration: 0.2s;
+}
+.community-buttons:hover {
+  filter: brightness(85%);
+  transition-duration: 0.2s;
 }
 
 /* Individual navs (or link row) */
