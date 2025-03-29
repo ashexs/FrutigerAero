@@ -131,6 +131,16 @@ button {
   text-decoration: underline;
 }
 
+/* Margin top for sections */
+.margin-top {
+  margin-top: 15px;
+}
+
+/* Full width for text */
+.p-full-width p {
+  max-width: 100%;
+}
+
 /* Gradients for text */
 .gradient-style-text {
   background: linear-gradient(

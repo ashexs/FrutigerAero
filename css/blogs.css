@@ -51,9 +51,6 @@
 .blog-article {
   flex-direction: column;
 }
-.blog-article p {
-  max-width: 100%;
-}
 .blog-article h2 {
   margin: 10px 0px 0px 0px;
 }
@@ -112,10 +109,6 @@
   height: 80px;
   padding: 1px;
   z-index: 2;
-}
-
-#nominateArtistArticle {
-  margin-top: 15px;
 }
 
 /* Responsiveness */
