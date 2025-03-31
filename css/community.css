@@ -36,6 +36,7 @@
 /* Cards */
 .community-cards {
   flex-direction: column;
+  position: relative;
 }
 .community-cards a {
   z-index: 2;
@@ -57,6 +58,7 @@
   opacity: 0;
   transition: opacity 0.2s ease-in;
   z-index: 1;
+  height: 100%;
 }
 .community-cards div:hover::before {
   opacity: 1;
