@@ -5,7 +5,7 @@
   margin-left: 15px;
 }
 
-/* .blog-entry-text a {
+.blog-entry-text a {
   background: linear-gradient(
     180deg,
     rgba(241, 241, 241, 0.9) 0%,
@@ -21,7 +21,7 @@
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   font-size: 2em;
   position: relative;
-} */
+}
 .blog-entry-text p {
   max-width: none;
   width: 100%;
