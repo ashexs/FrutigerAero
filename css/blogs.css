@@ -6,6 +6,7 @@
 }
 
 .blog-entry-text a {
+  color: white;
   font-style: normal;
   font-weight: 300;
   background: linear-gradient(
