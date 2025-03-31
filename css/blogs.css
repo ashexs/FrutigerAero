@@ -6,9 +6,6 @@
 }
 
 .blog-entry-text a {
-  color: white;
-  font-style: normal;
-  font-weight: 300;
   background: linear-gradient(
     180deg,
     rgba(241, 241, 241, 0.9) 0%,
@@ -16,11 +13,14 @@
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: white;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 300;
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   font-size: 2em;
-  display: inline-block;
-  pointer-events: auto;
-  z-index: 10;
+  position: relative;
 }
 .blog-entry-text p {
   max-width: none;
