@@ -5,13 +5,6 @@
   margin-left: 15px;
 }
 
-.blog-entry-container {
-  justify-content: flex-start;
-}
-.blog-entry-container img {
-  height: 100%;
-}
-
 .blog-entry-text a {
   font-style: normal;
   font-weight: 300;
@@ -125,9 +118,6 @@
   .header-img {
     display: none;
   }
-  .blog-entry-container img {
-    display: none;
-  }
 }
 
 @media (max-width: 520px) {
@@ -145,11 +135,5 @@
   }
   .blog-entry-text span {
     font-size: 1.1em;
-  }
-}
-
-@media (max-width: 300px) {
-  .blog-entry-container {
-    font-size: 0.7em;
   }
 }
