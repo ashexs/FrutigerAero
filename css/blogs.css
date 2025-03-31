@@ -5,6 +5,20 @@
   margin-left: 15px;
 }
 
+.blog-article-containers a {
+  background: linear-gradient(
+    180deg,
+    rgba(241, 241, 241, 0.9) 0%,
+    #ffffff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: white;
+  font-size: 2em;
+  display: block;
+}
+
 .blog-entry-text a {
   color: white;
   font-style: normal;
