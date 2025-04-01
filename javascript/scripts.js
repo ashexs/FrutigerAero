@@ -107,7 +107,7 @@ function linkSoundsMute() {
 
 // Hide Music Bar Function
 function musicBarHide() {
-  if (!isMusicBarVisible) return;
+  if (!isMusicBarVisible() return;
   isMusicBarVisible = false;
   let op = 1;
   MUSIC_BAR.style.opacity = op;
