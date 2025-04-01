@@ -17,8 +17,6 @@ let sound_on = false;
 let music_playing = false;
 let isMusicBarVisible = false;
 
-let savedSound = getSessionStorage("sound");
-
 MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
 MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
 
@@ -50,16 +48,25 @@ function overflowScrolling() {
   }
 }
 
-window.addEventListener("load", () => {
-  setTimeout(overflowScrolling, 0);
-});
+let savedMusic = getSessionStorage("music");
+setTimeout(overflowScrolling, 0);
+
+if (savedMusic === "on") {
+  musicOn();
+} else if (savedMusic === "off") {
+  musicOff();
+}
+
+if (navigator.userAgent.match(/iPhone|iPad|iPod|Macintosh/i)) {
+  musicOff();
+}
 
 window.addEventListener("resize", overflowScrolling);
 
 let sounds_enable = new Audio("/sounds/sounds_enable.mp3");
 let sounds_disable = new Audio("/sounds/sounds_disable.mp3");
 
-// Sounds enable sound
+// Sounds startup sound
 function soundsEnableSound() {
   sounds_enable.volume = 0.3;
   sounds_enable.play();
@@ -67,7 +74,7 @@ function soundsEnableSound() {
   sounds_disable.currentTime = 0;
 }
 
-// Sounds disable sound
+// Sounds shutdown sound
 function soundsDisableSound() {
   sounds_disable.volume = 0.3;
   sounds_disable.play();
@@ -78,7 +85,7 @@ function soundsDisableSound() {
 let link_sound = new Audio("/sounds/links.ogg");
 link_sound.volume = 0.05;
 
-// All links sounds
+// Enable links sounds
 function linkSounds() {
   document.querySelectorAll("a, button").forEach((element) => {
     element.addEventListener("mouseover", () => {
@@ -88,8 +95,9 @@ function linkSounds() {
     });
   });
 }
-// Disable links sounds
-function linkSoundsDisable() {
+
+// Mute link sounds
+function linkSoundsMute() {
   document.querySelectorAll("a, button").forEach((element) => {
     element.addEventListener("mouseover", () => {
       link_sound.currentTime = 0;
@@ -115,7 +123,6 @@ function musicBarHide() {
     MUSIC_BAR.style.filter = "alpha(opacity=" + op * 100 + ")";
   }, 50);
   soundsDisableSound();
-  linkSoundsDisable();
 }
 
 function musicBarShow() {
@@ -134,7 +141,6 @@ function musicBarShow() {
     MUSIC_BAR.style.filter = "alpha(opacity=" + op * 100 + ")";
   }, 50);
   soundsEnableSound();
-  linkSounds();
 }
 
 if (SOUND_ON_BUTTON) {
@@ -142,6 +148,7 @@ if (SOUND_ON_BUTTON) {
     setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true);
     musicBarShow();
     setSessionStorage("sound", "on");
+    linkSounds();
   });
 }
 
@@ -151,6 +158,7 @@ if (SOUND_OFF_BUTTON) {
     musicBarHide();
     setSessionStorage("sound", "off");
     musicOff();
+    linkSoundsMute();
   });
 }
 
@@ -187,27 +195,26 @@ function setActiveSound(activeButton, inactiveButton, isSoundOn) {
   }
 }
 
-window.addEventListener("load", () => {
-  if (savedSound === "on") {
-    MUSIC_BAR.style.display = "flex";
-    isMusicBarVisible = true;
-    overflowScrolling();
-    linkSounds();
-    tokoniSound();
-  } else if (savedSound === "off") {
-    MUSIC_BAR.style.display = "none";
-    isMusicBarVisible = false;
-    overflowScrolling();
-  }
+let savedSound = getSessionStorage("sound");
+if (savedSound === "on") {
+  MUSIC_BAR.style.display = "flex";
+  isMusicBarVisible = true;
+  overflowScrolling();
+  linkSounds();
+  tokoniSound();
+} else if (savedSound === "off") {
+  MUSIC_BAR.style.display = "none";
+  isMusicBarVisible = false;
+  overflowScrolling();
+}
 
-  if (SOUND_ON_BUTTON && SOUND_OFF_BUTTON) {
-    if (savedSound === "on") {
-      setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true);
-    } else if (savedSound === "off") {
-      setActiveSound(SOUND_OFF_BUTTON, SOUND_ON_BUTTON, false);
-    }
+if (SOUND_ON_BUTTON && SOUND_OFF_BUTTON) {
+  if (savedSound === "on") {
+    setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true);
+  } else if (savedSound === "off") {
+    setActiveSound(SOUND_OFF_BUTTON, SOUND_ON_BUTTON, false);
   }
-});
+}
 
 SONG_TITLE.textContent = SONG_AUDIO.getAttribute("data-title");
 SONG_ARTIST.textContent = SONG_AUDIO.getAttribute("data-artist");
@@ -243,47 +250,33 @@ MUSIC_TOGGLE_BUTTON.addEventListener("click", () => {
   music_playing ? musicOff() : musicOn();
 });
 
-window.addEventListener("load", () => {
-  let savedMusic = getSessionStorage("music");
+let savedFontSize = localStorage.getItem("font_size");
+let savedButton = localStorage.getItem("active_button");
 
-  if (savedMusic === "on") {
-    musicOn();
-  } else if (savedMusic === "off") {
-    musicOff();
+if (savedFontSize && savedButton) {
+  document.body.style.fontSize = savedFontSize;
+
+  switch (savedButton) {
+    case "small":
+      setActiveButton(TEXT_SMALL_BUTTON, [
+        TEXT_MEDIUM_BUTTON,
+        TEXT_LARGE_BUTTON,
+      ]);
+      break;
+    case "medium":
+      setActiveButton(TEXT_MEDIUM_BUTTON, [
+        TEXT_SMALL_BUTTON,
+        TEXT_LARGE_BUTTON,
+      ]);
+      break;
+    case "large":
+      setActiveButton(TEXT_LARGE_BUTTON, [
+        TEXT_SMALL_BUTTON,
+        TEXT_MEDIUM_BUTTON,
+      ]);
+      break;
   }
-
-  if (navigator.userAgent.match(/iPhone|iPad|iPod|Macintosh/i)) {
-    musicOff();
-  }
-
-  let savedFontSize = localStorage.getItem("font_size");
-  let savedButton = localStorage.getItem("active_button");
-
-  if (savedFontSize && savedButton) {
-    document.body.style.fontSize = savedFontSize;
-
-    switch (savedButton) {
-      case "small":
-        setActiveButton(TEXT_SMALL_BUTTON, [
-          TEXT_MEDIUM_BUTTON,
-          TEXT_LARGE_BUTTON,
-        ]);
-        break;
-      case "medium":
-        setActiveButton(TEXT_MEDIUM_BUTTON, [
-          TEXT_SMALL_BUTTON,
-          TEXT_LARGE_BUTTON,
-        ]);
-        break;
-      case "large":
-        setActiveButton(TEXT_LARGE_BUTTON, [
-          TEXT_SMALL_BUTTON,
-          TEXT_MEDIUM_BUTTON,
-        ]);
-        break;
-    }
-  }
-});
+}
 
 if (TEXT_SMALL_BUTTON) {
   TEXT_SMALL_BUTTON.addEventListener("click", function () {
@@ -294,7 +287,6 @@ if (TEXT_SMALL_BUTTON) {
     localStorage.setItem("active_button", "small");
   });
 }
-
 if (TEXT_MEDIUM_BUTTON) {
   TEXT_MEDIUM_BUTTON.addEventListener("click", function () {
     setActiveButton(TEXT_MEDIUM_BUTTON, [TEXT_SMALL_BUTTON, TEXT_LARGE_BUTTON]);
@@ -304,7 +296,6 @@ if (TEXT_MEDIUM_BUTTON) {
     localStorage.setItem("active_button", "medium");
   });
 }
-
 if (TEXT_LARGE_BUTTON) {
   TEXT_LARGE_BUTTON.addEventListener("click", function () {
     setActiveButton(TEXT_LARGE_BUTTON, [TEXT_SMALL_BUTTON, TEXT_MEDIUM_BUTTON]);
