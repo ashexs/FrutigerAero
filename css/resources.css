@@ -284,6 +284,11 @@
   z-index: 2;
 }
 
+.stamps-div a {
+  text-decoration: none;
+  margin: 0px 1px;
+}
+
 /* Responsiveness */
 @media (max-width: 250px) {
   .links-container a {
