@@ -1,3 +1,6 @@
+#newsHeader {
+  position: relative;
+}
 .rss-button {
   padding: 10px;
   border-radius: 9px;
