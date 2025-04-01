@@ -146,7 +146,7 @@ function musicBarShow() {
 if (SOUND_ON_BUTTON) {
   SOUND_ON_BUTTON.addEventListener("click", () => {
     setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true);
-    musicBarShow();
+    musicBarHide();
     setSessionStorage("sound", "on");
     linkSounds();
   });
@@ -155,7 +155,7 @@ if (SOUND_ON_BUTTON) {
 if (SOUND_OFF_BUTTON) {
   SOUND_OFF_BUTTON.addEventListener("click", () => {
     setActiveSound(SOUND_OFF_BUTTON, SOUND_ON_BUTTON, false);
-    musicBarHide();
+    musicBarShow();
     setSessionStorage("sound", "off");
     musicOff();
     linkSoundsMute();
