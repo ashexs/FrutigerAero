@@ -259,13 +259,26 @@ document.querySelectorAll("a").forEach((element) => {
 // Staff Sounds
 let tokoni = document.getElementById("tokoni");
 let tokoni_sound = new Audio("/sounds/tokoni.ogg");
+let tokoni_out = document.getElementById("tokoni_out");
+let tokoni_out_sound = new Audio("/sounds/tokoni_out.ogg");
 tokoni_sound.volume = 0.1;
+tokoni_out_sound.volume = 0.1;
 
 if (tokoni) {
   tokoni.querySelectorAll("img").forEach((element) => {
     element.addEventListener("mouseover", () => {
       if (!sound_on) {
         tokoni_sound.play();
+      }
+    });
+  });
+}
+
+if (tokoni_out) {
+  tokoni_out.querySelectorAll("img").forEach((element) => {
+    element.addEventListener(!"mouseover", () => {
+      if (!sound_on) {
+        tokoni_out_sound.play();
       }
     });
   });
