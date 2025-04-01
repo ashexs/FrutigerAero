@@ -109,7 +109,7 @@ function linkSoundsMute() {
     });
   });
 }
-
+  isMusicBarVisible = false;
 // Hide Music Bar Function
 function musicBarHide() {
   if (!isMusicBarVisible) return;
@@ -223,26 +223,6 @@ if (savedSound === "on") {
   overflowScrolling();
 }
 
-// Set Song Information
-SONG_TITLE.textContent = SONG_AUDIO.getAttribute("data-title");
-SONG_ARTIST.textContent = SONG_AUDIO.getAttribute("data-artist");
-
-// Song Audio
-SONG_AUDIO.volume = 0.3;
-SONG_AUDIO.onpause = () => {
-  musicOff();
-};
-SONG_AUDIO.onplay = () => {
-  musicOn();
-};
-
-// Music Button - Default
-MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
-MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
-MUSIC_TOGGLE_BUTTON.addEventListener("click", () => {
-  music_playing ? musicOff() : musicOn();
-});
-
 // Music Button - Turn Off
 function musicOff() {
   MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
@@ -261,6 +241,26 @@ function musicOn() {
   overflowScrolling();
   setSessionStorage("music", "on");
 }
+
+// Set Song Information
+SONG_TITLE.textContent = SONG_AUDIO.getAttribute("data-title");
+SONG_ARTIST.textContent = SONG_AUDIO.getAttribute("data-artist");
+
+// Song Audio
+SONG_AUDIO.volume = 0.3;
+SONG_AUDIO.onpause = () => {
+  musicOff();
+};
+SONG_AUDIO.onplay = () => {
+  musicOn();
+};
+
+// Music Button - Default
+MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
+MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
+MUSIC_TOGGLE_BUTTON.addEventListener("click", () => {
+  music_playing ? musicOn() : musicOff();
+});
 
 // Setting Buttons - Text
 const TEXT_SMALL_BUTTON = document.getElementById("small");
