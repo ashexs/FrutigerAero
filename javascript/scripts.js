@@ -50,25 +50,6 @@ window.addEventListener("resize", overflowScrolling);
 let savedMusic = getSessionStorage("music");
 setTimeout(overflowScrolling, 0);
 
-// Music Button - Turn Off
-function musicOff() {
-  MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
-  MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
-  music_playing = false;
-  SONG_AUDIO.pause();
-  overflowScrolling();
-  setSessionStorage("music", "off");
-}
-// Music Button - Turn On
-function musicOn() {
-  MUSIC_TOGGLE_IMAGE.src = "/images/music_on.svg";
-  MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-active");
-  music_playing = true;
-  SONG_AUDIO.play();
-  overflowScrolling();
-  setSessionStorage("music", "on");
-}
-
 if (savedMusic === "on") {
   musicOn();
 } else if (savedMusic === "off") {
@@ -235,6 +216,25 @@ if (savedSound === "on") {
   MUSIC_BAR.style.display = "none";
   isMusicBarVisible = false;
   overflowScrolling();
+}
+
+// Music Button - Turn Off
+function musicOff() {
+  MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
+  MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
+  music_playing = false;
+  SONG_AUDIO.pause();
+  overflowScrolling();
+  setSessionStorage("music", "off");
+}
+// Music Button - Turn On
+function musicOn() {
+  MUSIC_TOGGLE_IMAGE.src = "/images/music_on.svg";
+  MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-active");
+  music_playing = true;
+  SONG_AUDIO.play();
+  overflowScrolling();
+  setSessionStorage("music", "on");
 }
 
 // Set Song Information
