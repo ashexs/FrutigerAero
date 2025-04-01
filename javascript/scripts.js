@@ -106,9 +106,9 @@ if (SOUND_OFF_BUTTON) {
 }
 
 // All Links sounds
-let link_sound = new Audio("/sounds/links.ogg");
-link_sound.volume = 0.1;
 function linkSounds() {
+  let link_sound = new Audio("/sounds/links.ogg");
+  link_sound.volume = 0.1;
   document.querySelectorAll("a, button").forEach((element) => {
     element.addEventListener("mouseover", () => {
       link_sound.currentTime = 0;
@@ -118,12 +118,13 @@ function linkSounds() {
 }
 
 // Tokoni Sounds
-let tokoni = document.getElementById("tokoni");
-let tokoni_hover = new Audio("/sounds/tokoni_hover.ogg");
-let tokoni_leave = new Audio("/sounds/tokoni_leave.ogg");
-tokoni_hover.volume = 0.1;
-tokoni_leave.volume = 0.1;
 function tokoniSound() {
+  let tokoni = document.getElementById("tokoni");
+  let tokoni_hover = new Audio("/sounds/tokoni_hover.ogg");
+  let tokoni_leave = new Audio("/sounds/tokoni_leave.ogg");
+  tokoni_hover.volume = 0.1;
+  tokoni_leave.volume = 0.1;
+
   if (tokoni) {
     tokoni.addEventListener("mouseover", () => {
       tokoni_hover.play();
