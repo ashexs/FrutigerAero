@@ -51,28 +51,6 @@ function setActiveSound(activeButton, inactiveButton, isSoundOn) {
   }
 }
 
-// Display sound if sound is enabled in cookie
-window.addEventListener("load", () => {
-  let savedSound = getSessionStorage("sound");
-  if (savedSound === "on") {
-    MUSIC_BAR.style.display = "flex";
-    isMusicBarVisible = true;
-    overflowScrolling();
-  } else if (savedSound === "off") {
-    MUSIC_BAR.style.display = "none";
-    isMusicBarVisible = false;
-    overflowScrolling();
-  }
-
-  if (SOUND_ON_BUTTON && SOUND_OFF_BUTTON) {
-    if (savedSound === "on") {
-      setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true);
-    } else if (savedSound === "off") {
-      setActiveSound(SOUND_OFF_BUTTON, SOUND_ON_BUTTON, false);
-    }
-  }
-});
-
 // Text carousel if music title does not fit
 function overflowScrolling() {
   const isOverflowing =
