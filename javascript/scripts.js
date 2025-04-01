@@ -50,6 +50,25 @@ window.addEventListener("resize", overflowScrolling);
 let savedMusic = getSessionStorage("music");
 setTimeout(overflowScrolling, 0);
 
+// Music Button - Turn Off
+function musicOff() {
+  MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
+  MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
+  music_playing = false;
+  SONG_AUDIO.pause();
+  overflowScrolling();
+  setSessionStorage("music", "off");
+}
+// Music Button - Turn On
+function musicOn() {
+  MUSIC_TOGGLE_IMAGE.src = "/images/music_on.svg";
+  MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-active");
+  music_playing = true;
+  SONG_AUDIO.play();
+  overflowScrolling();
+  setSessionStorage("music", "on");
+}
+
 if (savedMusic === "on") {
   musicOn();
 } else if (savedMusic === "off") {
@@ -146,7 +165,7 @@ function musicBarShow() {
 if (SOUND_ON_BUTTON) {
   SOUND_ON_BUTTON.addEventListener("click", () => {
     setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true);
-    musicBarHide();
+    musicBarShow();
     setSessionStorage("sound", "on");
     linkSounds();
   });
@@ -155,7 +174,7 @@ if (SOUND_ON_BUTTON) {
 if (SOUND_OFF_BUTTON) {
   SOUND_OFF_BUTTON.addEventListener("click", () => {
     setActiveSound(SOUND_OFF_BUTTON, SOUND_ON_BUTTON, false);
-    musicBarShow();
+    musicBarHide();
     setSessionStorage("sound", "off");
     musicOff();
     linkSoundsMute();
@@ -237,25 +256,6 @@ MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
 MUSIC_TOGGLE_BUTTON.addEventListener("click", () => {
   music_playing ? musicOff() : musicOn();
 });
-
-// Music Button - Turn Off
-function musicOff() {
-  MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
-  MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
-  music_playing = false;
-  SONG_AUDIO.pause();
-  overflowScrolling();
-  setSessionStorage("music", "off");
-}
-// Music Button - Turn On
-function musicOn() {
-  MUSIC_TOGGLE_IMAGE.src = "/images/music_on.svg";
-  MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-active");
-  music_playing = true;
-  SONG_AUDIO.play();
-  overflowScrolling();
-  setSessionStorage("music", "on");
-}
 
 // Setting Buttons - Text
 const TEXT_SMALL_BUTTON = document.getElementById("small");
