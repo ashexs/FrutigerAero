@@ -242,3 +242,31 @@ if (TEXT_LARGE_BUTTON) {
     localStorage.setItem("active_button", "large");
   });
 }
+
+// All Links sounds
+let link_sound = new Audio("/sounds/links.ogg");
+link_sound.volume = 0.1;
+
+document.querySelectorAll("a").forEach((element) => {
+  element.addEventListener("mouseover", () => {
+    if (!sound_on) {
+      link_sound.currentTime = 0;
+      link_sound.play();
+    }
+  });
+});
+
+// Staff Sounds
+let tokoni = document.getElementById("tokoni");
+let tokoni_sound = new Audio("/sounds/tokoni.ogg");
+tokoni_sound.volume = 0.1;
+
+if (tokoni) {
+  tokoni.querySelectorAll("img").forEach((element) => {
+    element.addEventListener("mouseover", () => {
+      if (!sound_on) {
+        tokoni_sound.play();
+      }
+    });
+  });
+}
