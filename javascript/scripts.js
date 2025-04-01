@@ -104,7 +104,7 @@ function linkSoundsMute() {
     });
   });
 }
-
+  isMusicBarVisible = false;
 // Hide Music Bar Function
 function musicBarHide() {
   if (!isMusicBarVisible) return;
