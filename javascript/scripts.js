@@ -355,7 +355,6 @@ if (RSS_BUTTON_SPOTLIGHTS) {
     );
   });
 }
-
 // RSS Button - News
 const RSS_BUTTON_BLOG = document.getElementById("rssBlog");
 if (RSS_BUTTON_BLOG) {
