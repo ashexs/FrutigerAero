@@ -254,7 +254,7 @@ SONG_AUDIO.onplay = () => {
 MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
 MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
 MUSIC_TOGGLE_BUTTON.addEventListener("click", () => {
-  music_playing ? musicOff() : musicOn();
+  music_playing ? musicOn() : musicOff();
 });
 
 // Setting Buttons - Text
