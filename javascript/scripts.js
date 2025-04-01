@@ -17,6 +17,8 @@ let sound_on = false;
 let music_playing = false;
 let isMusicBarVisible = false;
 
+let savedSound = getSessionStorage("sound");
+
 MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
 MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
 
@@ -73,6 +75,30 @@ function soundsDisableSound() {
   sounds_enable.currentTime = 0;
 }
 
+let link_sound = new Audio("/sounds/links.ogg");
+link_sound.volume = 0.05;
+
+// All links sounds
+function linkSounds() {
+  document.querySelectorAll("a, button").forEach((element) => {
+    element.addEventListener("mouseover", () => {
+      link_sound.currentTime = 0;
+      link_sound.volume = 0.05;
+      link_sound.play();
+    });
+  });
+}
+// Disable links sounds
+function linkSoundsDisable() {
+  document.querySelectorAll("a, button").forEach((element) => {
+    element.addEventListener("mouseover", () => {
+      link_sound.currentTime = 0;
+      link_sound.volume = 0;
+      link_sound.pause();
+    });
+  });
+}
+
 function musicBarHide() {
   if (!isMusicBarVisible) return;
   isMusicBarVisible = false;
@@ -89,6 +115,7 @@ function musicBarHide() {
     MUSIC_BAR.style.filter = "alpha(opacity=" + op * 100 + ")";
   }, 50);
   soundsDisableSound();
+  linkSoundsDisable();
 }
 
 function musicBarShow() {
@@ -107,6 +134,7 @@ function musicBarShow() {
     MUSIC_BAR.style.filter = "alpha(opacity=" + op * 100 + ")";
   }, 50);
   soundsEnableSound();
+  linkSounds();
 }
 
 if (SOUND_ON_BUTTON) {
@@ -123,18 +151,6 @@ if (SOUND_OFF_BUTTON) {
     musicBarHide();
     setSessionStorage("sound", "off");
     musicOff();
-  });
-}
-
-// All Links sounds
-function linkSounds() {
-  let link_sound = new Audio("/sounds/links.ogg");
-  link_sound.volume = 0.05;
-  document.querySelectorAll("a, button").forEach((element) => {
-    element.addEventListener("mouseover", () => {
-      link_sound.currentTime = 0;
-      link_sound.play();
-    });
   });
 }
 
@@ -172,7 +188,6 @@ function setActiveSound(activeButton, inactiveButton, isSoundOn) {
 }
 
 window.addEventListener("load", () => {
-  let savedSound = getSessionStorage("sound");
   if (savedSound === "on") {
     MUSIC_BAR.style.display = "flex";
     isMusicBarVisible = true;
