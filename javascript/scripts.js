@@ -351,7 +351,7 @@ if (RSS_BUTTON_SPOTLIGHTS) {
       "https://frutigeraero.org/rss/creator_spotlights.xml"
     );
     alert(
-      "RSS Feed URL has been copied to your clipboard:\nhttps://frutigeraero.org/rss/creator_spotlights.xml"
+      "The following RSS Feed URL has been copied to your clipboard:\nhttps://frutigeraero.org/rss/creator_spotlights.xml"
     );
   });
 }
@@ -361,7 +361,7 @@ if (RSS_BUTTON_BLOG) {
   RSS_BUTTON_BLOG.addEventListener("click", () => {
     navigator.clipboard.writeText("https://frutigeraero.org/rss/blog.xml");
     alert(
-      "RSS Feed URL has been copied to your clipboard:\nhttps://frutigeraero.org/rss/blog.xml"
+      "The following RSS Feed URL has been copied to your clipboard:\nhttps://frutigeraero.org/rss/blog.xml"
     );
   });
 }
