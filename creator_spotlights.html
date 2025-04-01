@@ -26,6 +26,19 @@
     <link rel="canonical" href="frutigeraero.org/creator_spotlights" />
     <link rel="stylesheet" href="css/global.css" />
     <link rel="stylesheet" href="css/blogs.css" />
+    <noscript>
+      <style>
+        #newsHeader {
+          flex-direction: column;
+        }
+        .js-rss {
+          display: none !important;
+        }
+        .no-js-rss {
+          display: inline-block !important;
+        }
+      </style>
+    </noscript>
   </head>
 
   <body>
@@ -98,14 +111,28 @@
             class="containers-style-2 border-radius-top flex-center"
           >
             <h2>Creator Spotlights</h2>
-            <a
-              href="/rss/creator_spotlights.xml"
-              target="_blank"
-              type="application/rss+xml"
-              class="rss-button gradient-headers-buttons gradient-headers-buttons-hover flex-center"
-              title="Open RSS file, you can then copy the URL to your reader."
-              ><img src="images/community/rss.svg" alt="RSS Button"
-            /></a>
+            <!-- RSS Button - JavaScript Enabled -->
+            <button
+              aria-label="Copy RSS link to clipboard"
+              id="rssCreatorSpotlights"
+              class="js-rss rss-button gradient-headers-buttons gradient-headers-buttons-hover flex-center"
+              title="Copy RSS Feed URL to clipboard"
+            >
+              <img src="images/community/rss.svg" alt="RSS Button" />
+            </button>
+
+            <!-- RSS Button - JavaScript Disabled -->
+            <div class="no-js-rss" style="display: none">
+              <span class="gradient-style-text">RSS Feed URL: </span>
+              <a
+                href="/rss/creator_spotlights.xml"
+                target="_blank"
+                class="gradient-style-text"
+                title="Copy RSS Feed URL to clipboard"
+              >
+                https://frutigeraero.org/rss/creator_spotlights.xml
+              </a>
+            </div>
           </header>
 
           <article class="containers-style buttons-no-underline">
@@ -205,5 +232,7 @@
 
     <!-- Javascript -->
     <script src="javascript/scripts.js" async defer></script>
+
+    <script src="javascript/rss.js" async defer></script>
   </body>
 </html>

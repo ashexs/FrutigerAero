@@ -342,3 +342,27 @@ if (TEXT_LARGE_BUTTON) {
     localStorage.setItem("active_button", "large");
   });
 }
+
+// RSS Button - Creator Spotlights
+const RSS_BUTTON_SPOTLIGHTS = document.getElementById("rssCreatorSpotlights");
+if (RSS_BUTTON_SPOTLIGHTS) {
+  RSS_BUTTON_SPOTLIGHTS.addEventListener("click", () => {
+    navigator.clipboard.writeText(
+      "https://frutigeraero.org/rss/creator_spotlights.xml"
+    );
+    alert(
+      "RSS Feed URL has been copied to your clipboard:\nhttps://frutigeraero.org/rss/creator_spotlights.xml"
+    );
+  });
+}
+
+// RSS Button - News
+const RSS_BUTTON_BLOG = document.getElementById("rssBlog");
+if (RSS_BUTTON_BLOG) {
+  RSS_BUTTON_BLOG.addEventListener("click", () => {
+    navigator.clipboard.writeText("https://frutigeraero.org/rss/blog.xml");
+    alert(
+      "RSS Feed URL has been copied to your clipboard:\nhttps://frutigeraero.org/rss/blog.xml"
+    );
+  });
+}
