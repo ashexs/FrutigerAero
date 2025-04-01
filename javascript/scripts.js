@@ -54,6 +54,20 @@ window.addEventListener("load", () => {
 
 window.addEventListener("resize", overflowScrolling);
 
+// Sounds enable sound
+function soundsEnableSound() {
+  let sounds_enable = new Audio("/sounds/sounds_enable.mp3");
+  sounds_enable.volume = 0.3;
+  sounds_enable.play();
+}
+
+// Sounds disable sound
+function soundsDisableSound() {
+  let sounds_disable = new Audio("/sounds/sounds_disable.mp3");
+  sounds_disable.volume = 0.3;
+  sounds_disable.play();
+}
+
 function musicBarHide() {
   if (!isMusicBarVisible) return;
   isMusicBarVisible = false;
@@ -69,6 +83,7 @@ function musicBarHide() {
     MUSIC_BAR.style.opacity = op;
     MUSIC_BAR.style.filter = "alpha(opacity=" + op * 100 + ")";
   }, 50);
+  soundsDisableSound();
 }
 
 function musicBarShow() {
@@ -86,6 +101,7 @@ function musicBarShow() {
     MUSIC_BAR.style.opacity = op;
     MUSIC_BAR.style.filter = "alpha(opacity=" + op * 100 + ")";
   }, 50);
+  soundsEnableSound();
 }
 
 if (SOUND_ON_BUTTON) {
@@ -93,7 +109,6 @@ if (SOUND_ON_BUTTON) {
     setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true);
     musicBarShow();
     setSessionStorage("sound", "on");
-    soundsEnableSound();
   });
 }
 
@@ -103,22 +118,7 @@ if (SOUND_OFF_BUTTON) {
     musicBarHide();
     setSessionStorage("sound", "off");
     musicOff();
-    soundsDisableSound();
   });
-}
-
-// Sounds enable sound
-function soundsEnableSound() {
-  let sounds_enable = new Audio("/sounds/sounds_enable.mp3");
-  sounds_enable.volume = 0.3;
-  sounds_enable.play();
-}
-
-// Sounds disable sound
-function soundsDisableSound() {
-  let sounds_disable = new Audio("/sounds/sounds_disable.mp3");
-  sounds_disable.volume = 0.3;
-  sounds_disable.play();
 }
 
 // All Links sounds
