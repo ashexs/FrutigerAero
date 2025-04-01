@@ -6,6 +6,11 @@ function getSessionStorage(name) {
   return sessionStorage.getItem(name);
 }
 
+// Default States
+let sound_on = false;
+let music_playing = false;
+let isMusicBarVisible = false;
+
 // Setting Buttons - Sounds
 const SOUND_ON_BUTTON = document.getElementById("soundsOn");
 const SOUND_OFF_BUTTON = document.getElementById("soundsOff");
