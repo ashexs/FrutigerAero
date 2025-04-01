@@ -201,8 +201,8 @@ function tokoniSound() {
   let tokoni = document.getElementById("tokoni");
   let tokoni_hover = new Audio("/sounds/tokoni_hover.ogg");
   let tokoni_leave = new Audio("/sounds/tokoni_leave.ogg");
-  tokoni_hover.volume = 0.05;
-  tokoni_leave.volume = 0.05;
+  tokoni_hover.volume = 0.1;
+  tokoni_leave.volume = 0.1;
   if (tokoni) {
     tokoni.addEventListener("mouseover", () => {
       tokoni_hover.play();
