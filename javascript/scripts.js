@@ -1,35 +1,33 @@
-// Set and get "cookies"
-function setSessionStorage(name, value) {
-  sessionStorage.setItem(name, value);
-}
-function getSessionStorage(name) {
-  return sessionStorage.getItem(name);
-}
-
-// Default States
-let sound_on = false;
-let music_playing = false;
-let isMusicBarVisible = false;
-
-// Setting Buttons - Sounds
 const SOUND_ON_BUTTON = document.getElementById("soundsOn");
 const SOUND_OFF_BUTTON = document.getElementById("soundsOff");
-
-// Music Bar
 const MUSIC_BAR = document.getElementById("musicBar");
-
-// Music - Buttons
 const MUSIC_TOGGLE_BUTTON = document.getElementById("musicToggle");
 const MUSIC_TOGGLE_IMAGE = document.getElementById("musicToggleImg");
-
-// Music - Text
 const SONG_TITLE = document.getElementById("songTitle");
 const SONG_ARTIST = document.getElementById("songArtist");
 const SONG_AUDIO = document.getElementById("songAudio");
 const MUSIC_TEXT_DIV = document.querySelector(".music-text-div");
 const MUSIC_INNER_TEXT_DIV = document.querySelector(".music-inner-text");
+const TEXT_SMALL_BUTTON = document.getElementById("small");
+const TEXT_MEDIUM_BUTTON = document.getElementById("medium");
+const TEXT_LARGE_BUTTON = document.getElementById("large");
 
-// Set Active Button
+let font_size = "1em";
+let sound_on = false;
+let music_playing = false;
+let isMusicBarVisible = false;
+
+MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
+MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
+
+function setSessionStorage(name, value) {
+  sessionStorage.setItem(name, value);
+}
+
+function getSessionStorage(name) {
+  return sessionStorage.getItem(name);
+}
+
 function setActiveButton(activeButton, otherButtons) {
   if (SOUND_ON_BUTTON) {
     activeButton.setAttribute("class", "settings-buttons button-links-active");
@@ -39,78 +37,23 @@ function setActiveButton(activeButton, otherButtons) {
   }
 }
 
-// Text carousel if music title does not fit
 function overflowScrolling() {
   const isOverflowing =
     MUSIC_INNER_TEXT_DIV.scrollWidth > MUSIC_TEXT_DIV.clientWidth;
+
   if (isOverflowing) {
     MUSIC_INNER_TEXT_DIV.classList.add("scrolling");
   } else {
     MUSIC_INNER_TEXT_DIV.classList.remove("scrolling");
   }
 }
+
+window.addEventListener("load", () => {
+  setTimeout(overflowScrolling, 0);
+});
+
 window.addEventListener("resize", overflowScrolling);
 
-// Remember music state
-let savedMusic = getSessionStorage("music");
-setTimeout(overflowScrolling, 0);
-
-if (savedMusic === "on") {
-  musicOn();
-} else if (savedMusic === "off") {
-  musicOff();
-}
-
-// Music off by default for iOS
-if (navigator.userAgent.match(/iPhone|iPad|iPod|Macintosh/i)) {
-  musicOff();
-}
-
-// On/Off sounds
-let sounds_enable = new Audio("/sounds/sounds_enable.mp3");
-let sounds_disable = new Audio("/sounds/sounds_disable.mp3");
-
-// On sound
-function soundsEnableSound() {
-  sounds_enable.volume = 0.3;
-  sounds_enable.play();
-  sounds_disable.pause();
-  sounds_disable.currentTime = 0;
-}
-// Off sound
-function soundsDisableSound() {
-  sounds_disable.volume = 0.3;
-  sounds_disable.play();
-  sounds_enable.pause();
-  sounds_enable.currentTime = 0;
-}
-
-// General link sounds
-let link_sound = new Audio("/sounds/links.ogg");
-link_sound.volume = 0.05;
-
-// General link sounds - Enable
-function linkSounds() {
-  document.querySelectorAll("a, button").forEach((element) => {
-    element.addEventListener("mouseover", () => {
-      link_sound.currentTime = 0;
-      link_sound.volume = 0.05;
-      link_sound.play();
-    });
-  });
-}
-// General link sounds - Disable
-function linkSoundsMute() {
-  document.querySelectorAll("a, button").forEach((element) => {
-    element.addEventListener("mouseover", () => {
-      link_sound.currentTime = 0;
-      link_sound.volume = 0;
-      link_sound.pause();
-    });
-  });
-}
-  isMusicBarVisible = false;
-// Hide Music Bar Function
 function musicBarHide() {
   if (!isMusicBarVisible) return;
   isMusicBarVisible = false;
@@ -126,9 +69,8 @@ function musicBarHide() {
     MUSIC_BAR.style.opacity = op;
     MUSIC_BAR.style.filter = "alpha(opacity=" + op * 100 + ")";
   }, 50);
-  soundsDisableSound();
 }
-// Show Music Bar Function
+
 function musicBarShow() {
   if (isMusicBarVisible) return;
   isMusicBarVisible = true;
@@ -144,86 +86,69 @@ function musicBarShow() {
     MUSIC_BAR.style.opacity = op;
     MUSIC_BAR.style.filter = "alpha(opacity=" + op * 100 + ")";
   }, 50);
-  soundsEnableSound();
 }
 
-// Settings - Sound On
 if (SOUND_ON_BUTTON) {
   SOUND_ON_BUTTON.addEventListener("click", () => {
     setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true);
     musicBarShow();
     setSessionStorage("sound", "on");
-    linkSounds();
   });
 }
-// Settings - Sound Off
+
 if (SOUND_OFF_BUTTON) {
   SOUND_OFF_BUTTON.addEventListener("click", () => {
     setActiveSound(SOUND_OFF_BUTTON, SOUND_ON_BUTTON, false);
     musicBarHide();
     setSessionStorage("sound", "off");
     musicOff();
-    linkSoundsMute();
   });
 }
 
-// Get sound from "cookie"
-let savedSound = getSessionStorage("sound");
-
-// Change button state depending on sound status
-if (SOUND_ON_BUTTON && SOUND_OFF_BUTTON) {
-  if (savedSound === "on") {
-    setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true);
-  } else if (savedSound === "off") {
-    setActiveSound(SOUND_OFF_BUTTON, SOUND_ON_BUTTON, false);
-  }
-}
-
-// Set class to change setting button state
-function setActiveSound(activeButton, inactiveButton) {
+function setActiveSound(activeButton, inactiveButton, isSoundOn) {
   if (SOUND_ON_BUTTON) {
     activeButton.setAttribute("class", "settings-buttons button-links-active");
     inactiveButton.setAttribute(
       "class",
       "settings-buttons button-links-inactive"
     );
+    sound_on = isSoundOn;
   }
 }
 
-// Tokoni Sounds
-function tokoniSound() {
-  let tokoni = document.getElementById("tokoni");
-  let tokoni_hover = new Audio("/sounds/tokoni_hover.ogg");
-  let tokoni_leave = new Audio("/sounds/tokoni_leave.ogg");
-  tokoni_hover.volume = 0.05;
-  tokoni_leave.volume = 0.05;
-  if (tokoni) {
-    tokoni.addEventListener("mouseover", () => {
-      tokoni_hover.play();
-    });
-    tokoni.addEventListener("mouseleave", () => {
-      tokoni_hover.pause();
-      tokoni_hover.currentTime = 0;
-      tokoni_leave.play();
-      tokoni_leave.currentTime = 0;
-    });
+window.addEventListener("load", () => {
+  let savedSound = getSessionStorage("sound");
+  if (savedSound === "on") {
+    MUSIC_BAR.style.display = "flex";
+    isMusicBarVisible = true;
+    overflowScrolling();
+  } else if (savedSound === "off") {
+    MUSIC_BAR.style.display = "none";
+    isMusicBarVisible = false;
+    overflowScrolling();
   }
-}
 
-// Logic for enabled/disabled sound
-if (savedSound === "on") {
-  MUSIC_BAR.style.display = "flex";
-  isMusicBarVisible = true;
-  overflowScrolling();
-  linkSounds();
-  tokoniSound();
-} else if (savedSound === "off") {
-  MUSIC_BAR.style.display = "none";
-  isMusicBarVisible = false;
-  overflowScrolling();
-}
+  if (SOUND_ON_BUTTON && SOUND_OFF_BUTTON) {
+    if (savedSound === "on") {
+      setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true);
+    } else if (savedSound === "off") {
+      setActiveSound(SOUND_OFF_BUTTON, SOUND_ON_BUTTON, false);
+    }
+  }
+});
 
-// Music Button - Turn Off
+SONG_TITLE.textContent = SONG_AUDIO.getAttribute("data-title");
+SONG_ARTIST.textContent = SONG_AUDIO.getAttribute("data-artist");
+
+SONG_AUDIO.volume = 0.3;
+
+SONG_AUDIO.onpause = function () {
+  musicOff();
+};
+SONG_AUDIO.onplay = function () {
+  musicOn();
+};
+
 function musicOff() {
   MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
   MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
@@ -232,7 +157,7 @@ function musicOff() {
   overflowScrolling();
   setSessionStorage("music", "off");
 }
-// Music Button - Turn On
+
 function musicOn() {
   MUSIC_TOGGLE_IMAGE.src = "/images/music_on.svg";
   MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-active");
@@ -242,66 +167,54 @@ function musicOn() {
   setSessionStorage("music", "on");
 }
 
-// Set Song Information
-SONG_TITLE.textContent = SONG_AUDIO.getAttribute("data-title");
-SONG_ARTIST.textContent = SONG_AUDIO.getAttribute("data-artist");
-
-// Song Audio
-SONG_AUDIO.volume = 0.3;
-SONG_AUDIO.onpause = () => {
-  musicOff();
-};
-SONG_AUDIO.onplay = () => {
-  musicOn();
-};
-
-// Music Button - Default
-MUSIC_TOGGLE_IMAGE.src = "/images/music_off.svg";
-MUSIC_TOGGLE_BUTTON.setAttribute("class", "button-links-inactive");
 MUSIC_TOGGLE_BUTTON.addEventListener("click", () => {
-  music_playing ? musicOn() : musicOff();
+  music_playing ? musicOff() : musicOn();
 });
 
-// Setting Buttons - Text
-const TEXT_SMALL_BUTTON = document.getElementById("small");
-const TEXT_MEDIUM_BUTTON = document.getElementById("medium");
-const TEXT_LARGE_BUTTON = document.getElementById("large");
+window.addEventListener("load", () => {
+  let savedMusic = getSessionStorage("music");
 
-// Font size - Default
-let font_size = "1em";
-
-// Get font settings from "cookie"
-let savedFontSize = localStorage.getItem("font_size");
-let savedButton = localStorage.getItem("active_button");
-
-// Change font settings buttons state
-if (savedFontSize && savedButton) {
-  document.body.style.fontSize = savedFontSize;
-  switch (savedButton) {
-    case "small":
-      setActiveButton(TEXT_SMALL_BUTTON, [
-        TEXT_MEDIUM_BUTTON,
-        TEXT_LARGE_BUTTON,
-      ]);
-      break;
-    case "medium":
-      setActiveButton(TEXT_MEDIUM_BUTTON, [
-        TEXT_SMALL_BUTTON,
-        TEXT_LARGE_BUTTON,
-      ]);
-      break;
-    case "large":
-      setActiveButton(TEXT_LARGE_BUTTON, [
-        TEXT_SMALL_BUTTON,
-        TEXT_MEDIUM_BUTTON,
-      ]);
-      break;
+  if (savedMusic === "on") {
+    musicOn();
+  } else if (savedMusic === "off") {
+    musicOff();
   }
-}
 
-// Font size options - Small
+  if (navigator.userAgent.match(/iPhone|iPad|iPod|Macintosh/i)) {
+    musicOff();
+  }
+
+  let savedFontSize = localStorage.getItem("font_size");
+  let savedButton = localStorage.getItem("active_button");
+
+  if (savedFontSize && savedButton) {
+    document.body.style.fontSize = savedFontSize;
+
+    switch (savedButton) {
+      case "small":
+        setActiveButton(TEXT_SMALL_BUTTON, [
+          TEXT_MEDIUM_BUTTON,
+          TEXT_LARGE_BUTTON,
+        ]);
+        break;
+      case "medium":
+        setActiveButton(TEXT_MEDIUM_BUTTON, [
+          TEXT_SMALL_BUTTON,
+          TEXT_LARGE_BUTTON,
+        ]);
+        break;
+      case "large":
+        setActiveButton(TEXT_LARGE_BUTTON, [
+          TEXT_SMALL_BUTTON,
+          TEXT_MEDIUM_BUTTON,
+        ]);
+        break;
+    }
+  }
+});
+
 if (TEXT_SMALL_BUTTON) {
-  TEXT_SMALL_BUTTON.addEventListener("click", () => {
+  TEXT_SMALL_BUTTON.addEventListener("click", function () {
     setActiveButton(TEXT_SMALL_BUTTON, [TEXT_MEDIUM_BUTTON, TEXT_LARGE_BUTTON]);
     font_size = "0.85em";
     document.body.style.fontSize = font_size;
@@ -309,9 +222,9 @@ if (TEXT_SMALL_BUTTON) {
     localStorage.setItem("active_button", "small");
   });
 }
-// Font size options - Medium
+
 if (TEXT_MEDIUM_BUTTON) {
-  TEXT_MEDIUM_BUTTON.addEventListener("click", () => {
+  TEXT_MEDIUM_BUTTON.addEventListener("click", function () {
     setActiveButton(TEXT_MEDIUM_BUTTON, [TEXT_SMALL_BUTTON, TEXT_LARGE_BUTTON]);
     font_size = "1em";
     document.body.style.fontSize = font_size;
@@ -319,9 +232,9 @@ if (TEXT_MEDIUM_BUTTON) {
     localStorage.setItem("active_button", "medium");
   });
 }
-// Font size options - Large
+
 if (TEXT_LARGE_BUTTON) {
-  TEXT_LARGE_BUTTON.addEventListener("click", () => {
+  TEXT_LARGE_BUTTON.addEventListener("click", function () {
     setActiveButton(TEXT_LARGE_BUTTON, [TEXT_SMALL_BUTTON, TEXT_MEDIUM_BUTTON]);
     font_size = "1.1em";
     document.body.style.fontSize = font_size;
