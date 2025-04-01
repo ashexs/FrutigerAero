@@ -93,6 +93,7 @@ if (SOUND_ON_BUTTON) {
     setActiveSound(SOUND_ON_BUTTON, SOUND_OFF_BUTTON, true);
     musicBarShow();
     setSessionStorage("sound", "on");
+    soundsEnableSound();
   });
 }
 
@@ -102,7 +103,22 @@ if (SOUND_OFF_BUTTON) {
     musicBarHide();
     setSessionStorage("sound", "off");
     musicOff();
+    soundsDisableSound();
   });
+}
+
+// Sounds enable sound
+function soundsEnableSound() {
+  let sounds_enable = new Audio("/sounds/sounds_enable.mp3");
+  sounds_enable.volume = 0.3;
+  sounds_enable.play();
+}
+
+// Sounds disable sound
+function soundsDisableSound() {
+  let sounds_disable = new Audio("/sounds/sounds_disable.mp3");
+  sounds_disable.volume = 0.3;
+  sounds_disable.play();
 }
 
 // All Links sounds
