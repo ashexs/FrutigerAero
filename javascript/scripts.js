@@ -125,7 +125,7 @@ function musicBarHide() {
 }
 // Show Music Bar Function
 function musicBarShow() {
-  if (isMusicBarVisible) return;
+  if (isMusicBarVisible() return;
   isMusicBarVisible = true;
   MUSIC_BAR.style.display = "flex";
   MUSIC_BAR.style.visibility = "visible";
