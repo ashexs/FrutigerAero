@@ -1,9 +1,14 @@
-// Settings Buttons
+// Set and get "cookies"
+function setSessionStorage(name, value) {
+  sessionStorage.setItem(name, value);
+}
+function getSessionStorage(name) {
+  return sessionStorage.getItem(name);
+}
+
+// Setting Buttons - Sounds
 const SOUND_ON_BUTTON = document.getElementById("soundsOn");
 const SOUND_OFF_BUTTON = document.getElementById("soundsOff");
-const TEXT_SMALL_BUTTON = document.getElementById("small");
-const TEXT_MEDIUM_BUTTON = document.getElementById("medium");
-const TEXT_LARGE_BUTTON = document.getElementById("large");
 
 // Music Bar
 const MUSIC_BAR = document.getElementById("musicBar");
@@ -18,14 +23,6 @@ const SONG_ARTIST = document.getElementById("songArtist");
 const SONG_AUDIO = document.getElementById("songAudio");
 const MUSIC_TEXT_DIV = document.querySelector(".music-text-div");
 const MUSIC_INNER_TEXT_DIV = document.querySelector(".music-inner-text");
-
-// Set and get "cookies"
-function setSessionStorage(name, value) {
-  sessionStorage.setItem(name, value);
-}
-function getSessionStorage(name) {
-  return sessionStorage.getItem(name);
-}
 
 // Set Active Button
 function setActiveButton(activeButton, otherButtons) {
@@ -227,10 +224,10 @@ SONG_ARTIST.textContent = SONG_AUDIO.getAttribute("data-artist");
 
 // Song Audio
 SONG_AUDIO.volume = 0.3;
-SONG_AUDIO.onpause = function () {
+SONG_AUDIO.onpause = () => {
   musicOff();
 };
-SONG_AUDIO.onplay = function () {
+SONG_AUDIO.onplay = () => {
   musicOn();
 };
 
@@ -259,6 +256,11 @@ function musicOn() {
   overflowScrolling();
   setSessionStorage("music", "on");
 }
+
+// Setting Buttons - Text
+const TEXT_SMALL_BUTTON = document.getElementById("small");
+const TEXT_MEDIUM_BUTTON = document.getElementById("medium");
+const TEXT_LARGE_BUTTON = document.getElementById("large");
 
 // Font size - Default
 let font_size = "1em";
@@ -294,7 +296,7 @@ if (savedFontSize && savedButton) {
 
 // Font size options - Small
 if (TEXT_SMALL_BUTTON) {
-  TEXT_SMALL_BUTTON.addEventListener("click", function () {
+  TEXT_SMALL_BUTTON.addEventListener("click", () => {
     setActiveButton(TEXT_SMALL_BUTTON, [TEXT_MEDIUM_BUTTON, TEXT_LARGE_BUTTON]);
     font_size = "0.85em";
     document.body.style.fontSize = font_size;
@@ -304,7 +306,7 @@ if (TEXT_SMALL_BUTTON) {
 }
 // Font size options - Medium
 if (TEXT_MEDIUM_BUTTON) {
-  TEXT_MEDIUM_BUTTON.addEventListener("click", function () {
+  TEXT_MEDIUM_BUTTON.addEventListener("click", () => {
     setActiveButton(TEXT_MEDIUM_BUTTON, [TEXT_SMALL_BUTTON, TEXT_LARGE_BUTTON]);
     font_size = "1em";
     document.body.style.fontSize = font_size;
@@ -314,7 +316,7 @@ if (TEXT_MEDIUM_BUTTON) {
 }
 // Font size options - Large
 if (TEXT_LARGE_BUTTON) {
-  TEXT_LARGE_BUTTON.addEventListener("click", function () {
+  TEXT_LARGE_BUTTON.addEventListener("click", () => {
     setActiveButton(TEXT_LARGE_BUTTON, [TEXT_SMALL_BUTTON, TEXT_MEDIUM_BUTTON]);
     font_size = "1.1em";
     document.body.style.fontSize = font_size;
