@@ -249,7 +249,7 @@ link_sound.volume = 0.1;
 
 document.querySelectorAll("a").forEach((element) => {
   element.addEventListener("mouseover", () => {
-    if (!sound_on) {
+    if (sound_on) {
       link_sound.currentTime = 0;
       link_sound.play();
     }
@@ -265,7 +265,7 @@ tokoni_leave.volume = 0.1;
 
 if (tokoni) {
   tokoni.querySelectorAll("img").forEach((element) => {
-    if (!sound_on) {
+    if (sound_on) {
       element.addEventListener("mouseover", () => {
         tokoni_hover.play();
       });
