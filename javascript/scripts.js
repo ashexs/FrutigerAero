@@ -105,6 +105,39 @@ if (SOUND_OFF_BUTTON) {
   });
 }
 
+// All Links sounds
+let link_sound = new Audio("/sounds/links.ogg");
+link_sound.volume = 0.1;
+function linkSounds() {
+  document.querySelectorAll("a, button").forEach((element) => {
+    element.addEventListener("mouseover", () => {
+      link_sound.currentTime = 0;
+      link_sound.play();
+    });
+  });
+}
+
+// Tokoni Sounds
+let tokoni = document.getElementById("tokoni");
+let tokoni_hover = new Audio("/sounds/tokoni_hover.ogg");
+let tokoni_leave = new Audio("/sounds/tokoni_leave.ogg");
+tokoni_hover.volume = 0.1;
+tokoni_leave.volume = 0.1;
+function tokoniSound() {
+  if (tokoni) {
+    tokoni.addEventListener("mouseover", () => {
+      tokoni_hover.play();
+    });
+
+    tokoni.addEventListener("mouseleave", () => {
+      tokoni_hover.pause();
+      tokoni_hover.currentTime = 0;
+      tokoni_leave.play();
+      tokoni_leave.currentTime = 0;
+    });
+  }
+}
+
 function setActiveSound(activeButton, inactiveButton, isSoundOn) {
   if (SOUND_ON_BUTTON) {
     activeButton.setAttribute("class", "settings-buttons button-links-active");
@@ -122,6 +155,8 @@ window.addEventListener("load", () => {
     MUSIC_BAR.style.display = "flex";
     isMusicBarVisible = true;
     overflowScrolling();
+    linkSounds();
+    tokoniSound();
   } else if (savedSound === "off") {
     MUSIC_BAR.style.display = "none";
     isMusicBarVisible = false;
@@ -240,41 +275,5 @@ if (TEXT_LARGE_BUTTON) {
     document.body.style.fontSize = font_size;
     localStorage.setItem("font_size", font_size);
     localStorage.setItem("active_button", "large");
-  });
-}
-
-// All Links sounds
-let link_sound = new Audio("/sounds/links.ogg");
-link_sound.volume = 0.1;
-
-document.querySelectorAll("a").forEach((element) => {
-  element.addEventListener("mouseover", () => {
-    if (sound_on) {
-      link_sound.currentTime = 0;
-      link_sound.play();
-    }
-  });
-});
-
-// Staff Sounds
-let tokoni = document.getElementById("tokoni");
-let tokoni_hover = new Audio("/sounds/tokoni_hover.ogg");
-let tokoni_leave = new Audio("/sounds/tokoni_leave.ogg");
-tokoni_hover.volume = 0.1;
-tokoni_leave.volume = 0.1;
-
-if (tokoni) {
-  tokoni.querySelectorAll("img").forEach((element) => {
-    if (sound_on) {
-      element.addEventListener("mouseover", () => {
-        tokoni_hover.play();
-      });
-      element.addEventListener("mouseleave", () => {
-        tokoni_hover.pause();
-        tokoni_hover.currentTime = 0;
-        tokoni_leave.play();
-        tokoni_leave.currentTime = 0;
-      });
-    }
   });
 }
