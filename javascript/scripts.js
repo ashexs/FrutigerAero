@@ -54,18 +54,23 @@ window.addEventListener("load", () => {
 
 window.addEventListener("resize", overflowScrolling);
 
+let sounds_enable = new Audio("/sounds/sounds_enable.mp3");
+let sounds_disable = new Audio("/sounds/sounds_disable.mp3");
+
 // Sounds enable sound
 function soundsEnableSound() {
-  let sounds_enable = new Audio("/sounds/sounds_enable.mp3");
   sounds_enable.volume = 0.3;
   sounds_enable.play();
+  sounds_disable.pause();
+  sounds_disable.currentTime = 0;
 }
 
 // Sounds disable sound
 function soundsDisableSound() {
-  let sounds_disable = new Audio("/sounds/sounds_disable.mp3");
   sounds_disable.volume = 0.3;
   sounds_disable.play();
+  sounds_enable.pause();
+  sounds_enable.currentTime = 0;
 }
 
 function musicBarHide() {
