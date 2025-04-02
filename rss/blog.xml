@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <generator>RSS Builder by B!Soft</generator>
+    <title>Frutiger Aero Community Blog</title>
+    <link>https://frutigeraero.org/</link>
+    <description>The latest news announcements for the Frutiger Aero Community.</description>
+    <language>en-us</language>
+    <copyright>© Consumer Aesthetic Network</copyright>
+    <item>
+      <title>Website Launched!</title>
+      <pubDate>Wed, 2 Apr 2025 02:56:36 +0100</pubDate>
+      <link>https://frutigeraero.org/blog/website_launched</link>
+      <author>contact@frutigeraero.org</author>
+      <description><![CDATA[To celebrate our awesome community, we decided to create this website, to host our various community content and news announcements, among other things.]]></description>
+    </item>
+  </channel>
+</rss>
