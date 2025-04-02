@@ -212,7 +212,7 @@ button {
   background: linear-gradient(
     180deg,
     rgba(90, 95, 99, 0.7) 0%,
-    rgba(0, 0, 0, 0.7) 50%,
+    rgba(0, 0, 0, 0.68) 50%,
     rgba(62, 65, 67, 0.7) 100%
   );
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
