@@ -308,14 +308,71 @@
           </header>
 
           <article
-            class="contact-container border-radius-bottom containers-style flex-center"
+            class="contact-container border-radius-bottom containers-style p-full-width"
           >
             <p>
               For any inquiries or requests, feel free to reach out to us at
               <a href="mailto:contact@frutigeraero.org"
                 >contact@frutigeraero.org</a
-              >
+              >, or use the form below:
             </p>
+
+            <form
+              action="https://formsubmit.co/contact@frutigeraero.org"
+              enctype="multipart/form-data"
+              method="POST"
+              id="contactForm"
+              class="margin-top"
+            >
+              <label for="name" class="gradient-style-text"
+                >Name (Required) *</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Exemple: John Doe"
+                required
+              />
+
+              <label for="email" class="gradient-style-text margin-top"
+                >Email (Required) *</label
+              >
+              <input
+                type="email"
+                id="email"
+                placeholder="Exemple: your-email@hotmail.com"
+                name="email"
+                required
+              />
+
+              <label for="message" class="gradient-style-text margin-top"
+                >Message (Required) *</label
+              >
+              <textarea
+                id="message"
+                placeholder="Your message."
+                name="message"
+                rows="7"
+                required
+              ></textarea>
+
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="hidden"
+                name="_autoresponse"
+                value="Thank you for your message, we will come back to you as fast as possible."
+              />
+
+              <button
+                type="submit"
+                title="Submit form"
+                id="submit"
+                class="margin-top"
+              >
+                Send Message
+              </button>
+            </form>
           </article>
         </section>
 
