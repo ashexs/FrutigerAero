@@ -94,9 +94,12 @@ button {
 a {
   color: #ffffff;
   -webkit-text-fill-color: rgba(255, 255, 255, 0.35);
+  transition-duration: 0.2s;
 }
 a:hover {
   text-decoration: underline;
+  -webkit-text-fill-color: rgba(146, 146, 146, 0.35);
+  transition-duration: 0.2s;
 }
 
 button {
