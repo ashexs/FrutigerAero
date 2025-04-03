@@ -128,6 +128,7 @@
 #contactForm button:hover {
   filter: brightness(80%);
   transition-duration: 0.2s;
+  text-decoration: underline;
 }
 
 .site-info-article {
