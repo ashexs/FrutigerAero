@@ -67,34 +67,40 @@
 /* Creator Image Gallery */
 .creator-gallery {
   display: grid;
-  grid-column-gap: 10px;
-  grid-row-gap: 5px;
+  grid-column-gap: 20px;
+  grid-row-gap: 15px;
 }
 .creator-gallery span {
   color: white;
 }
 .creator-divs {
+  background: linear-gradient(
+    to bottom,
+    rgba(77, 105, 109, 0.4) 10%,
+    rgba(93, 124, 100, 0.55) 100%
+  );
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 1px rgba(131, 130, 130, 0.3),
+    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 30px;
+  padding: 12px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .creator-divs img {
-  background: linear-gradient(
-    145deg,
-    rgba(51, 72, 75, 0.4) 10%,
-    rgba(51, 78, 57, 0.4) 100%
-  );
+  background: rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
   display: flex;
   align-items: center;
   width: 100%;
   object-fit: contain;
   object-position: center;
-  overflow: hidden;
   aspect-ratio: 16 / 9;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  border-radius: 30px;
   max-width: 360px;
   transition-duration: 0.2s;
+  margin: 0px;
 }
 .creator-divs img:hover {
   filter: brightness(0.7);
