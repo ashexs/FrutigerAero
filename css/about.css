@@ -97,7 +97,7 @@
   border: none;
   border-radius: 10px;
   padding: 5px 10px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   margin-top: 5px;
 }
 #contactForm label {
@@ -120,7 +120,7 @@
     inset 0px -2px 1px rgba(0, 0, 0, 0.4);
   border: none;
   border-radius: 10px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.8);
   padding: 5px 0px 7px 0px;
   font-size: 1.2em;
   transition-duration: 0.2s;
