@@ -365,6 +365,16 @@ button {
   margin: 20px auto;
 }
 
+/* Link when you click Aqua on home page or 404 page */
+.aqua-android-link {
+  transition-duration: 0.3s;
+}
+.aqua-android-link:hover {
+  scale: 1.04;
+  transition-duration: 0.3s;
+  filter: brightness(85%);
+}
+
 /* Border Radius for elements with this class */
 .border-radius-top {
   border-top-right-radius: 15px;
