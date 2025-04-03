@@ -123,7 +123,7 @@
   border-radius: 10px;
   color: rgba(255, 255, 255, 0.8);
   padding: 5px 0px 7px 0px;
-  font-size: 1.1em;
+  font-size: 1.2em;
   transition-duration: 0.2s;
 }
 #contactForm button:hover {
@@ -184,5 +184,8 @@
   }
   .faq-article ul {
     width: 100%;
+  }
+  #contactForm button {
+    font-size: 1.1em;
   }
 }
