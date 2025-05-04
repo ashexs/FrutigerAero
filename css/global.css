@@ -448,10 +448,13 @@ button {
 }
 
 /* Responsiveness */
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .main-nav-links-inactive,
   .main-nav-links-active {
     font-size: 1em;
+  }
+  .main-nav-links {
+    font-size: 1.1em;
   }
 }
 
