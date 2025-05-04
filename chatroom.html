@@ -3,8 +3,11 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Frutiger Aero - Not Found</title>
-    <meta name="description" content="Page not found..." />
+    <title>Frutiger Aero - Chatroom</title>
+    <meta
+      name="description"
+      content="Meet new people and make friends on our Frutiger Aero community chat room based on xat!"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       rel="icon"
@@ -20,14 +23,8 @@
     />
     <meta name="apple-mobile-web-app-title" content="FrutAero" />
     <link rel="manifest" href="/images/favicon/site.webmanifest" />
-    <link rel="canonical" href="https://frutigeraero.org/not_found" />
-    <link rel="stylesheet" href="/css/global.css" />
-    <link rel="stylesheet" href="/css/index.css" />
-    <style>
-      #siteContainer {
-        max-height: none;
-      }
-    </style>
+    <link rel="canonical" href="https://frutigeraero.org/chatroom" />
+    <link rel="stylesheet" href="css/global.css" />
   </head>
 
   <body>
@@ -43,11 +40,12 @@
         <div class="nav-side-vertical-separators vertical-separators"></div>
 
         <div class="main-nav-mobile-divs">
+          <!-- Home Link -->
           <a
             href="/"
             class="main-nav-home main-nav-links button-links-inactive flex-center"
           >
-            <img src="/images/navbar/inactive/home.svg" alt="Home Logo" />
+            <img src="images/navbar/inactive/home.svg" alt="Home Logo" />
             <span class="home-nav-text gradient-style-text">Home</span>
           </a>
           <div class="vertical-separators"></div>
@@ -58,7 +56,7 @@
             class="main-nav-links button-links-inactive flex-center"
           >
             <img
-              src="/images/navbar/inactive/community.svg"
+              src="images/navbar/inactive/community.svg"
               alt="Community Logo"
               class="main-nav-images"
             />
@@ -72,7 +70,7 @@
             class="main-nav-links button-links-inactive flex-center"
           >
             <img
-              src="/images/navbar/inactive/resources.svg"
+              src="images/navbar/inactive/resources.svg"
               alt="Resources Logo"
               class="main-nav-images"
             />
@@ -80,58 +78,57 @@
           </a>
           <div class="vertical-separators"></div>
         </div>
-        <!-- Chatroom Link -->
-        <a
-          href="/chatroom"
-          class="main-nav-links button-links-inactive flex-center"
-        >
-          <img
-            src="images/navbar/inactive/chatroom.svg"
-            alt="Chatroom Logo"
-            class="main-nav-images"
-          />
-          <span class="gradient-style-text">Chatroom</span>
-        </a>
-        <div class="vertical-separators"></div>
 
-        <!-- About Link -->
-        <a
-          href="/about"
-          class="main-nav-links button-links-inactive flex-center"
-        >
-          <img
-            src="/images/navbar/inactive/about.svg"
-            alt="About Logo"
-            class="main-nav-images"
-          />
-          <span class="gradient-style-text">About</span>
-        </a>
-        <div class="nav-side-vertical-separators vertical-separators"></div>
+        <div class="main-nav-mobile-divs">
+          <!-- Chatroom Link -->
+          <a
+            href="/chatroom"
+            class="main-nav-links button-links-active flex-center"
+          >
+            <img
+              src="images/navbar/active/chatroom.svg"
+              alt="Chatroom Logo"
+              class="main-nav-images"
+            />
+            <span>Chatroom</span>
+          </a>
+          <div class="vertical-separators"></div>
+          <!-- About Link -->
+          <a
+            href="/about"
+            class="main-nav-links button-links-inactive flex-center"
+          >
+            <img
+              src="images/navbar/inactive/about.svg"
+              alt="About Logo"
+              class="main-nav-images"
+            />
+            <span class="gradient-style-text">About</span>
+          </a>
+          <div class="nav-side-vertical-separators vertical-separators"></div>
+        </div>
       </nav>
 
       <!-- Main Content Area -->
       <main id="mainContent">
-        <section id="introductionSection">
+        <!-- Chatroom -->
+        <section id="chatroom" class="margin-top">
           <header class="containers-style border-radius-top flex-center">
-            <h1>Error 404 - Not Found</h1>
+            <h1>Frutiger Aero Chatroom</h1>
           </header>
 
-          <article class="containers-style flex-center border-radius-bottom">
-            <a
-              href="/art_gallery"
-              class="aqua-android-link"
-              title="View Fan Art Gallery"
-              ><img src="/images/home/welcome.png" alt="Aqua the Android"
-            /></a>
-            <div>
-              <h2>Aqua the Android cannot find the page you wanted...</h2>
-              <p>
-                The URL may have been incorrect or we moved this page elsewhere.
-              </p>
-            </div>
+          <article class="containers-style border-radius-bottom">
+            <iframe
+              src="https://xat.com/embed/chat.php#id=220531562&gn=FrutigerAeroArchive"
+              width="100%"
+              height="650px"
+              frameborder="0"
+              scrolling="no"
+            ></iframe>
           </article>
         </section>
       </main>
+      <div class="website-spacer-bottom"></div>
     </div>
 
     <!-- Music Player -->
@@ -141,11 +138,7 @@
         id="musicToggle"
         aria-label="Toggle Music"
       >
-        <img
-          src="/images/music_on.svg"
-          alt="Music Status"
-          id="musicToggleImg"
-        />
+        <img src="images/music_on.svg" alt="Music Status" id="musicToggleImg" />
       </button>
       <div class="vertical-separators"></div>
       <div class="music-text-div">
@@ -153,10 +146,10 @@
           <audio
             id="songAudio"
             loop
-            data-title="Downloading Latest News"
-            data-artist="Wii News Channel OST"
+            data-title="New PSN Account"
+            data-artist="PS Vita"
           >
-            <source src="/music/not_found.mp3" type="audio/mpeg" />
+            <source src="/music/resources.mp3" type="audio/mpeg" />
           </audio>
           <span id="songTitle" class="gradient-style-text"></span>
           <span class="gradient-style-text">—</span>
@@ -166,6 +159,6 @@
     </div>
 
     <!-- Javascript -->
-    <script src="/javascript/scripts.js" async defer></script>
+    <script src="../javascript/scripts.js" async defer></script>
   </body>
 </html>
