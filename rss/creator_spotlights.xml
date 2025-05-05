@@ -7,12 +7,19 @@
     <description>The featured Artists of the Month in the Frutiger Aero Community!</description>
     <language>en-us</language>
     <copyright>© Consumer Aesthetic Network</copyright>
+      <item>
+      <title>May 2025 Creator Spotlight</title>
+      <pubDate>Thu, 1 May 2025 15:58:34 +0200</pubDate>
+      <link>https://frutigeraero.org/creator_spotlights/may_2025</link>
+      <author>contact@frutigeraero.org</author>
+      <description><![CDATA[This month, our Artist of the Month is Ghourical!]]></description>
+    </item>
     <item>
       <title>April 2025 Creator Spotlight</title>
       <pubDate>Tue, 1 Apr 2025 15:58:34 +0200</pubDate>
       <link>https://frutigeraero.org/creator_spotlights/april_2025</link>
       <author>contact@frutigeraero.org</author>
-      <description><![CDATA[This month, our Artist of the Month is Aurio!]]></description>
+      <description><![CDATA[This month, our Artist of the Month is Solinus!]]></description>
     </item>
     <item>
       <title>March 2025 Creator Spotlight</title>
