@@ -67,8 +67,8 @@
 /* Creator Image Gallery */
 .creator-gallery {
   display: grid;
-  grid-column-gap: 15px;
-  grid-row-gap: 25px;
+  grid-column-gap: 20px;
+  grid-row-gap: 30px;
   margin-bottom: 15px;
 }
 .creator-gallery span {
@@ -77,14 +77,14 @@
 .creator-divs {
   background: linear-gradient(
     to bottom,
-    rgba(132, 228, 175, 0.3) 10%,
-    rgba(116, 218, 162, 0.5) 100%
+    rgba(94, 138, 118, 0.5) 10%,
+    rgba(101, 167, 138, 0.5) 100%
   );
-  box-shadow: 0px 10px 8px rgba(84, 161, 122, 0.4),
-    inset 0px 2px 1px rgba(131, 130, 130, 0.3),
-    inset 0px -3px 1px rgba(26, 36, 29, 0.4);
+  box-shadow: 0px 15px 3px rgba(66, 109, 90, 0.5),
+    inset 0px 3px 2px rgba(255, 255, 255, 0.3),
+    inset 0px -10px 3px rgba(113, 172, 131, 0.4);
   border-radius: 8px;
-  padding: 10px 6px;
+  padding: 15px 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
