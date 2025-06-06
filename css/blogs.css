@@ -135,6 +135,12 @@
   z-index: 2;
 }
 
+/* Bullet List Style */
+.bullet-list {
+  color: white;
+  margin-left: 30px;
+}
+
 /* Responsiveness */
 @media (max-width: 750px) {
   #mainNav {
