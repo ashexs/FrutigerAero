@@ -77,12 +77,12 @@
 .creator-divs {
   background: linear-gradient(
     to bottom,
-    rgba(94, 138, 118, 0.5) 10%,
-    rgba(101, 167, 138, 0.5) 100%
+    rgba(90, 145, 119, 0.5) 10%,
+    rgba(93, 155, 128, 0.5) 100%
   );
   box-shadow: 0px 15px 3px rgba(66, 109, 90, 0.5),
-    inset 0px 3px 2px rgba(255, 255, 255, 0.3),
-    inset 0px -10px 3px rgba(113, 172, 131, 0.4);
+    inset 0px 3px 2px rgba(190, 255, 210, 0.3),
+    inset 0px -10px 8px rgba(100, 167, 120, 0.4);
   border-radius: 8px;
   padding: 15px 8px;
   display: flex;
@@ -90,7 +90,7 @@
   align-items: center;
 }
 .creator-divs img {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   display: flex;
