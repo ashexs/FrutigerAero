@@ -28,7 +28,7 @@
 <url>
   <loc>https://frutigeraero.org/about</loc>
   <changefreq>monthly</changefreq>
-  <lastmod>2025-05-04</lastmod>
+  <lastmod>2025-06-10</lastmod>
   <priority>0.8</priority>
 </url>
 <url>
@@ -77,6 +77,12 @@
   <loc>https://frutigeraero.org/blog/website_launched</loc>
   <changefreq>yearly</changefreq>
   <lastmod>2025-04-02</lastmod>
+  <priority>0.5</priority>
+</url>
+<url>
+  <loc>https://frutigeraero.org/blog/10k_100k_milestone_event</loc>
+  <changefreq>yearly</changefreq>
+  <lastmod>2025-06-10</lastmod>
   <priority>0.5</priority>
 </url>
 </urlset>
