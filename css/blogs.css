@@ -107,6 +107,12 @@
   filter: brightness(0.7);
   transition-duration: 0.2s;
 }
+.creator-divs a {
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+.creator-divs a:hover {
+  -webkit-text-fill-color: rgb(255, 255, 255);
+}
 
 /* Links */
 .links-container {
