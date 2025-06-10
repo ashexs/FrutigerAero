@@ -13,11 +13,11 @@
 #settingsBar {
   max-width: 1200px;
   margin: 10px auto;
-  gap: 20px;
+  gap: 15px;
 }
 .settings-bar-divs {
   backdrop-filter: blur(4px);
-  border-radius: 18px;
+  border-radius: 20px;
   height: 48px;
   width: 100%;
   padding: 0px;
