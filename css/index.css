@@ -17,7 +17,7 @@
 }
 .settings-bar-divs {
   backdrop-filter: blur(4px);
-  border-radius: 20px;
+  border-radius: 10px;
   height: 48px;
   width: 100%;
   padding: 0px;
