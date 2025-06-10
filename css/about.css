@@ -110,9 +110,10 @@
 #contactForm button {
   background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.3) 10%,
+    rgba(230, 230, 230, 0.4) 10%,
     rgba(48, 70, 51, 0.3) 50%,
-    rgba(255, 255, 255, 0.1) 100%
+    rgba(22, 48, 35, 0.8) 50%,
+    rgba(44, 94, 68, 0.8) 100%
   );
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3),
     inset 0px 2px 1px rgba(255, 255, 255, 0.3),
@@ -151,19 +152,25 @@
 
 .changelog {
   width: 100%;
-  height: 180px;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.35) 0%,
-    rgba(94, 100, 104, 0.4) 71%
-  );
-  box-shadow: 0px -3px 15px rgba(0, 0, 0, 0.3),
-    inset 0px -2px 1px rgba(255, 255, 255, 0.3),
-    inset 0px 2px 1px rgba(0, 0, 0, 0.4);
+  height: 205px;
+  background: rgba(134, 134, 134, 0.35);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2),
+    inset 0px -3px 5px rgba(255, 255, 255, 0.2),
+    inset 0px 3px 5px rgba(172, 171, 171, 0.5);
   border-radius: 8px;
   margin-top: 20px;
   overflow-y: auto;
-  scrollbar-color: #14a177 rgba(24, 102, 75, 0.2);
+  scrollbar-color: #198f6b rgba(43, 43, 43, 0.5);
+}
+.changelog ul {
+  list-style: none;
+  margin: 15px 0px 15px 20px;
+}
+.changelog li {
+  margin: 9px 0px;
+}
+.changelog strong {
+  color: #24c494;
 }
 
 /* Responsiveness */
