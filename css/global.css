@@ -207,13 +207,29 @@ button {
   opacity: 1;
 }
 
-/* Default container style with gradient background and shadows */
+/* Default container style for headers, bars, etc. */
 .containers-style {
   background: linear-gradient(
     180deg,
-    rgba(90, 95, 99, 0.7) 0%,
-    rgba(0, 0, 0, 0.68) 50%,
+    rgba(103, 108, 112, 0.7) 0%,
+    rgba(22, 22, 22, 0.7) 50%,
+    rgba(0, 0, 0, 0.7) 50%,
     rgba(62, 65, 67, 0.7) 100%
+  );
+  box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.3),
+    inset 0px 10px 10px rgba(255, 255, 255, 0.2),
+    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+  flex-direction: row;
+  padding: 16px;
+}
+
+/* Secondary container style for main content, divs, etc. */
+.containers-style-content {
+  background: linear-gradient(
+    180deg,
+    rgba(97, 103, 107, 0.7) 0%,
+    rgba(22, 22, 22, 0.7) 50%,
+    rgba(61, 64, 66, 0.7) 100%
   );
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.3),
     inset 0px 2px 1px rgba(255, 255, 255, 0.3),
@@ -271,14 +287,14 @@ button {
 .button-links-active {
   background: linear-gradient(
       180deg,
-      rgba(255, 255, 255, 0.25) 0%,
+      rgba(255, 255, 255, 0.4) 0%,
       rgba(255, 255, 255, 0.1) 49%,
       rgba(255, 255, 255, 0) 50%
     ),
     linear-gradient(
       180deg,
-      rgba(74, 168, 135, 0) 30%,
-      rgba(55, 209, 135, 0.4) 100%
+      rgba(74, 168, 135, 0) 20%,
+      rgba(59, 224, 145, 0.4) 100%
     );
 }
 .button-links-active:hover {
@@ -287,7 +303,7 @@ button {
 
 /* Gradient text style for active button links */
 .button-links-active span {
-  background: linear-gradient(180deg, #9bd6bf 0%, #5fd196 48.44%, #37d16d 100%),
+  background: linear-gradient(180deg, #9bd6bf 0%, #5fd196 48.44%, #32bd63 100%),
     linear-gradient(180deg, rgba(138, 153, 138, 0.9) 0%, #ffffff 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -300,9 +316,9 @@ button {
   position: relative;
   background: linear-gradient(
     180deg,
-    rgba(146, 155, 160, 0.6) 0%,
-    rgba(61, 65, 67, 0.4) 49%,
-    rgba(61, 65, 67, 0) 50%
+    rgba(180, 188, 190, 0.4) 0%,
+    rgba(107, 115, 119, 0.4) 50%,
+    rgba(61, 65, 67, 0.014) 50.1%
   );
   transition: all 0.2s ease-in;
   overflow: hidden;
@@ -315,7 +331,7 @@ button {
   background: linear-gradient(
     180deg,
     rgba(127, 140, 124, 0) 30%,
-    rgba(180, 189, 175, 0.4) 100%
+    rgba(216, 223, 212, 0.4) 100%
   );
   opacity: 0;
   transition: opacity 0.2s ease-in;
@@ -377,13 +393,13 @@ button {
 
 /* Border Radius for elements with this class */
 .border-radius-top {
-  border-top-right-radius: 15px;
-  border-top-left-radius: 15px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
   overflow: hidden;
 }
 .border-radius-bottom {
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
   overflow: hidden;
 }
 
