@@ -289,6 +289,37 @@
   margin: 0px 1px;
 }
 
+/* Webring */
+#aero-ring {
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.3) 0%,
+    rgba(64, 64, 64, 0.3) 100%
+  );
+  border-radius: 10px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5),
+    inset 0 2px 1px rgba(255, 255, 255, 0.15),
+    inset 0 -2px 1px rgba(0, 0, 0, 0.35);
+  padding: 0.75rem;
+  width: 15rem;
+  margin: 15px auto 0px auto;
+  font-family: sans-serif;
+}
+
+#aero-ring a {
+  color: white;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+}
+
+#aero-ring a:focus,
+#aero-ring a:hover {
+  color: lightgrey;
+}
+
+#aero-ring a:active {
+  color: darkgrey;
+}
+
 /* Responsiveness */
 @media (max-width: 250px) {
   .links-container a {
