@@ -49,14 +49,7 @@ h1,
 h2 {
   font-style: normal;
   font-weight: 300;
-  background: linear-gradient(
-    180deg,
-    rgba(241, 241, 241, 0.9) 0%,
-    #ffffff 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: rgba(255, 255, 255, 0.85);
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
 }
 
@@ -72,14 +65,6 @@ h2 {
 }
 
 p {
-  /* background: linear-gradient(
-    180deg,
-    rgba(247, 255, 247, 0.9) 0%,
-    rgb(255, 255, 255) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text; */
   color: rgba(255, 255, 255, 0.8);
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   max-width: 700px;
@@ -94,12 +79,11 @@ button {
 
 a {
   color: rgba(255, 255, 255, 0.9);
-  /* -webkit-text-fill-color: rgba(255, 255, 255, 0.35); */
   transition-duration: 0.2s;
 }
 a:hover {
+  color: rgba(223, 223, 223, 0.9);
   text-decoration: underline;
-  -webkit-text-fill-color: rgba(146, 146, 146, 0.35);
   transition-duration: 0.2s;
 }
 
