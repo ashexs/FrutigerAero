@@ -6,8 +6,6 @@
   font-weight: 300;
   font-size: 1.4em;
   line-height: 100%;
-  color: #e7e7e7;
-  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   margin-top: 5px;
 }
 
@@ -269,8 +267,6 @@
   font-family: "Noto Sans Regular", Arial, Helvetica, sans-serif;
   font-weight: 400;
   font-size: 18px;
-  color: #ffffff;
-  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   text-decoration: none;
   z-index: 1;
 }
@@ -304,20 +300,6 @@
   width: 15rem;
   margin: 15px auto 0px auto;
   font-family: sans-serif;
-}
-
-#aero-ring a {
-  color: white;
-  -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
-}
-
-#aero-ring a:focus,
-#aero-ring a:hover {
-  color: lightgrey;
-}
-
-#aero-ring a:active {
-  color: darkgrey;
 }
 
 /* Responsiveness */

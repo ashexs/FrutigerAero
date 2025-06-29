@@ -46,7 +46,8 @@ h4 {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-style: normal;
   font-weight: 300;
   color: rgba(255, 255, 255, 0.85);
@@ -70,6 +71,11 @@ p {
   max-width: 700px;
   font-size: 1.06em;
   margin-top: 10px;
+}
+
+span {
+  color: rgba(255, 255, 255, 0.8);
+  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
 }
 
 a,
@@ -127,19 +133,6 @@ button {
 /* Full width for text */
 .p-full-width p {
   max-width: 100%;
-}
-
-/* Gradients for text */
-.gradient-style-text {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.9) 0%,
-    #ffffff 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
 }
 
 /* Gradient for some headers and buttons */
@@ -285,14 +278,8 @@ button {
 .button-links-active:hover {
   text-decoration: none !important;
 }
-
-/* Gradient text style for active button links */
 .button-links-active span {
-  background: linear-gradient(180deg, #9bd6bf 0%, #5fd196 48.44%, #32bd63 100%),
-    linear-gradient(180deg, rgba(138, 153, 138, 0.9) 0%, #ffffff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #5fd196 !important;
   font-weight: 500;
 }
 
@@ -326,12 +313,9 @@ button {
   opacity: 1;
 }
 
-/* Gradient text style */
+/* Button Text style */
 .button-links-inactive span {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.9);
 }
 .button-links-inactive:hover span {
   text-decoration: underline;
@@ -347,6 +331,9 @@ button {
 }
 #mainNav img {
   height: 20px;
+}
+#mainNav span {
+  color: rgba(255, 255, 255, 0.85);
 }
 
 /* Flex layout for desktop navigation bar */
@@ -420,9 +407,6 @@ button {
   display: inline-block;
   font-weight: 300;
   font-size: 1.2em;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   text-shadow: 0px -2px 1px rgba(0, 0, 0, 0.25);
   margin-left: 8px;
   text-wrap: nowrap;

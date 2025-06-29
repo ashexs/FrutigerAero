@@ -47,12 +47,12 @@
   font-size: 0.95em;
 }
 .staff-contact {
-  -webkit-text-fill-color: rgba(255, 255, 255, 0.712);
+  color: rgba(255, 255, 255, 0.85);
   font-size: 0.9em;
   margin: 0px 5px;
 }
 .staff-contact:hover {
-  -webkit-text-fill-color: rgb(255, 255, 255);
+  color: rgba(212, 212, 212, 0.85);
 }
 
 .ashex {
