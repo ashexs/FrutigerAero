@@ -28,7 +28,7 @@
 <url>
   <loc>https://frutigeraero.org/about</loc>
   <changefreq>monthly</changefreq>
-  <lastmod>2025-06-29</lastmod>
+  <lastmod>2025-07-02</lastmod>
   <priority>0.8</priority>
 </url>
 <url>
@@ -46,7 +46,7 @@
 <url>
   <loc>https://frutigeraero.org/community_highlights</loc>
   <changefreq>monthly</changefreq>
-  <lastmod>2025-06-29</lastmod>
+  <lastmod>2025-07-02</lastmod>
   <priority>0.8</priority>
 </url>
 <url>
@@ -54,53 +54,5 @@
   <changefreq>monthly</changefreq>
   <lastmod>2025-06-29</lastmod>
   <priority>0.9</priority>
-</url>
-<url>
-  <loc>https://frutigeraero.org/creator_spotlights/january_2025</loc>
-  <changefreq>yearly</changefreq>
-  <lastmod>2025-06-29</lastmod>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>https://frutigeraero.org/creator_spotlights/february_2025</loc>
-  <changefreq>yearly</changefreq>
-  <lastmod>2025-06-29</lastmod>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>https://frutigeraero.org/creator_spotlights/march_2025</loc>
-  <changefreq>yearly</changefreq>
-  <lastmod>2025-06-29</lastmod>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>https://frutigeraero.org/creator_spotlights/april_2025</loc>
-  <changefreq>yearly</changefreq>
-  <lastmod>2025-06-29</lastmod>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>https://frutigeraero.org/creator_spotlights/may_2025</loc>
-  <changefreq>yearly</changefreq>
-  <lastmod>2025-06-29</lastmod>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>https://frutigeraero.org/creator_spotlights/june_2025</loc>
-  <changefreq>yearly</changefreq>
-  <lastmod>2025-06-29</lastmod>
-  <priority>0.6</priority>
-</url>
-<url>
-  <loc>https://frutigeraero.org/blog/website_launched</loc>
-  <changefreq>yearly</changefreq>
-  <lastmod>2025-06-29</lastmod>
-  <priority>0.5</priority>
-</url>
-<url>
-  <loc>https://frutigeraero.org/blog/10k_100k_milestone_event</loc>
-  <changefreq>yearly</changefreq>
-  <lastmod>2025-06-29</lastmod>
-  <priority>0.5</priority>
 </url>
 </urlset>
