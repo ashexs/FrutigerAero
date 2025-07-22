@@ -432,6 +432,14 @@ button {
   }
 }
 
+/* Spotlight Image Viewer */
+.spl-header {
+  background: none;
+}
+.spl-footer {
+  background: none;
+}
+
 /* Responsiveness */
 @media (max-width: 950px) {
   .main-nav-links-inactive,

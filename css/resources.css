@@ -9,6 +9,30 @@
   margin-top: 5px;
 }
 
+/* YT iframes Spotlight */
+.yt-container-divs {
+  display: none;
+}
+.yt-divs {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.yt-iframe-containers {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.yt-iframes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
 /* Article */
 .history-article {
   flex-direction: column;
