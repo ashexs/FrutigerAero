@@ -1,10 +1,14 @@
 .links-container {
-  height: 80px;
-  padding: 0px;
+  padding: 4px 5px;
 }
 .links-container a {
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3),
+    inset 0px 2px 1px rgba(255, 255, 255, 0.3),
+    inset 0px -2px 1px rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
   justify-content: flex-start;
   padding: 10px;
+  margin: 5px;
   width: 100%;
   min-height: 80px;
   font-family: "Noto Sans Regular", Arial, Helvetica, sans-serif;
@@ -12,6 +16,7 @@
   font-size: 18px;
   z-index: 1;
 }
+
 .links-container img {
   height: 60px;
 }
