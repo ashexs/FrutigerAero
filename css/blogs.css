@@ -66,7 +66,8 @@
     rgba(90, 145, 119, 0.5) 10%,
     rgba(93, 155, 128, 0.5) 100%
   );
-  box-shadow: 0px 15px 3px rgba(66, 109, 90, 0.5),
+  box-shadow:
+    0px 15px 3px rgba(66, 109, 90, 0.5),
     inset 0px 3px 2px rgba(190, 255, 210, 0.3),
     inset 0px -10px 8px rgba(100, 167, 120, 0.4);
   border-radius: 8px;
